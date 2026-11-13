@@ -25,7 +25,7 @@
     <div id="markers" class="markers"></div>
   </div>
   <header class="world-header">
-    <a href="experience.html" class="wordmark" aria-label="漫見首頁">漫見 <em>somewhere</em><svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 17Q58-5 116 9"/></svg></a>
+    <a href="experience.html" class="wordmark" aria-label="漫見首頁（Beta 測試版）">漫見 <em>somewhere</em><span class="beta-badge" aria-hidden="true">BETA</span><svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 17Q58-5 116 9"/></svg></a>
     <nav class="primary-nav" aria-label="主要導覽"><button id="nav-explore" aria-current="page">探索</button><button id="nav-stories">近期分享</button><button id="nav-saved">我的收藏 <span id="nav-saved-count">0</span></button></nav>
     <button class="header-search" id="header-search" aria-label="開啟全域搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span>搜尋地點，或一種心情</span></button>
   </header>
@@ -52,15 +52,15 @@
   <div class="map-hint glass" id="map-hint">拖曳探索世界 <span>↔</span> 滾輪縮放</div>
   <article class="island glass" id="island" aria-labelledby="island-title">
     <button class="island-dismiss" id="island-dismiss" aria-label="收起風景窗口">−</button>
-    <div class="island-image"><img id="island-photo" src="assets/atlas.png" alt="釜山海岸 AI 情境圖片"><div id="island-type"></div><span class="image-label">風格示意圖 · 非所選地點現場</span><button class="island-open" id="island-open" aria-label="查看原平台影像">▶</button></div>
-    <div class="island-info"><div><p class="overline" id="island-country">SOUTH KOREA / 釜山</p><h2 id="island-title">海與城市，相遇的地方。</h2><p id="island-desc">廣安里・海岸的藍調時刻</p></div><button class="island-save" id="island-save" aria-label="收藏這個景點" aria-pressed="false">♡</button></div>
+    <div class="island-image"><img id="island-photo" src="assets/cinema.webp" alt="日本風格示意圖，非所選地點現場"><div id="island-type"></div><span class="image-label">風格示意圖 · 非所選地點現場</span><button class="island-open" id="island-open" aria-label="查看原平台影像">▶</button></div>
+    <div class="island-info"><div><p class="overline" id="island-country">京都 / 日本</p><h2 id="island-title">京都・祇園花見小路</h2><p id="island-desc">探索當地影像與天氣</p></div><button class="island-save" id="island-save" aria-label="收藏這個景點" aria-pressed="false">♡</button></div>
     <section class="weather-card" aria-label="當地天氣"><div id="weather-island"><p class="weather-headline">正在取得當地天氣…</p></div></section>
     <div class="island-bottom"><span id="local-time">當地時間 —</span><button id="island-details">探索這個地點 ↗</button></div>
   </article>
   <button class="restore-island glass" id="restore-island" hidden>展開風景窗口 ↗</button>
   <aside class="saved-panel glass" id="saved-panel" aria-label="已收藏的旅行靈感" hidden><div class="collection-heading"><div><p class="overline">KEEP THE PLACES YOU LOVE</p><h1>把心動，留給<br><em>下一次出發。</em></h1><p>收藏儲存在此裝置，隨時回到讓你心動的地方。</p></div><button id="saved-close" class="outline-pill">返回探索 ↗</button></div><div id="saved-filters" class="filter-pills" aria-label="依國家篩選收藏"></div><div id="saved-list"></div><button id="saved-start" class="yellow-pill">開始探索 →</button></aside>
   <section class="stories-page glass" id="stories-page" hidden aria-labelledby="stories-heading"><div class="collection-heading"><div><p class="overline">WHAT IT LOOKS LIKE LATELY</p><h1 id="stories-heading">看看，<br><em>最近的那裡。</em></h1><p>讓有日期的旅行分享，補上鏡頭以外的風景。</p></div><button id="stories-back" class="outline-pill">返回探索 ↗</button></div><div class="stories-filters"><label>目的地<select id="stories-country"><option value="">全部國家</option><option value="japan">日本</option><option value="korea">韓國</option><option value="taiwan">台灣</option><option value="thailand">泰國</option></select></label><div class="filter-pills" aria-label="貼文日期篩選"><button data-period="7" aria-pressed="true">最近 7 天</button><button data-period="30" aria-pressed="false">最近 30 天</button></div></div><div class="stories-empty"><span class="empty-orbit" aria-hidden="true">✧</span><p class="overline">STORIES ARE ON THEIR WAY</p><h2>下一段旅行故事，還在路上。</h2><p id="stories-empty-copy">近期社群貼文尚未串接。先從當地影像與天氣，認識一個地方。</p><button id="stories-explore" class="yellow-pill">看看這裡的風景 →</button></div><div id="stories-suggestions" class="story-suggestions"></div></section>
-  <footer class="map-footer"><span>Made with <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> · 全球輪廓，非街道導航</span><span>FLOW 10 / 175 個地點 · 模型天氣 · 候選影像來源</span></footer>
+  <footer class="map-footer"><span>Made with <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> · 全球輪廓，非街道導航 · <a href="privacy.html">隱私權政策</a><a data-feedback hidden target="_blank" rel="noopener"> · 意見回報</a></span><span>FLOW 10 / 175 個地點 · 模型天氣 · 候選影像來源</span></footer>
   <nav class="mobile-nav glass" aria-label="手機主要導覽"><button data-mobile-nav="explore" aria-current="page">◎<span>探索</span></button><button data-mobile-nav="stories">◷<span>近期</span></button><button data-mobile-nav="saved">♡<span>收藏</span></button></nav>
   <div class="undo-toast glass" id="undo-toast" role="status" hidden><span>已移除收藏</span><button id="undo-save">復原</button><button id="undo-dismiss" aria-label="關閉復原提示">✕</button></div>
   <div id="status" class="status-toast" role="status" aria-live="polite"></div>
@@ -77,7 +77,7 @@
     <p id="media-provider" class="media-provider"></p><p id="media-location-note" class="media-location-note"></p>
     <p id="media-status" class="media-status" role="status" aria-live="polite">候選來源・播放與即時狀態待確認</p>
     <div class="media-actions"><button id="media-play">播放原平台影像 ▶</button><button id="media-preview">返回情境圖片</button><a id="media-original" target="_blank" rel="noopener noreferrer">前往原站 ↗</a></div>
-    <div class="media-links"><a id="media-fallback" target="_blank" rel="noopener noreferrer">其他來源／最新影像 ↗</a><a id="media-reference" target="_blank" rel="noopener noreferrer">收錄依據 ↗</a><a id="media-preview-link" href="http://127.0.0.1:4173/experience.html" target="_blank" rel="noopener" hidden>開啟本機預覽網址 ↗</a></div>
+    <div class="media-links"><a id="media-fallback" target="_blank" rel="noopener noreferrer">其他來源／最新影像 ↗</a><a id="media-reference" target="_blank" rel="noopener noreferrer">收錄依據 ↗</a><a data-feedback hidden target="_blank" rel="noopener">回報影片失效或地點錯誤 ↗</a><a id="media-preview-link" href="http://127.0.0.1:4173/experience.html" target="_blank" rel="noopener" hidden>開啟本機預覽網址 ↗</a></div>
     <p class="media-disclosure">點擊播放後才連接 YouTube。影片內容、廣告與播放限制由原平台提供；能播放不代表一定是即時直播。</p>
   </section>
   <div class="destination-body"><p class="overline" id="detail-location"></p><h2 id="detail-title"></h2><p id="detail-description"></p><div class="detail-metadata"><span id="detail-coordinates"></span><span>直播來源待驗證</span><span>天氣依參考點估算</span></div><section class="detail-weather"><div class="weather-title"><h3>當地天氣</h3><span id="weather-state">Open-Meteo</span><button id="weather-refresh">重新整理 ↻</button></div><div id="weather-detail"></div><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">天氣來源：Open-Meteo ↗</a></section><div class="detail-actions"><button id="detail-save">♡ 收藏這個地方</button><button id="detail-next">探索下一站 ↗</button></div><section class="recent-placeholder"><p class="overline">RECENT STORIES</p><h3>最近，有人替你先去看了。</h3><p>近期社群分享尚未收錄；目前已整合公開影像來源與參考點天氣。</p></section></div>

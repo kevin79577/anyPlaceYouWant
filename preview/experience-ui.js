@@ -6,6 +6,9 @@
   const $=s=>document.querySelector(s),root=$('#world');
   // Motion preview controls and build info are for reviewers only: open with ?debug.
   root.classList.toggle('debug',new URLSearchParams(location.search).has('debug'));
+  // Beta feedback form (e.g. a Google Form). Empty = feedback links stay hidden. Required before public launch: docs/上線檢查清單.md
+  const FEEDBACK_URL='';
+  if(FEEDBACK_URL)document.querySelectorAll('[data-feedback]').forEach(a=>{a.href=FEEDBACK_URL;a.hidden=false;});
   const countries=C.countries,places=C.places;
   const byId=id=>places.find(p=>p.id===id);
   const key=p=>p.countryKey||p.id;
@@ -52,7 +55,7 @@
     if(state.view!=='search')closeSearch();
     if(state.view==='home'){G.toggleLibrary(false);if(!keepCamera)G.reset();}
     else if(isExplore){
-      // The globe starts with korea selected but unfocused, so a #country/korea deep link must still focus the camera.
+      // The globe starts with a place selected (japan) but unfocused, so a deep link to that country must still focus the camera.
       if(!keepCamera&&!restore&&(key(byId(G.getState().selected))!==state.id||!G.getState().focused))G.restoreCamera({selected:state.id,lon:byId(state.id).point[0],lat:byId(state.id).point[1],zoom:2.6,focusMix:1,focused:true});
       G.toggleLibrary(true);syncCountry();lastExplore={view:state.view,id:state.id};
       if(restore&&state.library){$('#place-query').value=state.library.query||'';$('#place-query').dispatchEvent(new Event('input'));$('#place-region').value=state.library.region||'';$('#place-region').dispatchEvent(new Event('change'));$('#place-list').scrollTop=state.library.scroll||0;sheetExpanded=!!state.library.expanded;root.classList.toggle('sheet-expanded',sheetExpanded);$('#sheet-handle').setAttribute('aria-expanded',String(sheetExpanded));}

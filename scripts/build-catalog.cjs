@@ -1,5 +1,5 @@
 const fs=require('node:fs');
-const countries={japan:{name:'日本',iso:'JPN',zone:'Asia/Tokyo',image:'assets/cinema.png'},korea:{name:'韓國',iso:'KOR',zone:'Asia/Seoul',image:'assets/atlas.png'},taiwan:{name:'台灣',iso:'TWN',zone:'Asia/Taipei',image:'assets/taipei-scene-v1.png'},thailand:{name:'泰國',iso:'THA',zone:'Asia/Bangkok',image:'assets/play.png'}};
+const countries={japan:{name:'日本',iso:'JPN',zone:'Asia/Tokyo',image:'assets/cinema.webp'},korea:{name:'韓國',iso:'KOR',zone:'Asia/Seoul',image:'assets/atlas.webp'},taiwan:{name:'台灣',iso:'TWN',zone:'Asia/Taipei',image:'assets/taipei-scene-v1.webp'},thailand:{name:'泰國',iso:'THA',zone:'Asia/Bangkok',image:'assets/play.webp'}};
 const places=[],sources={};
 function add(countryKey,id,name,point,region,source,precision='景點參考點'){
  const c=countries[countryKey];let p=places.find(x=>x.id===id);

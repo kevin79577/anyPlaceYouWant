@@ -14,10 +14,10 @@
   const D = window.d3, geography = window.SOMEWHERE_WORLD;
   const interactionGeography = window.SOMEWHERE_WORLD_LOW || geography;
   const destinations = window.SomewhereCatalog ? window.SomewhereCatalog.places : [
-    {id:'japan',iso:'JPN',country:'日本',name:'京都・東山',en:'KYOTO / JAPAN',point:[135.778,34.998],image:'assets/cinema.png',alt:'京都東山暮色 AI 生成情境圖',title:'沿著暮色，走進京都。',subtitle:'東山・屋簷與街燈之間',description:'把步調留給石板路、屋簷與遠山。從東山的風景開始，想像一段不趕路的京都旅行。此圖片由 AI 生成，不代表該座標的實際鏡頭或當下景色。',zone:'Asia/Tokyo',aliases:['日本','京都','東山','japan','kyoto'],label:[20,-28]},
-    {id:'korea',iso:'KOR',country:'韓國',name:'釜山・廣安里',en:'BUSAN / SOUTH KOREA',point:[129.118,35.153],image:'assets/atlas.png',alt:'釜山海岸 AI 生成情境圖',title:'海與城市，相遇的地方。',subtitle:'廣安里・海岸的藍調時刻',description:'城市的燈火與海面的波光，替散步留下一個好理由。這是釜山廣安里的旅行氛圍提案；圖片由 AI 生成，直播來源尚未接入。',zone:'Asia/Seoul',aliases:['韓國','南韓','釜山','廣安里','korea','busan','gwangalli'],label:[-112,-45]},
+    {id:'japan',iso:'JPN',country:'日本',name:'京都・東山',en:'KYOTO / JAPAN',point:[135.778,34.998],image:'assets/cinema.webp',alt:'京都東山暮色 AI 生成情境圖',title:'沿著暮色，走進京都。',subtitle:'東山・屋簷與街燈之間',description:'把步調留給石板路、屋簷與遠山。從東山的風景開始，想像一段不趕路的京都旅行。此圖片由 AI 生成，不代表該座標的實際鏡頭或當下景色。',zone:'Asia/Tokyo',aliases:['日本','京都','東山','japan','kyoto'],label:[20,-28]},
+    {id:'korea',iso:'KOR',country:'韓國',name:'釜山・廣安里',en:'BUSAN / SOUTH KOREA',point:[129.118,35.153],image:'assets/atlas.webp',alt:'釜山海岸 AI 生成情境圖',title:'海與城市，相遇的地方。',subtitle:'廣安里・海岸的藍調時刻',description:'城市的燈火與海面的波光，替散步留下一個好理由。這是釜山廣安里的旅行氛圍提案；圖片由 AI 生成，直播來源尚未接入。',zone:'Asia/Seoul',aliases:['韓國','南韓','釜山','廣安里','korea','busan','gwangalli'],label:[-112,-45]},
     {id:'taiwan',iso:'TWN',country:'台灣',name:'台北・象山',en:'TAIPEI / TAIWAN',point:[121.571,25.027],image:'assets/taiwan.svg',alt:'台北城市天際線 SVG 概念插畫',title:'從山邊，望向日常。',subtitle:'象山・城市與天空的交界',description:'站在城市旁的一座山，重新看見熟悉的天際線。這幅畫面是 SVG 概念插畫，非現場照片；座標用於示範地圖定位，不代表已確認的攝影機位置。',zone:'Asia/Taipei',aliases:['台灣','臺灣','台北','臺北','象山','taiwan','taipei'],label:[20,14]},
-    {id:'thailand',iso:'THA',country:'泰國',name:'蘇梅島・海灣',en:'KOH SAMUI / THAILAND',point:[100.067,9.53],image:'assets/play.png',alt:'泰國熱帶海灣 AI 生成情境圖',title:'把今天，交給海風。',subtitle:'蘇梅島・一點遠方的藍',description:'椰影、海浪與慢下來的步調，讓熱帶海灣成為下一次出走的靈感。圖片由 AI 生成，並非這個座標的真實現場影像。',zone:'Asia/Bangkok',aliases:['泰國','蘇梅','蘇梅島','thailand','samui','koh samui'],label:[-115,2]}
+    {id:'thailand',iso:'THA',country:'泰國',name:'蘇梅島・海灣',en:'KOH SAMUI / THAILAND',point:[100.067,9.53],image:'assets/play.webp',alt:'泰國熱帶海灣 AI 生成情境圖',title:'把今天，交給海風。',subtitle:'蘇梅島・一點遠方的藍',description:'椰影、海浪與慢下來的步調，讓熱帶海灣成為下一次出走的靈感。圖片由 AI 生成，並非這個座標的真實現場影像。',zone:'Asia/Bangkok',aliases:['泰國','蘇梅','蘇梅島','thailand','samui','koh samui'],label:[-115,2]}
   ];
   const ids = new Set(destinations.map(d => d.id));
   const countryRegions=[...new Map(destinations.map(d=>[d.iso,d])).values()];
@@ -31,7 +31,7 @@
   // the page, instead of silently turning country transitions into zero ms.
   let motionEnabled=true;
   try { motionEnabled=localStorage.getItem('somewhere-globe-motion-v1')!=='off'; } catch {}
-  const state = {lon:105,lat:25,zoom:1,selected:'korea',auto:!reducedMotion,dragging:false,flying:false,focused:false,focusMix:0};
+  const state = {lon:105,lat:25,zoom:1,selected:'japan',auto:!reducedMotion,dragging:false,flying:false,focused:false,focusMix:0};
   let width=0,height=0,dpr=1,radius=1,dirty=true,lastPaint=0,lastTick=0,frame=0,flight=null,pointer=null,toastTimer=0,settleTimer=0,fastUntil=0,entryTimer=0;
   const projection = D.geoOrthographic().clipAngle(90).precision(.45);
   const geoPath = D.geoPath(projection,ctx);

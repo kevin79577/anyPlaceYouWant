@@ -10,6 +10,12 @@
 影片試播請先從專案根目錄執行 `node preview/serve.cjs`，再開啟 http://127.0.0.1:4173/experience.html 。伺服器只監聽本機，不提供上傳或代理服務。
 本原型不需安裝套件或執行建置；地圖資料、程式庫與情境圖片都放在專案內，可離線使用。原平台影片則需要網路。
 
+## 公開部署（Beta）
+
+- 打包：`node scripts/build-site.cjs` 產出 `dist/`（只含探索頁、隱私權政策與執行所需檔案，首頁即探索頁），並附 Cloudflare Pages／Netlify 用的 `_headers` 安全標頭。
+- 來源檢查：`node scripts/check-sources.cjs` 產出 `docs/來源自動檢查報告.md`；設定 `PLAYWRIGHT_MODULE` 後會實際播放每支影片。
+- 上線前必填項目（經營者、聯絡方式、回報網址、首頁預設地點）與部署步驟見 `docs/上線檢查清單.md`。
+
 ## 已實作
 
 - 真實全球地理輪廓的球面投影、拖曳旋轉、滾輪／按鈕／鍵盤縮放。

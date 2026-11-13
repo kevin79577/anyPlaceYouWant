@@ -113,6 +113,11 @@ input::placeholder{font-size:12px!important}
 #detail-save[aria-pressed=true]{animation:pop-soft .4s cubic-bezier(.3,.7,.3,1)}
 .geo-marker.selected .marker-dot{animation:pop .5s cubic-bezier(.3,.7,.3,1)}
 
+/* Beta launch: badge beside the wordmark; feedback links stay hidden until FEEDBACK_URL is set (link display rules would otherwise override [hidden]). */
+.beta-badge{position:relative;top:-14px;margin-left:6px;padding:1px 7px;border-radius:20px;background:var(--lemon);font:normal 10px/1.6 monospace;letter-spacing:1.5px;color:var(--ink);vertical-align:middle}
+[data-feedback][hidden]{display:none!important}
+.map-footer a[href="privacy.html"]{color:inherit}
+
 /* Layout fixes measured in Chrome (see FLOW10 doc). Kept last so they win over the earlier breakpoint rules. */
 @media(min-width:701px){
   /* Home: the scene window sat on top of all four country markers; park it smaller in the bottom-right, above the footer. */

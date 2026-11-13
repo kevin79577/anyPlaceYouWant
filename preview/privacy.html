@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>隱私權政策 — 漫見 somewhere</title>
+  <meta name="description" content="漫見 somewhere 如何處理瀏覽器本機資料，以及天氣與影片第三方服務的連線方式。">
+  <link rel="stylesheet" href="privacy.css?v=flow-10">
+</head>
+<body>
+<main class="policy">
+  <a class="back" href="experience.html">← 回到漫見</a>
+  <p class="overline">PRIVACY</p>
+  <h1>隱私權政策</h1>
+  <p class="meta">生效日期：2026-11-13 · 目前為 Beta 測試版</p>
+
+  <!-- 上線前必填：沒有填寫經營者與聯絡方式，不應公開部署（見 docs/上線檢查清單.md）。 -->
+  <section class="todo" aria-label="上線前待填資訊">
+    <p><strong>網站經營者：</strong><span class="placeholder">【待填：經營者名稱】</span></p>
+    <p><strong>聯絡方式：</strong><span class="placeholder">【待填：公開聯絡信箱或表單】</span></p>
+    <p><strong>網站託管：</strong><span class="placeholder">【待填：託管服務商，例如 Cloudflare Pages】</span></p>
+  </section>
+
+  <h2>一句話說明</h2>
+  <p>本站不使用 cookie、不做流量分析、沒有會員帳號。你的收藏只存在你自己的瀏覽器裡，不會傳回我們這裡。</p>
+
+  <h2>存在你瀏覽器裡的資料</h2>
+  <p>以下資料只存在你這台裝置的瀏覽器中，本站伺服器收不到。清除瀏覽器的網站資料就會刪除。</p>
+  <table>
+    <thead><tr><th>名稱</th><th>內容</th><th>保存多久</th></tr></thead>
+    <tbody>
+      <tr><td><code>somewhere-globe-saved-v1</code></td><td>你收藏的地點代號清單</td><td>直到你移除收藏或清除瀏覽器資料</td></tr>
+      <tr><td><code>somewhere-globe-motion-v1</code></td><td>轉場動效開或關</td><td>直到你清除瀏覽器資料</td></tr>
+      <tr><td><code>somewhere-entry-seen</code></td><td>這個分頁是否已播放過入場動畫</td><td>關閉分頁即刪除</td></tr>
+    </tbody>
+  </table>
+  <p>收藏不會跨裝置同步；換一台裝置或換一個瀏覽器，收藏不會跟著過去。</p>
+
+  <h2>第三方服務</h2>
+  <h3>天氣：Open-Meteo</h3>
+  <p>選取地點時，你的瀏覽器會直接向 <code>api.open-meteo.com</code> 查詢該地點參考座標的天氣。Open-Meteo 會收到這筆查詢與你的 IP 位址，並依其條款處理。天氣資料以 CC BY 4.0 授權提供，為模型估算，不是現場量測。</p>
+  <p><a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Open-Meteo 使用條款與隱私說明 ↗</a></p>
+
+  <h3>影片：YouTube</h3>
+  <p>只有在你按下「播放」之後，本站才會連線到 YouTube 載入播放器。播放器使用 <code>youtube-nocookie.com</code> 加強隱私模式；開始播放後，YouTube 與 Google 會依其政策處理相關資料。本站不錄影、不擷取也不轉播影片內容。</p>
+  <p><a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube 服務條款 ↗</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google 隱私權政策 ↗</a></p>
+
+  <h3>原站與來源連結</h3>
+  <p>點選「前往原站」「收錄依據」等連結後，你會離開本站，之後的資料處理依該網站的政策。</p>
+
+  <h3>網站託管</h3>
+  <p>和大多數網站一樣，託管服務商會為了安全與維運，自動記錄一般存取紀錄，例如 IP 位址、時間和請求的網址。本站不會用這些紀錄辨識個人。</p>
+
+  <h2>問題回報</h2>
+  <p>如果你透過回報表單告訴我們影片失效或地點錯誤，請不要填寫不必要的個人資料。回報內容只用來修正網站資料。</p>
+
+  <h2>政策變更</h2>
+  <p>本政策更新時，會修改上方的生效日期。重大變更會在網站上另外說明。</p>
+</main>
+</body>
+</html>
