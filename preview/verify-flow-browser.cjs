@@ -22,12 +22,16 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.click('[data-destination="taiwan"]');
   await page.waitForFunction(()=>!SomewhereGlobe.getState().flying);
   await page.click('#all-places');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');// view transition applies on the next frame
   assert.equal(await page.locator('#place-list [data-place]').count(),118);
   await page.fill('#place-query','高美濕地');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
   await shot(page,'02-locations.png');
   await page.click('#place-list [data-place]');
-  await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');// view transitions apply on the next frame
+  // A place in the list opens its stream directly; 返回景點資訊 then shows the detail page.
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='watch');
+  await page.click('#watch-return');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');
   assert.equal(await page.locator('#destination-dialog').isVisible(),true);
   assert.match(await page.locator('#detail-title').textContent(),/高美/);
   await shot(page,'03-place.png');
@@ -116,7 +120,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   assert.equal(await mobile.locator('#world.sheet-expanded').count(),1);
   await shot(mobile,'08-mobile-country.png');
   await mobile.click('#place-list [data-place] >> nth=0');
-  await mobile.waitForFunction(()=>SomewhereExperience.getState().view==='place');
+  await mobile.waitForFunction(()=>SomewhereExperience.getState().view==='watch');
   assert.equal(await mobile.locator('#destination-dialog').isVisible(),true);
   await shot(mobile,'09-mobile-place.png');
   await mobile.click('#detail-back');

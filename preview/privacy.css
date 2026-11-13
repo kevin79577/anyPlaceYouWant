@@ -1,5 +1,6 @@
 /* Privacy page: same pearl palette as the explorer, plain reading layout. */
 :root{--ink:#243f3e;--muted:#5c736d;--line:#cfdcd4;--paper:#f9faf4;--lemon:#f1ff52;--todo:#fff4c2}
+@view-transition{navigation:auto}/* crossfade to and from the explorer */
 *{box-sizing:border-box}
 body{margin:0;background:#edf3ed;color:var(--ink);font:16px/1.85 "Microsoft JhengHei","PingFang TC",sans-serif}
 .policy{max-width:760px;margin:0 auto;padding:40px 16px 72px}

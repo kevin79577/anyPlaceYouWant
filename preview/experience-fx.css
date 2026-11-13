@@ -1,0 +1,90 @@
+/* Interaction effects for the explorer: hover, press, click burst, entrances, page transitions.
+   Loaded after experience-ui.css. Purely decorative: removing this file leaves a fully working site.
+   Reduced motion: globe.css already disables every animation/transition on elements; the block at the end covers pseudo-elements. */
+:root{--ease:cubic-bezier(.2,.8,.2,1);--spring:cubic-bezier(.3,1.5,.5,1)}
+
+/* Moving between the explorer and the privacy page crossfades too (cross-document view transition). */
+@view-transition{navigation:auto}
+
+/* ---------- shared timing ---------- */
+.yellow-pill,.begin,.outline-pill,.filter-pills button,.search-moods button,.country-dock button,.primary-nav button,.header-search,.map-controls button,.island-save,.island-open,.all-places,.collection-remove,.detail-actions button,.media-actions button,.media-actions a,.breadcrumbs button,#search-close,#dialog-close,#library-close,.mobile-nav button{transition:transform .28s var(--ease),box-shadow .28s var(--ease),background-color .25s,border-color .25s,color .25s}
+.begin span,.all-places span,.tile-meta>span,.header-search svg,.wordmark em{display:inline-block;transition:transform .35s var(--ease)}
+.tile-photo img,.tile-type{transition:transform .7s var(--ease)}
+.marker-dot{transition:transform .3s var(--spring),box-shadow .3s}
+
+/* Primary pills carry a light sheen that sweeps across on hover (a background layer, so no extra element or positioning). */
+.yellow-pill,.begin{background-image:linear-gradient(110deg,transparent 38%,#ffffffc4 50%,transparent 62%);background-size:260% 100%;background-position:130% 0;background-repeat:no-repeat;transition:transform .28s var(--ease),box-shadow .28s var(--ease),background-position .8s var(--ease)}
+
+/* Pointer-follow glow on cards and the scene window (--mx/--my are set by experience-ui.js). */
+.scene-tile{position:relative}
+.scene-tile::after,.island::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(200px circle at var(--mx,50%) var(--my,50%),#f4ff7a3d,transparent 70%)}
+
+/* ---------- hover (pointer devices only, so touch never gets stuck in a hover state) ---------- */
+@media(hover:hover){
+  .yellow-pill:hover,.begin:hover{transform:translateY(-2px);box-shadow:inset 0 1px 3px #fff,0 12px 30px #cfe04d66;background-position:-40% 0}
+  .begin:hover span,.all-places:hover span{transform:translate(4px,-4px)}
+  .outline-pill:hover,.filter-pills button:hover,.search-moods button:hover{transform:translateY(-2px);background-color:#f6ffc0;border-color:#c9d86a;box-shadow:0 8px 18px #b9cf6a2e}
+  .primary-nav button:not([aria-current]):hover{background-color:#ffffffa6;transform:translateY(-1px)}
+  .country-dock button:not(.active):hover{background-color:#f1ff5259;transform:translateY(-1px)}
+  .header-search:hover{box-shadow:0 0 0 4px #f1ff5240,0 8px 22px #7fa08a26;background-color:#fffffff0}
+  .header-search:hover svg{transform:rotate(-14deg) scale(1.12)}
+  .map-controls button:hover{transform:scale(1.14)}
+  #spin:hover{transform:rotate(120deg) scale(1.14)}
+  #search-close:hover,#dialog-close:hover,#library-close:hover{transform:rotate(90deg)}
+  .island-save:hover,.collection-remove:hover{transform:scale(1.12)}
+  .island-open:hover{transform:scale(1.12);box-shadow:0 0 0 8px #f1ff5247,0 6px 18px #9db0432e}
+  .all-places:hover{background-color:#f1ff9c;box-shadow:0 8px 20px #c5d86a38}
+  .scene-tile:hover{transform:translateY(-4px);box-shadow:0 16px 32px #5c86702b}
+  .scene-tile:hover::after,.island:hover::after{opacity:1}
+  .scene-tile:hover .tile-photo img,.scene-tile:hover .tile-type{transform:scale(1.07)}
+  .scene-tile:hover .tile-meta>span{transform:translateX(4px)}
+  .geo-marker:hover .marker-dot{transform:scale(1.4);box-shadow:0 0 0 9px #f6ff9bb3,0 0 26px #d3e341}
+  .wordmark:hover em{transform:translateX(3px)}
+  .wordmark:hover svg path{animation:fx-draw .7s var(--ease)}
+  .mobile-nav button:hover{transform:translateY(-2px)}
+}
+.wordmark svg path{stroke-dasharray:130}/* path is ~118 long, so it stays fully drawn until the hover redraw */
+
+/* ---------- press and click ---------- */
+.map-controls button:active,.island-open:active,#search-close:active,#dialog-close:active,#library-close:active,.collection-remove:active{transform:scale(.88)}
+/* A ring that expands from the click point; experience-ui.js adds and removes the element. */
+.click-burst{position:fixed;z-index:60;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;border:2px solid #e3f04a;box-shadow:0 0 14px #f1ff52b3,inset 0 0 6px #ffffffd9;animation:fx-burst .55s var(--ease) forwards}
+
+/* ---------- entrances ---------- */
+/* Collection and stories pages: heading, filters, then cards rise in sequence. */
+.saved-panel>*,.stories-page>*{animation:rise .6s var(--ease) backwards}
+.saved-panel>:nth-child(2),.stories-page>:nth-child(2){animation-delay:.07s}
+.saved-panel>:nth-child(3),.stories-page>:nth-child(3){animation-delay:.14s}
+.saved-panel>:nth-child(4),.stories-page>:nth-child(4){animation-delay:.21s}
+.collection-card,.story-suggestions .scene-tile{animation:rise .6s var(--ease) backwards}
+.collection-card:nth-child(1),.story-suggestions .scene-tile:nth-child(1){animation-delay:.16s}
+.collection-card:nth-child(2),.story-suggestions .scene-tile:nth-child(2){animation-delay:.22s}
+.collection-card:nth-child(3),.story-suggestions .scene-tile:nth-child(3){animation-delay:.28s}
+.collection-card:nth-child(4){animation-delay:.34s}.collection-card:nth-child(5){animation-delay:.4s}.collection-card:nth-child(n+6){animation-delay:.46s}
+.empty-orbit{animation:fx-float 4.5s ease-in-out infinite}
+/* Dialog contents follow the dialog's own lift. */
+.search-dialog[open]>*,.destination-dialog[open] .destination-body>*{animation:rise .55s var(--ease) backwards}
+.search-dialog[open]>:nth-child(2),.destination-dialog[open] .destination-body>:nth-child(2){animation-delay:.06s}
+.search-dialog[open]>:nth-child(3),.destination-dialog[open] .destination-body>:nth-child(3){animation-delay:.12s}
+.search-dialog[open]>:nth-child(4),.destination-dialog[open] .destination-body>:nth-child(4){animation-delay:.18s}
+.search-dialog[open]>:nth-child(n+5),.destination-dialog[open] .destination-body>:nth-child(n+5){animation-delay:.24s}
+.vt-back .search-dialog[open]>*{animation:none}/* returning from a detail: the reverse morph already carries the motion */
+/* Desktop place panel slides in from the right; toasts pop up. */
+@media(min-width:701px){.place-library:not([hidden]){animation:fx-panel .6s var(--ease) backwards}}
+.undo-toast:not([hidden]){animation:fx-toast .45s var(--spring) backwards}
+/* Count badges bump when a cluster forms. */
+.geo-marker.cluster::after{animation:pop .45s var(--spring)}
+
+/* ---------- page transitions (View Transitions API, see withTransition in experience-ui.js) ---------- */
+::view-transition-old(root){animation:.24s ease both fx-vt-out}
+::view-transition-new(root){animation:.5s var(--ease) both fx-vt-in}
+
+@keyframes fx-draw{from{stroke-dashoffset:130}}
+@keyframes fx-burst{from{transform:scale(.4);opacity:.95}to{transform:scale(4.6);opacity:0}}
+@keyframes fx-float{50%{transform:translateY(-7px) rotate(8deg)}}
+@keyframes fx-panel{from{opacity:0;transform:translateX(26px)}}
+@keyframes fx-toast{from{opacity:0;transform:translateY(14px) scale(.94)}}
+@keyframes fx-vt-out{to{opacity:0;transform:scale(1.012)}}
+@keyframes fx-vt-in{from{opacity:0;transform:translateY(14px) scale(.99)}}
+
+@media(prefers-reduced-motion:reduce){*::before,*::after{animation:none!important;transition:none!important}.scene-tile::after,.island::after{display:none}}

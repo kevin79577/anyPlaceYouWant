@@ -103,7 +103,8 @@
   function back(){if(current.index>0)history.back();else navigate(lastExplore.view,lastExplore.id,{replace:true});}
   function chooseCountry(k){if(!countries[k])return;rememberEntry();navigate('country',k,{keepCamera:true});busy=true;G.flyTo(k);busy=false;syncCountry();}
   function showLocations(){const d=byId(G.getState().selected);navigate('locations',key(d),{keepCamera:true});}
-  function openPlace(id){if(!byId(id))return;detailParent=current.view==='search'?'search':current.view==='saved'?'saved':current.view==='stories'?'stories':current.view==='locations'?'locations':'country';rememberEntry();navigate('place',id);}
+  let watchDirect=false;// the stream was opened straight from the map or list, with no detail page underneath in history
+  function openPlace(id,watch=false){if(!byId(id))return;detailParent=current.view==='search'?'search':current.view==='saved'?'saved':current.view==='stories'?'stories':current.view==='locations'?'locations':'country';rememberEntry();watchDirect=watch;navigate(watch?'watch':'place',id);if(watch)window.SomewhereMedia?.play();}
   function showSearch(query=''){searchLimit=24;navigate('search','',{query});$('#global-query').focus();}
   // Every place in a country shares one mood image, so non-representative places get a typographic tile instead of a misleading photo.
   function typeTile(p){
@@ -118,20 +119,18 @@
     $('#detail-back-label').textContent=({home:'返回全球探索',saved:'返回我的收藏',search:'返回搜尋結果',locations:'返回地點總覽',stories:'返回近期分享'})[detailParent]||'返回國家探索';
     $('#detail-coordinates').textContent=d.coordinatePrecision+' '+d.point[1].toFixed(3)+'° N / '+d.point[0].toFixed(3)+'° E';
   }
-  function enterWatch(){navigate('watch',G.getState().selected);window.SomewhereMedia?.play();}
-  function leaveWatch(){if(current.view==='watch')back();else{window.SomewhereMedia?.close();$('#destination-dialog').classList.remove('watching');$('#watch-return').hidden=true;}}
-  function card(p,action='place'){
+  function enterWatch(){watchDirect=false;navigate('watch',G.getState().selected);window.SomewhereMedia?.play();}
+  function leaveWatch(){if(current.view==='watch'){if(watchDirect){watchDirect=false;navigate('place',current.id,{replace:true});}else back();}else{window.SomewhereMedia?.close();$('#destination-dialog').classList.remove('watching');$('#watch-return').hidden=true;}}
+  function card(p){
     const visual=p.id===key(p)?`<img src="${esc(p.image)}" alt="${esc(p.alt)}" loading="lazy"><span>風景示意</span>`:typeTile(p);
-    return `<button class="scene-tile" data-${action}="${esc(p.id)}"><div class="tile-photo">${visual}</div><div class="tile-copy"><small>${esc(p.country)} / ${esc(p.region||'旅遊靈感')}</small><strong>${esc(p.name)}</strong><span class="tile-meta">${p.sourceCount||1} 個來源入口 <span>候選・待確認 ↗</span></span></div></button>`;
+    return `<button class="scene-tile" data-place="${esc(p.id)}"><div class="tile-photo">${visual}</div><div class="tile-copy"><small>${esc(p.country)} / ${esc(p.region||'旅遊靈感')}</small><strong>${esc(p.name)}</strong><span class="tile-meta">${p.sourceCount||1} 個來源入口 <span>候選・待確認 ↗</span></span></div></button>`;
   }
   function decorateLibrary(filtered){
     const list=$('#place-list'),scroll=list.scrollTop||0,isFull=current.view==='locations';
     // Desktop: the scene window already shows the selected place, so the unfiltered country list skips it (mobile hides that window).
     const mobile=matchMedia('(max-width:700px)').matches,unfiltered=!$('#place-query').value.trim()&&!$('#place-region').value&&!mobile,sel=G.getState().selected;
     const shown=isFull?filtered:(unfiltered?filtered.filter(p=>p.id!==sel):filtered).slice(0,3);
-    // Cards open the detail where no scene window is visible (full list, mobile); in the desktop country view they retarget the scene window.
-    const action=isFull||mobile?'place':'location';
-    list.innerHTML=shown.length?shown.map(p=>card(p,action)).join(''):'<div class="library-empty"><h3>換個關鍵字，再出發。</h3><p>這個區域尚無符合的地點。</p><button data-clear-library class="outline-pill">清除篩選</button></div>';
+    list.innerHTML=shown.length?shown.map(p=>card(p)).join(''):'<div class="library-empty"><h3>換個關鍵字，再出發。</h3><p>這個區域尚無符合的地點。</p><button data-clear-library class="outline-pill">清除篩選</button></div>';
     list.scrollTop=scroll;list.classList.toggle('catalogue-grid',isFull);
     if(!isFull)$('#library-count').textContent=`${filtered.length} 個符合地點 · 先看看這 ${shown.length} 個風景入口`;
     syncCountry();
@@ -172,7 +171,7 @@
   window.SomewhereExperience={
     chooseCountry,openPlace,showLocations,showSearch,showSaved:()=>navigate('saved'),decorateLibrary,savedRendered,savedChanged,typeTile,closeDetailView,
     nextPlace:()=>{const others=places.filter(p=>p.id!==G.getState().selected);navigate('place',others[Math.floor(Math.random()*others.length)].id,{replace:true});},
-    chooseMarker:id=>{const p=byId(id);if(!p)return;if(current.view==='home')chooseCountry(key(p));else if(['country','locations'].includes(current.view)&&key(byId(G.getState().selected))===key(p)){rememberEntry();G.flyTo(id);}else openPlace(id);},
+    chooseMarker:id=>{const p=byId(id);if(!p)return;if(current.view==='home')chooseCountry(key(p));else openPlace(id,true);},// inside a country a place marker opens its stream directly
     selectionChanged(d){if(busy)return;if(['home','country','locations'].includes(current.view)){const nextKey=key(d);if(G.getState().focused&&(current.view==='home'||current.id!==nextKey)){navigate('country',nextKey,{keepCamera:true,replace:current.view==='home'});rememberEntry();}else syncCountry();}},
     detailsOpened(d){if(!busy){detailParent=current.view;navigate('place',d.id);}configureDetail();},
     mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:current.view==='home'?.48:.35};
@@ -185,15 +184,15 @@ return {x:current.view==='locations'?.77:current.view==='country'?(window.innerW
   $('#nav-explore').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));
   $('#nav-stories').addEventListener('click',()=>withTransition(()=>navigate('stories')));
   $('#nav-saved').addEventListener('click',()=>withTransition(()=>navigate('saved')));
-  $('#header-search').addEventListener('click',()=>showSearch());
-  $('#breadcrumb-world').addEventListener('click',()=>navigate('home'));
-  $('#breadcrumb-country').addEventListener('click',()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true}));
-  $('#all-places').addEventListener('click',showLocations);
+  $('#header-search').addEventListener('click',()=>withTransition(()=>showSearch()));
+  $('#breadcrumb-world').addEventListener('click',()=>withTransition(()=>navigate('home')));
+  $('#breadcrumb-country').addEventListener('click',()=>withTransition(()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true})));
+  $('#all-places').addEventListener('click',()=>withTransition(showLocations));
   $('#library-toggle').addEventListener('click',showLocations);
-  $('#library-close').addEventListener('click',()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true}));
-  $('#saved-close').addEventListener('click',()=>navigate(lastExplore.view,lastExplore.id));
-  $('#saved-start').addEventListener('click',()=>navigate('home'));
-  $('#stories-back').addEventListener('click',()=>navigate(lastExplore.view,lastExplore.id));
+  $('#library-close').addEventListener('click',()=>withTransition(()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true})));
+  $('#saved-close').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));
+  $('#saved-start').addEventListener('click',()=>withTransition(()=>navigate('home')));
+  $('#stories-back').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));
   $('#stories-explore').addEventListener('click',()=>chooseCountry($('#stories-country').value||'japan'));
   $('#stories-country').addEventListener('change',renderStories);
   $('#skip-entry').addEventListener('click',()=>{G.finishFlight();rememberEntry();});
@@ -218,8 +217,8 @@ return {x:current.view==='locations'?.77:current.view==='country'?(window.innerW
   $('#sheet-handle').addEventListener('pointercancel',()=>{sheetPointer=undefined;sheetDragged=false;});
   document.addEventListener('click',e=>{
     const button=e.target.closest('button');if(!button)return;
-    if(button.dataset.place){morphFrom=button.dataset.place;withTransition(()=>openPlace(button.dataset.place),button.querySelector('.tile-photo'));}
-    if(button.dataset.location)window.SomewhereExperience.chooseMarker(button.dataset.location);
+    // Cards in the country/place list open the stream directly; search, saved and story cards open the detail page.
+    if(button.dataset.place){morphFrom=button.dataset.place;const watch=!!button.closest('#place-list');withTransition(()=>openPlace(button.dataset.place,watch),button.querySelector('.tile-photo'));}
     if(button.hasAttribute('data-saved-country')){savedCountry=button.dataset.savedCountry;G.refreshSaved();}
     if(button.dataset.removeSave)G.toggleSave(button.dataset.removeSave);
     if(button.hasAttribute('data-search-country')){searchCountry=button.dataset.searchCountry;searchLimit=24;renderSearch();}
@@ -230,8 +229,13 @@ return {x:current.view==='locations'?.77:current.view==='country'?(window.innerW
     if(button.dataset.mobileNav){const section=button.dataset.mobileNav;withTransition(()=>section==='explore'?navigate(lastExplore.view,lastExplore.id):navigate(section));}
   });
   // The logo returns home without reloading, preserving local navigation context.
-  $('.wordmark').addEventListener('click',e=>{e.preventDefault();navigate('home');});
+  $('.wordmark').addEventListener('click',e=>{e.preventDefault();withTransition(()=>navigate('home'));});
   $('#reset').addEventListener('click',()=>navigate('home','',{keepCamera:true}));
+  // Decorative pointer effects, skipped when motion is off (CSS reads --mx/--my for the glow; .click-burst is styled in experience-ui.css).
+  const fxOK=()=>G.getState().motionEnabled&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('pointermove',e=>{const t=e.target.closest?.('.scene-tile,.island');if(!t)return;const r=t.getBoundingClientRect();t.style.setProperty('--mx',e.clientX-r.left+'px');t.style.setProperty('--my',e.clientY-r.top+'px');},{passive:true});
+  document.addEventListener('pointerdown',e=>{if(!fxOK()||!e.target.closest?.('button,a'))return;const burst=document.createElement('span');burst.className='click-burst';burst.style.left=e.clientX+'px';burst.style.top=e.clientY+'px';
+    (e.target.closest('dialog[open]')||document.body).append(burst);burst.addEventListener('animationend',()=>burst.remove());},{passive:true});// inside a modal dialog the burst must live in the dialog (top layer)
   window.addEventListener('popstate',e=>{if(e.state?.flow)apply(e.state,{restore:true});});
   let motionFrame;
   function watchMotion(){const s=G.getState(),hidden=!s.flying||s.focusMix>=.98;if($('#skip-entry').hidden!==hidden)$('#skip-entry').hidden=hidden;if(!seenEntry&&s.flying&&s.focusMix>=.98)rememberEntry();motionFrame=requestAnimationFrame(watchMotion);}

@@ -28,6 +28,9 @@
   }
 
   function create(from, destination, options = {}) {
+    // Snapshot the start: globe.js passes its live camera state, which it then overwrites every frame with our samples.
+    // Reading it live compounded the rotation (100+ turns instead of two) and finished the zoom early.
+    from = {lon: from.lon, lat: from.lat, zoom: from.zoom, focusMix: from.focusMix, focused: from.focused};
     const mode = options.mode || (from.focused ? 'direct' : 'intro');
     const duration = options.reducedMotion ? 0 : options.duration ?? (mode === 'intro' ? 5000 : 1100);
     const toZoom = options.zoom ?? (options.mobile ? 2.3 : 2.6);// options.zoom: cluster zoom-in keeps its own target scale
