@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>漫見｜完整操作與視覺提案</title>
+  <link rel="stylesheet" href="journey.css?v=journey-08">
+</head>
+<body>
+  <header class="intro">
+    <div><p class="kicker">SOMEWHERE / EXPERIENCE REIMAGINED / 08</p><h1>讓每一次心動，<em>自然抵達。</em></h1><p class="lead">一張地圖，串起探索、現場影像、天氣與旅行靈感。<br>保留光感浮島的驚喜，讓每一步都知道往哪裡走。</p></div>
+    <div class="edition"><span>10</span><p>組完整預覽<br>桌面・手機・例外狀態</p></div>
+  </header>
+  <div class="notice"><span class="dot"></span><p>這是新版操作流程與 AI 視覺提案；圖內影像、天氣、貼文皆為示意，尚未套用到互動版。</p><a href="experience.html?v=flow-10" target="_blank" rel="noopener">既有互動版 ↗</a></div>
+  <nav class="view-tabs" aria-label="預覽顯示方式"><button data-view="detail" aria-pressed="true">逐頁看設計</button><button data-view="overview" aria-pressed="false">全部預覽圖</button><button data-view="flow" aria-pressed="false">操作流程圖</button><span>全球 → 國家 → 地點 → 觀看</span></nav>
+  <main>
+    <section id="detail-view" class="detail-layout" aria-label="逐頁設計預覽">
+      <nav id="screen-nav" class="screen-nav" aria-label="選擇操作畫面"></nav>
+      <div class="screen-main">
+        <header class="screen-heading"><div><p id="screen-tag" class="kicker"></p><h2 id="screen-title"></h2></div><div class="paging"><button id="previous" aria-label="上一張預覽">←</button><span id="position" aria-live="polite"></span><button id="next" aria-label="下一張預覽">→</button></div></header>
+        <figure class="stage"><button id="zoom" aria-label="放大目前設計預覽"><img id="hero" alt="" fetchpriority="high"><span class="zoom-label">↗ 放大檢視</span></button></figure>
+        <div class="design-copy"><div><p class="kicker">WHY THIS SCREEN / 操作目的</p><p id="intent"></p><div id="next-links" class="next-links"></div></div><div><p class="kicker">INTERACTION / 流暢的關鍵</p><p id="interaction"></p><a id="original" target="_blank" rel="noopener">開啟原始圖片 ↗</a></div></div>
+      </div>
+    </section>
+    <section id="overview-view" hidden aria-label="全部預覽圖"><div class="section-heading"><p class="kicker">THE COMPLETE PICTURE</p><h2>從第一眼，到下一次出發。</h2><p>點選任一張，回到對應的畫面與操作說明。</p></div><div id="overview-grid" class="overview-grid"></div></section>
+    <section id="flow-view" hidden aria-label="完整操作流程"><div class="section-heading"><p class="kicker">ONE MAP. ONE CONTINUOUS JOURNEY.</p><h2>探索不必一直重新開始。</h2><p>點擊流程節點，查看對應設計；返回時保留國家、位置、篩選與清單捲動。</p></div>
+      <div class="flow-scroll"><svg viewBox="0 0 1040 440" role="img" aria-labelledby="flow-title flow-desc"><title id="flow-title">漫見完整操作流程</title><desc id="flow-desc">從全球到國家、地點總覽、景點詳情與觀看影像；搜尋、近期分享、收藏都可以回到景點，錯誤狀態可恢復。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#7a9992"/></marker></defs><g fill="none" stroke="#a6bdb6" stroke-width="1.5" marker-end="url(#arrow)"><path d="M192 164H226M388 164H422M584 164H618M780 164H814"/><path d="M111 112V62H699V112M503 112V62M307 216V270H699V216M699 216V352H895V216"/></g>
+      <g class="flow-node" data-screen="world" role="link" tabindex="0" aria-label="查看全球探索"><title>從地球與國家入口開始探索</title><rect x="30" y="112" width="162" height="104"/><text x="52" y="144" class="tiny">01 / DISCOVER</text><text x="52" y="179">全球探索</text></g>
+      <g class="flow-node" data-screen="country" role="link" tabindex="0" aria-label="查看國家探索"><title>保留地球背景，以單一面板探索國家</title><rect x="226" y="112" width="162" height="104"/><text x="248" y="144" class="tiny">02 / COUNTRY</text><text x="248" y="179">國家探索</text></g>
+      <g class="flow-node" data-screen="locations" role="link" tabindex="0" aria-label="查看地點總覽"><title>利用區域、關鍵字和地圖篩選一國多地點</title><rect x="422" y="112" width="162" height="104"/><text x="444" y="144" class="tiny">03 / PLACES</text><text x="444" y="179">地點總覽</text></g>
+      <g class="flow-node accent" data-screen="place" role="link" tabindex="0" aria-label="查看景點詳情"><title>整合景點影像、天氣、來源及收藏入口</title><rect x="618" y="112" width="162" height="104"/><text x="640" y="144" class="tiny">05 / DESTINATION</text><text x="640" y="179">景點詳情</text></g>
+      <g class="flow-node" data-screen="watch" role="link" tabindex="0" aria-label="查看沉浸觀看"><title>保持完整播放器並提供切換來源及返回地點</title><rect x="814" y="112" width="162" height="104"/><text x="836" y="144" class="tiny">06 / WATCH</text><text x="836" y="179">沉浸觀看</text></g>
+      <g class="flow-node small" data-screen="search" role="link" tabindex="0" aria-label="查看全域搜尋"><title>搜尋直接抵達景點，不必逐層進入</title><rect x="270" y="32" width="160" height="60"/><text x="290" y="69">04 全域搜尋</text></g>
+      <g class="flow-node small" data-screen="stories" role="link" tabindex="0" aria-label="查看近期分享"><title>以近期分享補充旅遊靈感，再回到相關景點</title><rect x="280" y="240" width="160" height="60"/><text x="300" y="277">07 近期分享</text></g>
+      <g class="flow-node small" data-screen="saved" role="link" tabindex="0" aria-label="查看我的收藏"><title>收藏留在此裝置，隨時回到原景點</title><rect x="470" y="240" width="160" height="60"/><text x="490" y="277">08 我的收藏</text></g>
+      <g class="flow-node small" data-screen="states" role="link" tabindex="0" aria-label="查看例外狀態"><title>載入、搜尋空結果、影像失效、天氣失效都有恢復操作</title><rect x="750" y="322" width="200" height="60"/><text x="770" y="359">09 例外狀態與恢復</text></g>
+      <text x="32" y="394" class="flow-foot">手機版沿用相同流程，資訊改成可拖曳底部面板。</text></svg></div>
+      <div class="principles"><article><span>01</span><h3>一次，只做一個選擇。</h3><p>只打開當前需要的面板，地圖與清單互相對應。</p></article><article><span>02</span><h3>看風景，也看得懂資料。</h3><p>天氣時間、估算性質與來源狀態一起呈現。</p></article><article><span>03</span><h3>前進有驚喜，返回有記憶。</h3><p>入場兩圈五秒可略過；國家間走最短路徑，頁面返回保留上下文。</p></article></div>
+    </section>
+  </main>
+  <footer>漫見 somewhere · 光感浮島 / 操作與視覺重整 08 <span>AI 圖中文字可能偏離規格；導覽統一為探索／近期分享／我的收藏，不含會員或行程規劃。</span></footer>
+  <dialog id="lightbox" aria-label="設計預覽大圖"><div class="lightbox-toolbar"><p id="zoom-title"></p><button id="close-zoom" aria-label="關閉大圖">關閉 ✕</button></div><img id="zoom-image" alt=""><p class="lightbox-note">可捲動檢視原尺寸圖片；按 Esc 關閉。</p></dialog>
+  <script src="journey.js?v=journey-08"></script>
+</body></html>

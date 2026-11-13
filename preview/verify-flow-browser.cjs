@@ -1,0 +1,131 @@
+/* Run with PLAYWRIGHT_MODULE pointing to an installed playwright-core package.
+   Optional CHROME_PATH uses an installed Chrome/Edge instead of Playwright's downloaded browser. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright-core');
+const origin=process.env.PREVIEW_ORIGIN||'http://127.0.0.1:4173';
+const output=path.join(__dirname,'../tmp/flow-qa');fs.mkdirSync(output,{recursive:true});
+// QA screenshots wait for view transitions and dialog animations (max ~0.6s) to settle.
+const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join(output,name)}));
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined});const errors=[];
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1000}});
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(origin+'/experience.html?v=flow-10');
+  await page.waitForFunction(()=>window.SomewhereGlobe?.getState().flying);
+  assert.equal(await page.locator('#skip-entry').isVisible(),true);
+  await page.click('#skip-entry');
+  assert.equal(await page.evaluate(()=>SomewhereGlobe.getState().flying),false);
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='country');
+  await shot(page,'01-country.png');
+  console.log('通過：首頁入場、略過、進入國家探索。');
+  await page.click('[data-destination="taiwan"]');
+  await page.waitForFunction(()=>!SomewhereGlobe.getState().flying);
+  await page.click('#all-places');
+  assert.equal(await page.locator('#place-list [data-place]').count(),118);
+  await page.fill('#place-query','高美濕地');
+  assert.equal(await page.locator('#place-list [data-place]').count(),1);
+  await shot(page,'02-locations.png');
+  await page.click('#place-list [data-place]');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');// view transitions apply on the next frame
+  assert.equal(await page.locator('#destination-dialog').isVisible(),true);
+  assert.match(await page.locator('#detail-title').textContent(),/高美/);
+  await shot(page,'03-place.png');
+  await page.click('#detail-save');
+  await page.click('#detail-back');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');
+  assert.equal(await page.locator('#place-query').inputValue(),'高美濕地');
+  assert.equal(await page.locator('#place-list [data-place]').count(),1);
+  console.log('通過：118 個台灣地點、篩選、景點、收藏及返回保留篩選。');
+  await page.click('#nav-saved');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='saved');
+  assert.equal(await page.locator('#saved-list .collection-card').count(),1);
+  await page.click('[data-remove-save]');
+  assert.equal(await page.locator('#undo-toast').isVisible(),true);
+  await page.click('#undo-save');
+  assert.equal(await page.locator('#saved-list .collection-card').count(),1);
+  await shot(page,'04-saved.png');
+  console.log('通過：收藏清單、移除與復原。');
+  await page.click('#header-search');
+  await page.fill('#global-query','海邊');
+  assert.ok(await page.locator('#global-results [data-place]').count()>0);
+  await page.click('[data-search-country="thailand"]');
+  const matches=await page.evaluate(()=>SomewhereExperience.searchMatches('海邊').map(p=>p.countryKey));
+  assert.ok(matches.every(k=>k==='thailand'));
+  await page.fill('#global-query','找不到這個地方123');
+  assert.equal(await page.locator('#clear-search').isVisible(),true);
+  await page.click('#clear-search');
+  assert.ok(await page.locator('#global-results [data-place]').count()>0);
+  await page.fill('#global-query','廣安里');
+  await shot(page,'05-search.png');
+  await page.click('#global-results [data-place]');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');
+  await page.waitForTimeout(700);// let the open morph finish before closing
+  await page.click('#detail-back');
+  // Reverse morph: the detail hero shrinks back into the card it was opened from.
+  await page.waitForFunction(()=>document.getAnimations().some(a=>String(a.effect?.pseudoElement).includes('view-transition-group(place-photo)')));
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='search');
+  assert.equal(await page.locator('#global-query').inputValue(),'廣安里');
+  await page.click('#search-close');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='saved');
+  console.log('通過：跨國情境搜尋、空結果、清除及搜尋返回記憶。');
+  await page.click('#nav-stories');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='stories');
+  await page.selectOption('#stories-country','taiwan');await page.click('[data-period="30"]');
+  assert.match(await page.locator('#stories-empty-copy').textContent(),/台灣最近 30 天/);
+  assert.equal(await page.locator('#stories-suggestions [data-place]').count(),3);
+  await shot(page,'06-stories.png');
+  console.log('通過：近期分享篩選與未串接的真實空狀態。');
+  // Fail the provider request deliberately to verify the visible recovery flow.
+  await page.route('**/www.youtube.com/iframe_api',route=>route.abort());
+  await page.evaluate(()=>SomewhereExperience.openPlace('korea'));
+  await page.click('#watch-start');
+  await page.waitForFunction(()=>SomewhereMedia.getState().status==='error');
+  assert.equal(await page.locator('#destination-dialog.watching').isVisible(),true);
+  assert.equal(await page.locator('#media-original').isVisible(),true);
+  assert.equal(await page.locator('#media-source').isVisible(),true);
+  await shot(page,'07-watch-error.png');
+  await page.click('#watch-return');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');
+  assert.equal(await page.locator('#destination-dialog.watching').count(),0);
+  await page.click('#detail-back');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='stories');
+  console.log('通過：觀看、播放器失敗恢復、原站入口與返回。');
+  // Cluster clicks: a single-region cluster filters the list; a mixed cluster resets the filter and opens the full list.
+  const clusters=await browser.newPage({viewport:{width:1440,height:900}});
+  clusters.on('pageerror',e=>errors.push(e.message));
+  await clusters.goto(origin+'/experience.html?v=flow-10#country/japan');
+  await clusters.waitForFunction(()=>window.SomewhereExperience?.getState().view==='country'&&!SomewhereGlobe.getState().flying);
+  await clusters.waitForTimeout(900);
+  // Hidden markers keep their last cluster data, so only match visible ones.
+  const single=clusters.locator('.geo-marker.cluster:not([hidden]):not([data-region=""])').first();
+  const region=await single.getAttribute('data-region');
+  await single.click();
+  assert.equal(await clusters.locator('#place-region').inputValue(),region);
+  await clusters.click('.geo-marker.cluster:not([hidden])[data-region=""]');
+  await clusters.waitForFunction(()=>SomewhereExperience.getState().view==='locations');
+  assert.equal(await clusters.locator('#place-region').inputValue(),'','mixed cluster must clear the region filter');
+  console.log(`通過：同地區聚合點篩選「${region}」，跨地區聚合點清除篩選並開啟全部地點。`);
+  const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  mobile.on('pageerror',e=>errors.push(e.message));
+  await mobile.goto(origin+'/experience.html?v=flow-10#country/taiwan');
+  await mobile.waitForFunction(()=>window.SomewhereExperience?.getState().view==='country');
+  await mobile.click('#sheet-handle');
+  assert.equal(await mobile.locator('#world.sheet-expanded').count(),1);
+  await shot(mobile,'08-mobile-country.png');
+  await mobile.click('#place-list [data-place] >> nth=0');
+  await mobile.waitForFunction(()=>SomewhereExperience.getState().view==='place');
+  assert.equal(await mobile.locator('#destination-dialog').isVisible(),true);
+  await shot(mobile,'09-mobile-place.png');
+  await mobile.click('#detail-back');
+  await mobile.waitForFunction(()=>SomewhereExperience.getState().view==='country');
+  assert.equal(await mobile.locator('#sheet-handle').getAttribute('aria-expanded'),'true');
+  await mobile.click('[data-mobile-nav="saved"]');
+  await mobile.waitForFunction(()=>SomewhereExperience.getState().view==='saved');
+  assert.equal(await mobile.locator('#saved-panel').isVisible(),true);
+  assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  console.log('通過：手機底部面板、景點、返回與收藏導覽。');
+  assert.deepEqual(errors,[]);
+  console.log('完成：8 組實際瀏覽器流程驗證，無未處理 JavaScript 錯誤。');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

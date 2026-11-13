@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>漫見 somewhere — 世界座標科技視覺提案</title>
+  <meta name="description" content="漫見旅遊探索設計預覽，包含光感浮島首頁、景點詳情、近期分享與收藏頁。">
+  <link rel="stylesheet" href="styles.css?v=journey-08">
+</head>
+<body>
+  <header class="studio">
+    <a class="studio-brand" href="#journey"><span class="studio-mark">S.</span><span>漫見 <small>DESIGN EXPLORATIONS / LIQUID GLASS</small></span></a>
+    <nav aria-label="切換視覺提案" id="design-tabs">
+      <button data-design="journey">08 <span>全流程・新版提案</span></button>
+      <button data-design="cinema">01 <span>午夜放映室</span></button>
+      <button data-design="journal">02 <span>風景通信</span></button>
+      <button data-design="atlas">03 <span>世界座標</span></button>
+      <button data-design="play">04 <span>出走俱樂部</span></button>
+      <button data-design="technology">NEW <span>世界座標・科技版</span></button>
+      <button data-design="glasspages">PAGES <span>光感浮島・內頁</span></button>
+      <button data-design="experience">TRY <span>光感浮島・互動版</span></button>
+    </nav>
+    <button class="compare-button" id="compare">提案總覽 ↗</button>
+  </header>
+  <aside class="design-note"><span id="note-number">DIRECTION 01</span><p id="note-text"></p><span class="demo-label">視覺原型 · AI 情境圖片 · 非即時影像</span></aside>
+  <a class="live-preview-link" href="experience.html?v=flow-10">↗ 開啟光感浮島・新版完整互動網站 <small>FLOW 10 · 國家、地點、天氣、觀看、搜尋與收藏</small></a>
+  <main id="app"></main>
+  <footer class="studio-footer"><span>漫見 somewhere / 視覺設計研究</span><span>日本 · 韓國 · 台灣 · 泰國</span><span>設計圖資料皆為示意；互動版的影像來源與天氣依各區塊標示。</span></footer>
+  <dialog id="detail"><button class="dialog-close" aria-label="關閉">✕</button><div id="detail-content"></div></dialog>
+  <dialog id="concept-lightbox"><button class="dialog-close" aria-label="關閉大圖">✕</button><img id="concept-full" alt=""><p>AI 網頁概念圖 · 圖內內容與日期為示意 · 動效尚未實作</p></dialog>
+  <dialog id="overview"><button class="dialog-close" aria-label="關閉">✕</button><p class="eyebrow">WAYS TO SEE THE WORLD</p><h2>選一種，開始看世界。</h2><div class="overview-grid"></div></dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js?v=flow-10"></script>
+</body></html>
