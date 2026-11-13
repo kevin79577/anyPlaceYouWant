@@ -10,7 +10,7 @@ const cases=[
   ['home',1440,900],['home',1280,800],['home',1280,720],['home',1024,768],['home',1920,1080],
   ['country/taiwan',800,700],['country/taiwan',1024,768],['country/taiwan',1100,720],['country/taiwan',1440,900],
   ['country/japan',1024,768],['country/japan',1100,720],['country/japan',1280,720],['country/japan',1440,800],['country/japan',1440,900],
-  ['country/korea',900,760],['country/thailand',1024,768]
+  ['country/korea',900,760],['country/korea',1280,800],['country/korea',1440,900],['country/thailand',1024,768]
 ];
 // Elements the scene window must stay clear of; markers are checked separately (dot always, label only while visible).
 const guarded={hint:'#map-hint',footer:'.map-footer',heading:'#country-heading',summary:'#country-summary',dock:'.country-dock',library:'#place-library',intro:'.intro'};
@@ -23,6 +23,8 @@ const guarded={hint:'#map-hint',footer:'.map-footer',heading:'#country-heading',
       await page.goto(`${origin}/experience.html?v=flow-10#${route}`);
       await page.waitForFunction(()=>window.SomewhereExperience&&!SomewhereGlobe.getState().flying);
       await page.waitForTimeout(800);// let marker positions and panel transitions settle
+      // A country deep link must focus the camera (#country/korea once stayed at the global view, which also hid an overlap).
+      if(route.startsWith('country/')&&!(await page.evaluate(()=>SomewhereGlobe.getState().focused))){failures.push(`${route} ${width}x${height}`);console.error(`FAIL ${route} ${width}x${height}：鏡頭沒有對焦到國家`);await page.close();continue;}
       const hits=await page.evaluate(guarded=>{
         const box=el=>{if(!el||el.hidden)return null;const s=getComputedStyle(el);if(s.display==='none'||s.visibility==='hidden')return null;const r=el.getBoundingClientRect();return r.width&&r.height?r:null;};
         const hit=(a,b)=>a&&b&&a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;

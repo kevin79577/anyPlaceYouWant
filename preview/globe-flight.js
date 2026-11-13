@@ -29,8 +29,8 @@
 
   function create(from, destination, options = {}) {
     const mode = options.mode || (from.focused ? 'direct' : 'intro');
-    const duration = options.reducedMotion ? 0 : mode === 'intro' ? 5000 : 1100;
-    const toZoom = options.mobile ? 2.3 : 2.6;
+    const duration = options.reducedMotion ? 0 : options.duration ?? (mode === 'intro' ? 5000 : 1100);
+    const toZoom = options.zoom ?? (options.mobile ? 2.3 : 2.6);// options.zoom: cluster zoom-in keeps its own target scale
     // Unwrapped camera angles keep both modes continuous at the date line.
     // Intro has two presentation turns plus the final small alignment;
     // direct mode adds no extra turn and preserves the close-up scale.

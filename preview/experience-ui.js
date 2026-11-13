@@ -52,7 +52,8 @@
     if(state.view!=='search')closeSearch();
     if(state.view==='home'){G.toggleLibrary(false);if(!keepCamera)G.reset();}
     else if(isExplore){
-      if(!keepCamera&&!restore&&key(byId(G.getState().selected))!==state.id)G.restoreCamera({selected:state.id,lon:byId(state.id).point[0],lat:byId(state.id).point[1],zoom:2.6,focusMix:1,focused:true});
+      // The globe starts with korea selected but unfocused, so a #country/korea deep link must still focus the camera.
+      if(!keepCamera&&!restore&&(key(byId(G.getState().selected))!==state.id||!G.getState().focused))G.restoreCamera({selected:state.id,lon:byId(state.id).point[0],lat:byId(state.id).point[1],zoom:2.6,focusMix:1,focused:true});
       G.toggleLibrary(true);syncCountry();lastExplore={view:state.view,id:state.id};
       if(restore&&state.library){$('#place-query').value=state.library.query||'';$('#place-query').dispatchEvent(new Event('input'));$('#place-region').value=state.library.region||'';$('#place-region').dispatchEvent(new Event('change'));$('#place-list').scrollTop=state.library.scroll||0;sheetExpanded=!!state.library.expanded;root.classList.toggle('sheet-expanded',sheetExpanded);$('#sheet-handle').setAttribute('aria-expanded',String(sheetExpanded));}
     }else{
@@ -171,8 +172,11 @@
     chooseMarker:id=>{const p=byId(id);if(!p)return;if(current.view==='home')chooseCountry(key(p));else if(['country','locations'].includes(current.view)&&key(byId(G.getState().selected))===key(p)){rememberEntry();G.flyTo(id);}else openPlace(id);},
     selectionChanged(d){if(busy)return;if(['home','country','locations'].includes(current.view)){const nextKey=key(d);if(G.getState().focused&&(current.view==='home'||current.id!==nextKey)){navigate('country',nextKey,{keepCamera:true,replace:current.view==='home'});rememberEntry();}else syncCountry();}},
     detailsOpened(d){if(!busy){detailParent=current.view;navigate('place',d.id);}configureDetail();},
-    mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:current.view==='home'?.48:.35};// Tablet: .37 lands inside the scene window, so centre the country between the window and the list panel.
-return {x:current.view==='locations'?.77:current.view==='country'?(window.innerWidth<=1100?.5:.37):.67,y:.52};},
+    mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:current.view==='home'?.48:.35};
+// Country: .42 keeps the country right of the scene window (.37 put Korea's south coast under it). Tablets, and zoomed-in views where the country grows wider, centre it
+// between the window and the list (.5); the shift follows zoom (2.6x → 4.6x) so cluster zoom-ins glide instead of jumping.
+const zoomShift=Math.min(1,Math.max(0,(G.getState().zoom-2.6)/2));
+return {x:current.view==='locations'?.77:current.view==='country'?(window.innerWidth<=1100?.5:.42+.08*zoomShift):.67,y:.52};},
     getState:()=>({...current,searchCountry,savedCountry,period,detailParent,sheetExpanded}),searchMatches
   };
   $('#nav-explore').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));

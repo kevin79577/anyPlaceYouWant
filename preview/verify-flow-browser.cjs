@@ -91,7 +91,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.click('#detail-back');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='stories');
   console.log('通過：觀看、播放器失敗恢復、原站入口與返回。');
-  // Cluster clicks: a single-region cluster filters the list; a mixed cluster resets the filter and opens the full list.
+  // Cluster clicks: a single-region cluster filters the list; a mixed cluster resets the filter and zooms in until it splits.
   const clusters=await browser.newPage({viewport:{width:1440,height:900}});
   clusters.on('pageerror',e=>errors.push(e.message));
   await clusters.goto(origin+'/experience.html?v=flow-10#country/japan');
@@ -102,10 +102,12 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   const region=await single.getAttribute('data-region');
   await single.click();
   assert.equal(await clusters.locator('#place-region').inputValue(),region);
+  const zoomBefore=await clusters.evaluate(()=>SomewhereGlobe.getState().zoom);
   await clusters.click('.geo-marker.cluster:not([hidden])[data-region=""]');
-  await clusters.waitForFunction(()=>SomewhereExperience.getState().view==='locations');
+  await clusters.waitForFunction(z=>SomewhereGlobe.getState().zoom>z*2,zoomBefore);
   assert.equal(await clusters.locator('#place-region').inputValue(),'','mixed cluster must clear the region filter');
-  console.log(`通過：同地區聚合點篩選「${region}」，跨地區聚合點清除篩選並開啟全部地點。`);
+  assert.equal(await clusters.evaluate(()=>SomewhereExperience.getState().view),'country','zoom-in stays in the country view');
+  console.log(`通過：同地區聚合點篩選「${region}」，跨地區聚合點清除篩選並放大到那一帶。`);
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
   mobile.on('pageerror',e=>errors.push(e.message));
   await mobile.goto(origin+'/experience.html?v=flow-10#country/taiwan');
