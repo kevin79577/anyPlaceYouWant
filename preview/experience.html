@@ -3,30 +3,34 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>漫見 somewhere — 光感浮島互動探索</title>
-  <meta name="description" content="以光感浮島視覺探索全球，拖曳地球、飛近日韓台泰，展開風景窗口。">
-  <link rel="stylesheet" href="globe.css?v=flow-10">
-  <link rel="stylesheet" href="experience-ui.css?v=flow-10">
-  <link rel="stylesheet" href="experience-fx.css?v=flow-10">
+  <title>任意門 — 打開門，就到了</title>
+  <meta name="description" content="選一個想去的地方，打開門，看看日本、韓國、台灣、泰國現在的樣子。">
+  <link rel="stylesheet" href="globe.css?v=door-3">
+  <link rel="stylesheet" href="experience-ui.css?v=door-3">
+  <link rel="stylesheet" href="experience-fx.css?v=door-3">
+  <link rel="stylesheet" href="door.css?v=door-3">
   <script defer src="vendor/d3.min.js"></script>
   <script defer src="assets/world-data.js"></script>
   <script defer src="assets/world-low-data.js"></script>
-  <script defer src="globe-flight.js?v=flow-10"></script>
-  <script defer src="catalog.js?v=flow-10"></script>
-  <script defer src="weather.js?v=flow-10"></script>
-  <script defer src="media-player.js?v=flow-10"></script>
-  <script defer src="globe.js?v=flow-10"></script>
-  <script defer src="experience-ui.js?v=flow-10"></script>
+  <script defer src="globe-flight.js?v=door-3"></script>
+  <script defer src="catalog.js?v=door-3"></script>
+  <script defer src="weather.js?v=door-3"></script>
+  <script defer src="media-player.js?v=door-3"></script>
+  <script defer src="globe.js?v=door-3"></script>
+  <script defer src="experience-ui.js?v=door-3"></script>
 </head>
 <body>
 <main class="world" id="world" data-page="home">
+  <div class="room" aria-hidden="true"></div>
   <div class="map-surface" id="map-surface">
     <canvas id="globe" tabindex="0" role="application" aria-label="互動全球地圖：拖曳旋轉、滾輪縮放；鍵盤方向鍵旋轉，加減號縮放，Home 返回全球。也可使用國家按鈕。"></canvas>
     <svg id="connection" aria-hidden="true"><path id="connection-path"/></svg>
     <div id="markers" class="markers"></div>
   </div>
+  <div class="door" aria-hidden="true"><i class="door-glow"></i><i class="door-leaf"></i></div>
+  <p class="door-plaque"><span id="door-plaque"></span></p>
   <header class="world-header">
-    <a href="experience.html" class="wordmark" aria-label="漫見首頁（Beta 測試版）">漫見 <em>somewhere</em><span class="beta-badge" aria-hidden="true">BETA</span><svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 17Q58-5 116 9"/></svg></a>
+    <a href="experience.html" class="wordmark" aria-label="任意門首頁（Beta 測試版）">任意門 <em>anywhere door</em><span class="beta-badge" aria-hidden="true">BETA</span><svg viewBox="0 0 120 20" aria-hidden="true"><path d="M2 17Q58-5 116 9"/></svg></a>
     <nav class="primary-nav" aria-label="主要導覽"><button id="nav-explore" aria-current="page">探索</button><button id="nav-stories">近期分享</button><button id="nav-saved">我的收藏 <span id="nav-saved-count">0</span></button></nav>
     <button class="header-search" id="header-search" aria-label="開啟全域搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><span>搜尋地點，或一種心情</span></button>
   </header>
@@ -38,12 +42,11 @@
   <div class="motion-tools glass" aria-label="轉場預覽控制"><button id="motion-toggle" aria-pressed="true"><span id="motion-status">轉場動效：開</span></button><span></span><button id="replay-flight">重播轉場 ↻</button><span></span><button id="library-toggle" aria-expanded="false">地點清單 ☷</button></div>
   <aside id="place-library" class="place-library glass" aria-label="國家內的地點與來源" hidden><button class="sheet-handle" id="sheet-handle" aria-label="展開或收起地點面板" aria-expanded="false"><span></span></button><div class="panel-title"><div><p class="overline">FIND YOUR NEXT WINDOW</p><h2 id="library-title">地點與來源</h2></div><button id="library-close" aria-label="返回國家探索">✕</button></div><p id="library-count" class="panel-note"></p><div class="library-filters"><label class="sr-only" for="place-query">搜尋這個國家的地點</label><input id="place-query" placeholder="搜尋地點、景點或地區…"><label class="sr-only" for="place-region">選擇地區</label><select id="place-region"><option value="">全部地區</option></select></div><div id="place-list" class="place-list"></div><button class="all-places" id="all-places">查看全部地點 <span>↗</span></button><p class="library-disclosure">風景圖為示意；公開影像入口均待播放與即時性驗證。<a href="assets/source-inventory.json" target="_blank" rel="noopener">來源清單 ↗</a></p></aside>
   <section class="intro" id="intro">
-    <p class="overline">A LITTLE CLOSER TO THE WORLD</p>
-    <h1>下一站，<br>跟著感覺走。</h1>
-    <svg class="headline-stroke" viewBox="0 0 210 30" aria-hidden="true"><path d="M4 22Q100-8 203 15" pathLength="1"/></svg>
-    <p class="intro-copy">以地圖開啟旅程，在日本、韓國、台灣、泰國，<br>先看見風景，再決定下一次出發。</p>
-    <button class="begin" id="begin">開始探索 <span>↗</span></button>
-    <div class="chapter"><span>01 — 04</span><span>JAPAN / KOREA<br>TAIWAN / THAILAND</span></div>
+    <p class="overline">ONE DOOR · FOUR COUNTRIES</p>
+    <h1>打開門，<br>就到了。</h1>
+    <p class="intro-copy">選一個想去的地方，看看那裡現在的樣子。</p>
+    <p class="door-ask">想去哪裡？</p>
+    <button class="begin" id="begin">開門</button>
   </section>
   <button class="skip-entry glass" id="skip-entry" hidden>略過轉場 →</button>
   <div class="world-label" aria-hidden="true"><span id="camera-label">GLOBAL VIEW</span><small id="camera-coords">25.0° N / 105.0° E</small></div>

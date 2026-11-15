@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* 任意門: home is a dim room with one door; the world shows through the doorway.
+   Loaded last. #world outranks the page rules in experience-ui.css, including its breakpoints.
+   The doorway (clip on the map) and the frame (.door) share --dt/--dr/--db/--dl, so they open in step. */
+#world{--dw:min(31vw,48vh);--dt:20%;--db:14%;--dl:calc(67% - var(--dw)/2);--dr:calc(33% - var(--dw)/2);--frame:10px;--door-ease:cubic-bezier(.7,0,.2,1);--light:#fff1c2;--room:#12152a;--paper:#f1e9d6}
+#world[data-light=dusk]{--light:#ffb472}
+#world[data-light=night]{--light:#8fb2ff}
+
+.room{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transform:scale(3.4);transform-origin:67% 53%;background:radial-gradient(ellipse 34% 52% at 67% 52%,color-mix(in srgb,var(--light) 16%,transparent),transparent),linear-gradient(var(--room) calc(100% - var(--db)),#0b0d1c 0)}
+#world[data-page=home] .room{opacity:1;transform:none}
+#world[data-page=home]:after{opacity:0}
+
+/* The bright world keeps its own backdrop, so the room can sit behind and around it. */
+.map-surface{background:radial-gradient(ellipse at 3% 5%,#fffaf3 0,transparent 53%),radial-gradient(ellipse at 80% 45%,#d7f0efaa 0,transparent 62%),linear-gradient(135deg,#f4f4e9,#dfefed 75%,#f4f4e9);clip-path:inset(0 0 0 0 round 0 0 0 0)}
+#world[data-page=home] .map-surface{clip-path:inset(var(--dt) var(--dr) var(--db) var(--dl) round var(--dw) var(--dw) 0 0)}
+
+.door{position:absolute;z-index:1;pointer-events:none;inset:calc(-1*var(--frame));border:var(--frame) solid var(--paper);border-bottom-width:0;border-radius:0;opacity:0}
+#world[data-page=home] .door{inset:calc(var(--dt) - var(--frame)) calc(var(--dr) - var(--frame)) var(--db) calc(var(--dl) - var(--frame));border-radius:calc(var(--dw) + var(--frame)) calc(var(--dw) + var(--frame)) 0 0;opacity:1;box-shadow:0 0 110px color-mix(in srgb,var(--light) 42%,transparent),inset 0 0 46px color-mix(in srgb,var(--light) 55%,transparent)}
+/* The leaf stands open against the wall, hinged on the left. */
+.door-leaf{position:absolute;inset:0;border-radius:var(--dw) var(--dw) 0 0;background:linear-gradient(100deg,#efe6d1,#c9bd9f);box-shadow:inset 0 0 0 1px #ffffff55,inset -14px 0 30px #0002;transform-origin:left center;transform:perspective(2600px) rotateY(-104deg)}
+.door-leaf:after{content:"";position:absolute;right:9%;top:55%;width:13px;height:13px;border-radius:50%;background:#a98a4b;box-shadow:0 2px 5px #0005}
+#world:has(#begin:hover,#begin:focus-visible) .door-leaf{transform:perspective(2600px) rotateY(-114deg)}
+#world:not([data-page=home]) .door-leaf,#world:not([data-page=home]) .door-glow{opacity:0}
+
+/* Light from the other side spills across the floor. */
+.door-glow{position:absolute;left:-35%;right:-35%;top:100%;height:22%;background:linear-gradient(color-mix(in srgb,var(--light) 60%,transparent),transparent 88%);clip-path:polygon(20.6% 0,79.4% 0,100% 100%,0 100%);filter:blur(5px)}
+
+.door-plaque{display:none}
+#world[data-page=home] .door-plaque{display:block;position:absolute;z-index:2;left:var(--dl);width:var(--dw);top:calc(var(--dt) - 44px);text-align:center;pointer-events:none}
+.door-plaque span{display:inline-block;padding:8px 14px;border:1px solid #ffffff38;border-radius:4px;background:#1b1f3a;color:var(--paper);font:12px/1 ui-monospace,Consolas,monospace;letter-spacing:1.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Left column: headline, destination, one action. Anchored from the bottom so the dock always fits between the question and the button. */
+/* Walking through: the camera pushes in on the doorway, so the room (wall, floor, words, leaf) grows past the edges of the screen. */
+#world .intro{top:auto;bottom:16%;left:6%;width:40%;transform-origin:150% 45%}
+
+#world:not([data-page=home]) .intro{transform:scale(3.4);opacity:0}
+#world .intro .overline{color:#8f97bd}
+#world .intro h1{color:#f6f1e4;margin-top:16px}
+#world .intro-copy{color:#aab0cc;font-size:14px;margin-top:14px}
+.door-ask{font:17px/1.6 "PMingLiU","Noto Serif TC",serif;letter-spacing:2px;color:var(--paper);margin:30px 0 78px}
+#world .begin{display:inline-block;margin:0;padding:15px 46px 15px 54px;border:0;border-radius:40px;background:var(--light);color:#12152a;font-size:16px;letter-spacing:8px;box-shadow:0 0 44px color-mix(in srgb,var(--light) 45%,transparent)}
+#world[data-page=home] .country-dock{position:absolute;left:6%;top:auto;bottom:calc(16% + 68px);transform:none;background:#1b1f3acc;border:1px solid #ffffff2e;box-shadow:none}
+#world[data-page=home] .country-dock button{color:#d5d9ec}
+#world[data-page=home] .country-dock button.active{background:var(--paper);color:#12152a;box-shadow:none}
+
+/* Room chrome: light text on the dark wall; map tools wait on the other side of the door. */
+#world[data-page=home] .world-header{background:#1b1f3a99;border-color:#ffffff24;box-shadow:none}
+#world[data-page=home] .wordmark{color:#f6f1e4}
+#world[data-page=home] .wordmark svg{stroke:var(--light)}
+#world[data-page=home] .beta-badge{background:var(--paper)}
+#world[data-page=home] .primary-nav button{color:#b9bfda}
+#world[data-page=home] .primary-nav button[aria-current=page]{background:var(--paper);color:#12152a;box-shadow:none}
+#world[data-page=home] .header-search{background:#ffffff14;border-color:#ffffff2e;color:#b9bfda}
+#world[data-page=home] .map-footer{color:#7f86a8}
+#world[data-page=home] .mobile-nav{background:#1b1f3af0;border-color:#ffffff2e;box-shadow:none}
+#world[data-page=home] .mobile-nav button{color:#aab0cc}
+#world[data-page=home] .mobile-nav button[aria-current=page]{background:var(--paper);color:#12152a}
+#world[data-page=home] :focus-visible{outline-color:var(--light)}
+#world[data-page=home] .island,#world[data-page=home] .restore-island,#world[data-page=home] .world-label,#world[data-page=home] .map-controls,#world[data-page=home] .motion-tools,#world[data-page=home] .map-hint,#world[data-page=home] #connection{display:none}
+
+@media(max-width:700px){
+  #world{--dw:62vw;--dt:16%;--db:45%;--dl:calc(50% - var(--dw)/2);--dr:var(--dl);--frame:8px}
+  .room{transform-origin:50% 35%;background:radial-gradient(ellipse 60% 34% at 50% 35%,color-mix(in srgb,var(--light) 16%,transparent),transparent),linear-gradient(var(--room) calc(100% - var(--db)),#0b0d1c 0)}
+  .door-glow{height:20%}
+  #world[data-page=home] .door-plaque{top:calc(var(--dt) - 40px)}
+  .door-plaque span{font-size:11px;padding:6px 10px}
+  #world .intro{left:24px;right:24px;width:auto;bottom:108px;text-align:center;transform-origin:50% -120%}
+  #world .intro h1{font-size:34px;margin-top:0}
+  #world .intro h1 br,#world .intro .overline,#world .intro-copy{display:none}
+  .door-ask{font-size:15px;margin:10px 0 64px}
+  #world .begin{padding:13px 40px 13px 48px;font-size:15px}
+  #world[data-page=home] .country-dock{left:50%;bottom:calc(108px + 60px);transform:translateX(-50%)}
+}
+
+/* Every place is a door: arched photo on the cards, a door frame and plaque on the detail page.
+   The stream itself keeps its 16:9 box (the :has()/.watching rules in experience-ui.css are more specific), so video is never cropped. */
+.tile-photo{border-radius:999px 999px 6px 6px;box-shadow:0 0 0 3px #f1e9d6,0 6px 16px #54777522}
+.scene-tile .tile-copy>small{align-self:flex-start;padding:2px 7px;border:1px solid #c9d3bd;border-radius:3px;font-family:ui-monospace,Consolas,monospace;letter-spacing:.5px}
+.collection-card .tile-photo,.story-suggestions .tile-photo{box-shadow:none}
+.destination-visual{border:9px solid #f1e9d6;outline:0;border-radius:50% 50% 14px 14px / 34% 34% 14px 14px}
+.detail-navigation p{flex:0 1 auto;margin:0 auto;padding:8px 14px;border:1px solid #ffffff38;border-radius:4px;background:#1b1f3a;color:#f1e9d6;font:12px/1 ui-monospace,Consolas,monospace;letter-spacing:1.5px;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.watching .detail-navigation p{color:#f1e9d6}
+@media(max-width:700px){.detail-navigation p{font-size:11px;padding:6px 9px;letter-spacing:.5px}}
+.scene-tile .tile-photo{margin:8px 0 8px 8px}
+.collection-card .tile-photo,.story-suggestions .tile-photo{margin:0}
+
+/* Door motion follows the site's own 「轉場動效」 switch (globe.js sets .motion-on), like the globe flight does.
+   Switch the site's motion off and these rules no longer apply (html.motion-off in globe.css then removes every transition). */
+#world.motion-on .room{transition:opacity .3s .8s,transform 1.1s var(--door-ease)!important}
+#world.motion-on[data-page=home] .room{transition:opacity .3s,transform 1.1s var(--door-ease)!important}
+#world.motion-on .map-surface{transition:clip-path 1.1s var(--door-ease)!important}
+#world.motion-on .door{transition:inset 1.1s var(--door-ease),border-radius 1.1s var(--door-ease),opacity .3s .8s!important}
+#world.motion-on[data-page=home] .door{transition:inset 1.1s var(--door-ease),border-radius 1.1s var(--door-ease),opacity .3s!important}
+#world.motion-on .door-leaf{transition:transform .7s var(--door-ease),opacity .5s .5s!important}
+#world.motion-on[data-page=home] .door-leaf,#world.motion-on[data-page=home] .door-glow{transition:transform .7s var(--door-ease),opacity .35s!important}
+#world.motion-on .door-glow{transition:opacity .5s .5s!important}
+#world.motion-on .intro{transition:opacity .6s,transform 1.1s var(--door-ease),visibility 0s 1.1s!important}
+#world.motion-on[data-page=home] .intro{transition:opacity .6s .3s,transform 1.1s var(--door-ease),visibility 0s!important}

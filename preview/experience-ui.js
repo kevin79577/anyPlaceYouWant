@@ -82,7 +82,7 @@
   }
   // Page-level morph via the View Transitions API. Only for clicks whose navigation is the last step (update runs async).
   // Skipped without browser support, with reduced motion, or when the page motion switch is off.
-  const motionOK=()=>G.getState().motionEnabled&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!!document.startViewTransition;
+  const motionOK=()=>G.getState().motionEnabled&&!!document.startViewTransition;
   let morphFrom='';// place id whose detail was opened from a card, so closing can shrink back into that card
   function withTransition(update,source){
     if(!motionOK())return update();
@@ -102,6 +102,7 @@
   }
   function back(){if(current.index>0)history.back();else navigate(lastExplore.view,lastExplore.id,{replace:true});}
   function chooseCountry(k){if(!countries[k])return;rememberEntry();navigate('country',k,{keepCamera:true});busy=true;G.flyTo(k);busy=false;syncCountry();}
+  function pickCountry(k){if(current.view==='home')G.select(k);else chooseCountry(k);}// home: the dock only changes what is behind the door; 「開門」 walks through
   function showLocations(){const d=byId(G.getState().selected);navigate('locations',key(d),{keepCamera:true});}
   let watchDirect=false;// the stream was opened straight from the map or list, with no detail page underneath in history
   function openPlace(id,watch=false){if(!byId(id))return;detailParent=current.view==='search'?'search':current.view==='saved'?'saved':current.view==='stories'?'stories':current.view==='locations'?'locations':'country';rememberEntry();watchDirect=watch;navigate(watch?'watch':'place',id);if(watch)window.SomewhereMedia?.play();}
@@ -115,7 +116,7 @@
     const d=byId(G.getState().selected),own=d.id===key(d);
     $('#detail-type').innerHTML=own?'':typeTile(d);
     $('#detail-image-label').textContent=own?'風景示意圖 · 非所選地點現場':'此地點尚無風景圖';
-    $('#detail-breadcrumb').textContent='世界 ／ '+d.country+' ／ '+(d.region||d.name);
+    $('#detail-breadcrumb').textContent='通往 '+d.name+'・'+$('#local-time').textContent.replace('當地時間','當地');// door plaque; shortcut: the time is read when the door opens and does not tick while it stays open
     $('#detail-back-label').textContent=({home:'返回全球探索',saved:'返回我的收藏',search:'返回搜尋結果',locations:'返回地點總覽',stories:'返回近期分享'})[detailParent]||'返回國家探索';
     $('#detail-coordinates').textContent=d.coordinatePrecision+' '+d.point[1].toFixed(3)+'° N / '+d.point[0].toFixed(3)+'° E';
   }
@@ -169,16 +170,18 @@
     $('#stories-suggestions').innerHTML='<div class="suggestions-heading"><p class="overline">MEANWHILE, EXPLORE THESE WINDOWS</p><h2>先看看，這裡的風景。</h2></div>'+suggestions.map(p=>card(p)).join('');
   }
   window.SomewhereExperience={
-    chooseCountry,openPlace,showLocations,showSearch,showSaved:()=>navigate('saved'),decorateLibrary,savedRendered,savedChanged,typeTile,closeDetailView,
+    chooseCountry,pickCountry,openPlace,showLocations,showSearch,showSaved:()=>navigate('saved'),decorateLibrary,savedRendered,savedChanged,typeTile,closeDetailView,
     nextPlace:()=>{const others=places.filter(p=>p.id!==G.getState().selected);navigate('place',others[Math.floor(Math.random()*others.length)].id,{replace:true});},
     chooseMarker:id=>{const p=byId(id);if(!p)return;if(current.view==='home')chooseCountry(key(p));else openPlace(id,true);},// inside a country a place marker opens its stream directly
     selectionChanged(d){if(busy)return;if(['home','country','locations'].includes(current.view)){const nextKey=key(d);if(G.getState().focused&&(current.view==='home'||current.id!==nextKey)){navigate('country',nextKey,{keepCamera:true,replace:current.view==='home'});rememberEntry();}else syncCountry();}},
     detailsOpened(d){if(!busy){detailParent=current.view;navigate('place',d.id);}configureDetail();},
-    mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:current.view==='home'?.48:.35};
+    // home (.67/.52, mobile .5/.35) is the centre of the doorway in door.css
+    mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:.35};
 // Country: .42 keeps the country right of the scene window (.37 put Korea's south coast under it). Tablets, and zoomed-in views where the country grows wider, centre it
 // between the window and the list (.5); the shift follows zoom (2.6x → 4.6x) so cluster zoom-ins glide instead of jumping.
-const zoomShift=Math.min(1,Math.max(0,(G.getState().zoom-2.6)/2));
-return {x:current.view==='locations'?.77:current.view==='country'?(window.innerWidth<=1100?.5:.42+.08*zoomShift):.67,y:.52};},
+const zoomShift=Math.min(1,Math.max(0,(G.getState().zoom-2.6)/2)),mix=G.getState().focusMix;
+// Walking through the door, the globe glides from the doorway (.67) to its country position as the focus fades in, instead of jumping.
+return {x:current.view==='locations'?.77:current.view==='country'?.67+((window.innerWidth<=1100?.5:.42+.08*zoomShift)-.67)*mix:.67,y:.52};},
     getState:()=>({...current,searchCountry,savedCountry,period,detailParent,sheetExpanded}),searchMatches
   };
   $('#nav-explore').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));
@@ -232,7 +235,7 @@ return {x:current.view==='locations'?.77:current.view==='country'?(window.innerW
   $('.wordmark').addEventListener('click',e=>{e.preventDefault();withTransition(()=>navigate('home'));});
   $('#reset').addEventListener('click',()=>navigate('home','',{keepCamera:true}));
   // Decorative pointer effects, skipped when motion is off (CSS reads --mx/--my for the glow; .click-burst is styled in experience-ui.css).
-  const fxOK=()=>G.getState().motionEnabled&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fxOK=()=>G.getState().motionEnabled;
   document.addEventListener('pointermove',e=>{const t=e.target.closest?.('.scene-tile,.island');if(!t)return;const r=t.getBoundingClientRect();t.style.setProperty('--mx',e.clientX-r.left+'px');t.style.setProperty('--my',e.clientY-r.top+'px');},{passive:true});
   document.addEventListener('pointerdown',e=>{if(!fxOK()||!e.target.closest?.('button,a'))return;const burst=document.createElement('span');burst.className='click-burst';burst.style.left=e.clientX+'px';burst.style.top=e.clientY+'px';
     (e.target.closest('dialog[open]')||document.body).append(burst);burst.addEventListener('animationend',()=>burst.remove());},{passive:true});// inside a modal dialog the burst must live in the dialog (top layer)

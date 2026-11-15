@@ -33,6 +33,7 @@
     from = {lon: from.lon, lat: from.lat, zoom: from.zoom, focusMix: from.focusMix, focused: from.focused};
     const mode = options.mode || (from.focused ? 'direct' : 'intro');
     const duration = options.reducedMotion ? 0 : options.duration ?? (mode === 'intro' ? 5000 : 1100);
+    const toFocus = options.focusMix ?? 1;// 0: a camera move on the home page must not start the country focus fade
     const toZoom = options.zoom ?? (options.mobile ? 2.3 : 2.6);// options.zoom: cluster zoom-in keeps its own target scale
     // Unwrapped camera angles keep both modes continuous at the date line.
     // Intro has two presentation turns plus the final small alignment;
@@ -61,7 +62,7 @@
           lon: t === 1 ? wrap(destination[0]) : point[0],
           lat: point[1],
           zoom,
-          focusMix: from.focusMix + (1 - from.focusMix) * smooth(t),
+          focusMix: from.focusMix + (toFocus - from.focusMix) * smooth(t),
           done: t === 1
         };
       }
