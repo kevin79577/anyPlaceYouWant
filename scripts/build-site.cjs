@@ -1,7 +1,9 @@
 // Build the public site into dist/ for static hosting (e.g. Cloudflare Pages: build output directory = dist).
 // Only the explorer and its runtime files ship; design proposals, verify scripts and original PNGs stay out.
-// Usage: node scripts/build-site.cjs
+// Usage: node scripts/build-site.cjs            private preview: search engines are told not to index it (default)
+//        node scripts/build-site.cjs --public   public launch: indexable; refuses while privacy.html still has 待填 placeholders
 const fs=require('node:fs'),path=require('node:path');
+const isPublic=process.argv.includes('--public');
 const src=path.join(__dirname,'../preview'),out=path.join(__dirname,'../dist');
 const files=[
   'experience.html','privacy.html','privacy.css','globe.css','experience-ui.css','experience-fx.css',
@@ -14,15 +16,19 @@ fs.rmSync(out,{recursive:true,force:true});
 for(const f of files){fs.mkdirSync(path.dirname(path.join(out,f)),{recursive:true});fs.copyFileSync(path.join(src,f),path.join(out,f));}
 // The explorer is the home page.
 fs.copyFileSync(path.join(out,'experience.html'),path.join(out,'index.html'));
-// Cloudflare Pages / Netlify header rules. YouTube loads only after "play"; weather calls go straight to Open-Meteo.
-fs.writeFileSync(path.join(out,'_headers'),`/*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self' https://api.open-meteo.com; img-src 'self' data: https://i.ytimg.com; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-/assets/*
-  Cache-Control: public, max-age=86400
-`);
+// Response headers, defined once and written in both host formats: vercel.json (Vercel) and _headers (Cloudflare Pages / Netlify).
+// YouTube loads only after "play"; weather calls go straight to Open-Meteo.
+const siteHeaders={
+  'Content-Security-Policy':"default-src 'self'; script-src 'self' https://www.youtube.com https://s.ytimg.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self' https://api.open-meteo.com; img-src 'self' data: https://i.ytimg.com; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+  'X-Content-Type-Options':'nosniff',
+  'Referrer-Policy':'strict-origin-when-cross-origin',
+  'Permissions-Policy':'camera=(), microphone=(), geolocation=(), payment=()',
+  ...(isPublic?{}:{'X-Robots-Tag':'noindex, nofollow'})
+};
+const assetHeaders={'Cache-Control':'public, max-age=86400'};
+const lines=h=>Object.entries(h).map(([k,v])=>`  ${k}: ${v}`).join('\n'),pairs=h=>Object.entries(h).map(([key,value])=>({key,value}));
+fs.writeFileSync(path.join(out,'_headers'),`/*\n${lines(siteHeaders)}\n/assets/*\n${lines(assetHeaders)}\n`);
+fs.writeFileSync(path.join(out,'vercel.json'),JSON.stringify({headers:[{source:'/(.*)',headers:pairs(siteHeaders)},{source:'/assets/(.*)',headers:pairs(assetHeaders)}]},null,2)+'\n');
 
 // Self-check: every local file referenced by the shipped HTML/CSS/JS must exist in dist (a missed file = a broken page).
 const missing=[];
@@ -34,5 +40,8 @@ for(const f of fs.readdirSync(out,{recursive:true}).filter(f=>/\.(html|css|js)$/
   for(const r of refs)if(!fs.existsSync(path.join(out,r)))missing.push(`${f} → ${r}`);
 }
 const size=fs.readdirSync(out,{recursive:true}).reduce((n,f)=>{const s=fs.statSync(path.join(out,f));return n+(s.isFile()?s.size:0);},0);
+// A public site must name its operator and contact (docs/上線檢查清單.md).
+const unfilled=isPublic&&fs.readFileSync(path.join(out,'privacy.html'),'utf8').includes('待填');
 if(missing.length){console.error('Missing files in dist:\n  '+[...new Set(missing)].join('\n  '));process.exitCode=1;}
-else console.log(`dist/ ready: ${files.length+2} files, ${(size/1048576).toFixed(1)} MB, all local references resolve.`);
+else if(unfilled){fs.rmSync(out,{recursive:true,force:true});console.error('Public build refused: preview/privacy.html still has 待填 placeholders (operator, contact, host). dist/ removed.');process.exitCode=1;}
+else console.log(`dist/ ready (${isPublic?'PUBLIC, indexable':'private preview, noindex'}): ${files.length+3} files, ${(size/1048576).toFixed(1)} MB, all local references resolve.`);
