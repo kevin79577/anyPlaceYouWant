@@ -54,7 +54,8 @@
   $('#media-source').addEventListener('change',()=>{const source=(catalog[currentDestination]||[]).find(s=>s.id===$('#media-source').value);if(!source)return;currentSource=source;showSource();});
   $('#media-play').addEventListener('click',play);
   $('#media-preview').addEventListener('click',()=>{clearPlayer();setStatus('idle');});
-  $('#destination-dialog').addEventListener('close',()=>{clearPlayer();setStatus('idle');});
+  // The dialog is closed and re-opened at once when it switches between the modal place page and the docked stream panel; that is not the user leaving.
+  $('#destination-dialog').addEventListener('close',()=>{if($('#destination-dialog').open)return;clearPlayer();setStatus('idle');});
   root.addEventListener('pagehide',clearPlayer);
   root.SomewhereMedia={selectDestination,play,close:()=>{clearPlayer();setStatus('idle');},getState:()=>({destination:currentDestination,source:currentSource&&currentSource.id,status:currentStatus})};
 })(typeof window!=='undefined'?window:globalThis);

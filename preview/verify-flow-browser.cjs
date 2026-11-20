@@ -11,7 +11,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
  try{
   const page=await browser.newPage({viewport:{width:1440,height:1000}});
   page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(origin+'/experience.html?v=door-3');
+  await page.goto(origin+'/experience.html?v=door-10');
   // Home is a door: the dock only changes what is behind it, 「開門」 walks through.
   await page.waitForFunction(()=>window.SomewhereExperience&&/^通往 日本・當地 \d\d:\d\d$/.test(document.querySelector('#door-plaque').textContent));
   assert.match(await page.getAttribute('#world','data-light'),/^(day|dusk|night)$/);
@@ -43,8 +43,11 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.click('#place-list [data-place]');
   // A place in the list opens its stream directly; 返回景點資訊 then shows the detail page.
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='watch');
+  // Desktop: the stream is a docked, non-modal panel; the place page it returns to is a modal again.
+  assert.equal(await page.evaluate(()=>document.querySelector('#destination-dialog').matches(':modal')),false);
   await page.click('#watch-return');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');
+  assert.equal(await page.evaluate(()=>document.querySelector('#destination-dialog').matches(':modal')),true);
   assert.equal(await page.locator('#destination-dialog').isVisible(),true);
   assert.match(await page.locator('#detail-title').textContent(),/高美/);
   await shot(page,'03-place.png');
@@ -111,7 +114,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   // Cluster clicks: a single-region cluster filters the list; a mixed cluster resets the filter and zooms in until it splits.
   const clusters=await browser.newPage({viewport:{width:1440,height:900}});
   clusters.on('pageerror',e=>errors.push(e.message));
-  await clusters.goto(origin+'/experience.html?v=door-3#country/japan');
+  await clusters.goto(origin+'/experience.html?v=door-10#country/japan');
   await clusters.waitForFunction(()=>window.SomewhereExperience?.getState().view==='country'&&!SomewhereGlobe.getState().flying);
   await clusters.waitForTimeout(900);
   // Hidden markers keep their last cluster data, so only match visible ones.
@@ -127,7 +130,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   console.log(`通過：同地區聚合點篩選「${region}」，跨地區聚合點清除篩選並放大到那一帶。`);
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
   mobile.on('pageerror',e=>errors.push(e.message));
-  await mobile.goto(origin+'/experience.html?v=door-3#country/taiwan');
+  await mobile.goto(origin+'/experience.html?v=door-10#country/taiwan');
   await mobile.waitForFunction(()=>window.SomewhereExperience?.getState().view==='country');
   await mobile.click('#sheet-handle');
   assert.equal(await mobile.locator('#world.sheet-expanded').count(),1);

@@ -47,6 +47,7 @@
     if(state.detailParent)detailParent=state.detailParent;
     if(restore&&state.camera)G.restoreCamera(state.camera);
     root.dataset.page=state.view;
+    root.classList.toggle('stream-open',state.view==='watch'&&window.innerWidth>700);// the docked stream panel is showing (desktop)
     const isExplore=['country','locations'].includes(state.view);
     $('#explore-context').hidden=!isExplore;
     $('#saved-panel').hidden=state.view!=='saved';$('#saved-toggle').setAttribute('aria-expanded',String(state.view==='saved'));
@@ -56,7 +57,7 @@
     if(state.view==='home'){G.toggleLibrary(false);if(!keepCamera)G.reset();}
     else if(isExplore){
       // The globe starts with a place selected (japan) but unfocused, so a deep link to that country must still focus the camera.
-      if(!keepCamera&&!restore&&(key(byId(G.getState().selected))!==state.id||!G.getState().focused))G.restoreCamera({selected:state.id,lon:byId(state.id).point[0],lat:byId(state.id).point[1],zoom:2.6,focusMix:1,focused:true});
+      if(!keepCamera&&!restore&&(key(byId(G.getState().selected))!==state.id||!G.getState().focused))G.restoreCamera({selected:state.id,...G.countryCamera(state.id),focusMix:1,focused:true});
       G.toggleLibrary(true);syncCountry();lastExplore={view:state.view,id:state.id};
       if(restore&&state.library){$('#place-query').value=state.library.query||'';$('#place-query').dispatchEvent(new Event('input'));$('#place-region').value=state.library.region||'';$('#place-region').dispatchEvent(new Event('change'));$('#place-list').scrollTop=state.library.scroll||0;sheetExpanded=!!state.library.expanded;root.classList.toggle('sheet-expanded',sheetExpanded);$('#sheet-handle').setAttribute('aria-expanded',String(sheetExpanded));}
     }else{
@@ -65,9 +66,15 @@
       if(state.view==='stories'){period=state.period||period;if(state.storiesCountry!==undefined)$('#stories-country').value=state.storiesCountry;renderStories();}
       if(state.view==='search'){if(state.query!==undefined)$('#global-query').value=state.query;searchCountry=state.searchCountry??searchCountry;searchLimit=state.searchLimit||24;renderSearch();if(!$('#search-dialog').open)$('#search-dialog').showModal();$('#global-results').scrollTop=state.searchScroll||0;}
       if(['place','watch'].includes(state.view)){
-        const d=byId(state.id);if(d&&G.getState().selected!==d.id)G.restoreCamera({selected:d.id,lon:d.point[0],lat:d.point[1],zoom:2.6,focusMix:1,focused:true});
+        if(state.view==='watch'&&window.innerWidth>700)G.toggleLibrary(true);// before the camera is fitted, so the place panel counts
+        const d=byId(state.id);if(d&&G.getState().selected!==d.id)G.restoreCamera({selected:d.id,lon:d.point[0],lat:d.point[1],zoom:G.countryCamera(key(d)).zoom,focusMix:1,focused:true});
         G.openDetails();configureDetail();
-        $('#destination-dialog').classList.toggle('watching',state.view==='watch');$('#watch-return').hidden=state.view!=='watch';
+        // Desktop: the stream is a panel docked beside the map (owner's annotation), opened non-modally so other places stay clickable.
+        // The place page stays a modal; switching between the two has to close and re-open the dialog in the other mode.
+        const dlg=$('#destination-dialog'),dock=state.view==='watch'&&window.innerWidth>700;
+        dlg.classList.toggle('watching',state.view==='watch');dlg.classList.toggle('docked',dock);$('#watch-return').hidden=state.view!=='watch';
+        if(dlg.matches(':modal')===dock){ignoreDetailClose++;dlg.close();if(dock)dlg.show();else dlg.showModal();}
+        if(dock){root.dataset.page='country';G.toggleLibrary(true);syncCountry();}// the map behind the panel is the working country view
         if(state.view==='place')window.SomewhereMedia?.close();
       }
     }
@@ -104,6 +111,7 @@
   function chooseCountry(k){if(!countries[k])return;rememberEntry();navigate('country',k,{keepCamera:true});busy=true;G.flyTo(k);busy=false;syncCountry();}
   function pickCountry(k){if(current.view==='home')G.select(k);else chooseCountry(k);}// home: the dock only changes what is behind the door; 「開門」 walks through
   function showLocations(){const d=byId(G.getState().selected);navigate('locations',key(d),{keepCamera:true});}
+  let shownCx=null;// eased horizontal centre of the map, see mapLayout
   let watchDirect=false;// the stream was opened straight from the map or list, with no detail page underneath in history
   function openPlace(id,watch=false){if(!byId(id))return;detailParent=current.view==='search'?'search':current.view==='saved'?'saved':current.view==='stories'?'stories':current.view==='locations'?'locations':'country';rememberEntry();watchDirect=watch;navigate(watch?'watch':'place',id);if(watch)window.SomewhereMedia?.play();}
   function showSearch(query=''){searchLimit=24;navigate('search','',{query});$('#global-query').focus();}
@@ -177,11 +185,14 @@
     detailsOpened(d){if(!busy){detailParent=current.view;navigate('place',d.id);}configureDetail();},
     // home (.67/.52, mobile .5/.35) is the centre of the doorway in door.css
     mapLayout(){const mobile=window.innerWidth<700;if(mobile)return {x:.5,y:.35};
-// Country: .42 keeps the country right of the scene window (.37 put Korea's south coast under it). Tablets, and zoomed-in views where the country grows wider, centre it
-// between the window and the list (.5); the shift follows zoom (2.6x → 4.6x) so cluster zoom-ins glide instead of jumping.
-const zoomShift=Math.min(1,Math.max(0,(G.getState().zoom-2.6)/2)),mix=G.getState().focusMix;
+// Country: the centre of the free area beside the place panel (globe.js freeArea), which countryCamera fills with the country.
+const mix=G.getState().focusMix,area=G.freeArea();
+// The free area changes when the stream panel opens or closes; ease the centre across a few frames instead of jumping.
+shownCx=shownCx===null?area.cx:shownCx+(area.cx-shownCx)*.2;if(Math.abs(area.cx-shownCx)>.0005)requestAnimationFrame(G.invalidate);else shownCx=area.cx;
+// The country switcher sits under the map, centred on the same free area, so it never ends up beneath a panel.
+const dockX=(shownCx*100).toFixed(2)+'%';if(root.style.getPropertyValue('--map-cx')!==dockX)root.style.setProperty('--map-cx',dockX);
 // Walking through the door, the globe glides from the doorway (.67) to its country position as the focus fades in, instead of jumping.
-return {x:current.view==='locations'?.77:current.view==='country'?.67+((window.innerWidth<=1100?.5:.42+.08*zoomShift)-.67)*mix:.67,y:.52};},
+return current.view==='locations'?{x:.77,y:.52}:current.view==='home'?{x:.67,y:.52}:{x:.67+(shownCx-.67)*mix,y:.52+(area.cy-.52)*mix};},
     getState:()=>({...current,searchCountry,savedCountry,period,detailParent,sheetExpanded}),searchMatches
   };
   $('#nav-explore').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));

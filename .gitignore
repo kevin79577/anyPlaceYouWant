@@ -3,3 +3,4 @@ tmp/
 
 # Build output of scripts/build-site.cjs (deploy this folder)
 dist/
+.ui-annotate/

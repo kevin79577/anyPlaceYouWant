@@ -147,3 +147,96 @@ input::placeholder{font-size:12px!important}
 /* Tablet: the map controls column sat on the panel's top-right and hid its close button; keep the panel left of it. */
 @media(min-width:701px){.world[data-page=country] .place-library{right:max(5%,78px)}}
 @media(max-height:820px) and (min-width:701px){.world[data-page=country] .island-image{height:110px}.world[data-page=country] .weather-card{display:none}.world[data-page=home] .island-image{height:110px}}
+/* Country panel (UI annotation): no eyebrow, count line, source meta or disclosure; tag and title share one row. */
+.world[data-page=country] .place-library .panel-title .overline,.world[data-page=country] #library-count,.world[data-page=country] #place-list .tile-meta,.world[data-page=country] .library-disclosure{display:none}
+.world[data-page=country] #place-list .tile-copy{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;column-gap:10px}
+.world[data-page=country] .place-library .panel-title{margin-bottom:14px}
+.world[data-page=country] #place-list .tile-copy>small{align-self:center}
+
+/* Owner's annotations (2026-11-20): map controls sit bottom-left as one row; the scene window starts collapsed and its opener sits above them. */
+@media(min-width:701px){
+.world .map-controls,.world[data-page=country] .map-controls,.world[data-page=locations] .map-controls{top:auto;right:auto;left:5%;bottom:36px;flex-direction:row;align-items:center}
+.world .map-controls>span{width:1px;height:18px;margin:0 5px}
+.world .restore-island{right:auto;left:5%;bottom:96px}
+}
+/* Owner's annotations (2026-11-20, detail page): the description, the source location note, the extra source links and the
+   YouTube disclosure are removed. The status bar is hidden only while idle: loading, error and "original site only" still need to be seen.
+   Hidden rather than deleted from the HTML because media-player.js writes to these elements. */
+#detail-description,.media-location-note,.media-links,.media-disclosure,.media-status:not([data-state]),.media-status[data-state=idle]{display:none}
+
+/* Owner's annotation (2026-11-20): on desktop the stream opens as a panel docked on the left of the country view, only after a place is clicked.
+   It ends 150px above the bottom so the scene-window opener and map controls stay reachable. */
+.destination-dialog.docked{position:fixed;left:32px;top:18%;right:auto;bottom:auto;margin:0;width:clamp(380px,26.2vw,520px);height:auto;max-height:calc(82% - 150px);padding:62px 16px 16px;gap:12px;border-radius:24px;z-index:12;box-shadow:0 24px 60px #0d2b3655}
+.destination-dialog.docked .destination-visual{width:100%;max-width:none;margin:0;outline-width:4px;box-shadow:0 8px 24px #001b2d55}
+.destination-dialog.docked .media-controls{width:100%;padding:12px 14px}
+.destination-dialog.docked .detail-weather{max-width:none;padding:10px 14px}
+.destination-dialog.docked .detail-navigation{left:16px;right:58px;top:16px;gap:8px}
+.destination-dialog.docked #detail-back{display:none}
+.destination-dialog.docked .detail-navigation p{margin:0 auto 0 0;min-width:0}
+.destination-dialog.docked .dialog-close{top:17px;right:16px}
+
+/* Owner's annotation (2026-11-20): the weather card uses drawn SVG icons (symbols in experience.html) and one tile per reading. */
+.wx-defs{position:absolute;width:0;height:0}
+.wx-icon{display:inline-flex;flex-shrink:0}
+.wx-icon svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.wx-big svg{width:48px;height:48px;stroke-width:1.3;color:#d2952b}
+.wx-now{display:flex;align-items:center;gap:12px}
+.wx-main{flex:1;min-width:0}
+.wx-sub{font-size:12px;line-height:1.6;color:#5d7a68}
+.wx-side{display:grid;gap:4px;font:12px/1.4 ui-monospace,Consolas,monospace;color:#4d6b58;font-variant-numeric:tabular-nums}
+.wx-side p{display:flex;align-items:center;justify-content:flex-end;gap:4px}
+.wx-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 8px}
+.wx-tile{display:grid;gap:3px;align-content:start;padding:9px 10px;border-radius:12px;background:#ffffffc4;border:1px solid #fff;min-width:0}
+.wx-label{display:flex;align-items:center;gap:5px;font-size:11px;color:#6d8a76;white-space:nowrap}
+.wx-tile b{font:600 14px/1.3 "Microsoft JhengHei",sans-serif;color:#2f4d3c;white-space:nowrap}
+.wx-tile meter{width:100%;height:5px}
+.detail-weather .wx-now .weather-headline{line-height:1.2}
+/* Docked stream panel: compact weather so the whole card fits without scrolling on a 1080px-high screen. */
+.destination-dialog.docked .weather-title{display:none}
+.destination-dialog.docked .weather-time{display:none}
+.destination-dialog.docked .wx-grid{gap:6px;margin:8px 0 0}
+.destination-dialog.docked .wx-tile{padding:6px 9px;gap:1px}
+.destination-dialog.docked .wx-tile meter{display:none}
+.destination-dialog.docked .wx-big svg{width:40px;height:40px}
+.destination-dialog.docked .detail-navigation>button{white-space:nowrap;flex-shrink:0}
+.destination-dialog.docked .detail-navigation p{flex:1 1 0}
+
+/* Owner's annotations (2026-11-20, third round), desktop only:
+   - the scene-window opener and the map controls are removed (wheel, keyboard and the 世界 breadcrumb still zoom and reset);
+     shortcut: the scene window markup and its code in globe.js are now unreachable on desktop, delete them if this layout stays;
+   - the stream panel and the place panel run the full height between the header and the footer line (44px keeps the privacy link clickable);
+   - the country switcher is centred on the free map area (--map-cx from mapLayout) and hides beside an open stream panel when the gap is too narrow. */
+@media(min-width:701px){
+.world .restore-island,.world .map-controls,.world[data-page=country] .map-controls,.world[data-page=locations] .map-controls{display:none}
+.destination-dialog.docked{top:104px;bottom:44px;height:auto;max-height:none}
+.world[data-page=country] .place-library{top:104px;bottom:44px}
+.world[data-page=country] .country-dock{left:var(--map-cx,37%)}
+}
+@media(min-width:701px) and (max-width:1500px){.world.stream-open .country-dock{display:none}}
+/* The status bar now shows only when something needs attention; "playing" and "ready" need no banner. */
+.media-status:not([data-state=error]):not([data-state=external]):not([data-state=delayed]):not([data-state=local]):not([data-state=ended]){display:none}
+
+/* Owner's requests (2026-11-20, fourth round). */
+/* Markers follow the map at once: the 0.72s glide made them trail behind while dragging. */
+.geo-marker{transition:opacity .2s}
+@media(min-width:701px){
+/* The interface is drawn at 80% of its former size. The map canvas, its markers and the door are left alone:
+   they are sized from the viewport, and scaling the canvas would shift every pointer and marker coordinate. */
+.world-header,.intro,.country-dock,.explore-context,.place-library,.saved-panel,.stories-page,.map-footer,.door-plaque,.skip-entry,.status-toast,.undo-toast,.search-dialog,.destination-dialog{zoom:.8}
+.primary-nav button{font-size:19px}
+/* Docked stream panel: the source controls show only when the status needs attention (error, original-site only…), so there is a way out. */
+.destination-dialog.docked .media-controls:not(:has(.media-status[data-state=error],.media-status[data-state=external],.media-status[data-state=delayed],.media-status[data-state=local],.media-status[data-state=ended])){display:none}
+/* Docked stream panel: larger weather icons and text. */
+.destination-dialog.docked .detail-weather{padding:16px}
+.destination-dialog.docked .detail-weather .weather-headline{font-size:34px}
+.destination-dialog.docked .wx-sub,.destination-dialog.docked .wx-side{font-size:16px}
+.destination-dialog.docked .wx-icon svg{width:22px;height:22px}
+.destination-dialog.docked .wx-big svg{width:72px;height:72px}
+.destination-dialog.docked .wx-grid{gap:8px;margin-top:14px}
+.destination-dialog.docked .wx-tile{padding:12px;gap:4px}
+.destination-dialog.docked .wx-label{font-size:16px}
+.destination-dialog.docked .wx-tile b{font-size:22px}
+}
+/* Docked stream panel opened without a running player (a shared link, or after going back): the source controls are hidden there,
+   so the ▶ button on the picture is the way to start playing. */
+@media(min-width:701px){.destination-dialog.docked .destination-visual:has(#media-viewer[hidden]) .watch-start{display:revert;top:auto;bottom:14px;left:14px}}
