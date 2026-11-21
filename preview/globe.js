@@ -13,10 +13,11 @@
   if (!ctx) { $('#status').textContent = '此瀏覽器無法建立地圖畫布，請使用支援 Canvas 的瀏覽器。'; $('#status').classList.add('visible'); return; }
   const D = window.d3, geography = window.SOMEWHERE_WORLD;
   const interactionGeography = window.SOMEWHERE_WORLD_LOW || geography;
-  // 台灣改用內政部縣市界線衍生的海岸線（含澎湖、金門、馬祖、綠島、蘭嶼）：Natural Earth 的台灣只有約 70 個點、沒有離島，海邊鏡頭會落在海上。
-  // 國家視角的取景仍用原本的台灣本島輪廓，避免金門、馬祖把畫面拉遠。
-  const TW=window.SOMEWHERE_TAIWAN,cameraShape=new Map();
-  if(TW)for(const g of new Set([geography,interactionGeography])){const i=g.features.findIndex(f=>f.properties.iso==='TWN');if(i<0)continue;if(!cameraShape.has('TWN'))cameraShape.set('TWN',g.features[i]);g.features[i]=TW.nation;}
+  // 台灣、日本、韓國改用精細海岸線（含離島，assets/region-map-data.js）：Natural Earth 1:50m 太粗，海邊鏡頭會落在海上。
+  // 國家視角的取景仍用原本的 1:50m 輪廓，避免金門、馬祖或遠方小島把畫面拉遠。
+  const REGIONS=window.SOMEWHERE_REGIONS||{},cameraShape=new Map();
+  for(const iso of Object.keys(REGIONS)){const R=REGIONS[iso];if(!R.nation)continue;
+    for(const g of new Set([geography,interactionGeography])){const i=g.features.findIndex(f=>f.properties.iso===iso);if(i<0)continue;if(!cameraShape.has(iso))cameraShape.set(iso,g.features[i]);g.features[i]=R.nation;}}
   const destinations = window.SomewhereCatalog ? window.SomewhereCatalog.places : [
     {id:'japan',iso:'JPN',country:'日本',name:'京都・東山',en:'KYOTO / JAPAN',point:[135.778,34.998],image:'assets/cinema.webp',alt:'京都東山暮色 AI 生成情境圖',title:'沿著暮色，走進京都。',subtitle:'東山・屋簷與街燈之間',description:'把步調留給石板路、屋簷與遠山。從東山的風景開始，想像一段不趕路的京都旅行。此圖片由 AI 生成，不代表該座標的實際鏡頭或當下景色。',zone:'Asia/Tokyo',aliases:['日本','京都','東山','japan','kyoto'],label:[20,-28]},
     {id:'korea',iso:'KOR',country:'韓國',name:'釜山・廣安里',en:'BUSAN / SOUTH KOREA',point:[129.118,35.153],image:'assets/atlas.webp',alt:'釜山海岸 AI 生成情境圖',title:'海與城市，相遇的地方。',subtitle:'廣安里・海岸的藍調時刻',description:'城市的燈火與海面的波光，替散步留下一個好理由。這是釜山廣安里的旅行氛圍提案；圖片由 AI 生成，直播來源尚未接入。',zone:'Asia/Seoul',aliases:['韓國','南韓','釜山','廣安里','korea','busan','gwangalli'],label:[-112,-45]},
@@ -92,7 +93,11 @@
   // The selected place goes first, so it is always an anchor and keeps its selected styling.
   // At MAX_ZOOM only same-region markers merge: many places share one regional reference point, so mixed clusters there could never split.
   const CLUSTER_PX=36;let panels=[],panelsAt=-1e9;
-  function positionMarkers(){const anchors=[];const order=[selected(),...destinations.filter(d=>d.id!==state.selected&&listed(d))];for(const d of order){const b=markerElements.get(d.id),p=projection(d.point);const onScreen=visible(d.point)&&p[0]>15&&p[0]<width-15&&p[1]>88&&p[1]<height-130;const show=onScreen&&(state.focused?countryKey(d)===countryKey(selected()):d.id===countryKey(d));if(!show)continue;const deepest=state.zoom>=maxZoom()*.999;const near=anchors.find(a=>Math.hypot(a.x-p[0],a.y-p[1])<CLUSTER_PX&&(!deepest||a.d.region===d.region));if(near){near.members.push(d);continue;}
+  function positionMarkers(){const anchors=[];
+    // Panel boxes are re-read at most every 400ms. A dot underneath a panel cannot be seen or clicked, so it is not shown (pan to bring it out).
+    if(performance.now()-panelsAt>400){panelsAt=performance.now();panels=['#island','#place-library'].map(q=>$(q).getBoundingClientRect()).filter(r=>r&&r.width).map(r=>({l:r.left-6,r:r.right+6,t:r.top-6,b:r.bottom+6}));}
+    const under=(x,y)=>panels.some(r=>x>r.l&&x<r.r&&y>r.t&&y<r.b);
+    const order=[selected(),...destinations.filter(d=>d.id!==state.selected&&listed(d))];for(const d of order){const b=markerElements.get(d.id),p=projection(d.point);const onScreen=visible(d.point)&&p[0]>15&&p[0]<width-15&&p[1]>88&&p[1]<height-130&&!(state.focused&&under(p[0],p[1]));const show=onScreen&&(state.focused?countryKey(d)===countryKey(selected()):d.id===countryKey(d));if(!show)continue;const deepest=state.zoom>=maxZoom()*.999;const near=anchors.find(a=>Math.hypot(a.x-p[0],a.y-p[1])<CLUSTER_PX&&(!deepest||a.d.region===d.region));if(near){near.members.push(d);continue;}
       // Deepest level keeps different regions apart, so nudge a dot off any neighbour closer than 16px (else its button covers the other).
       let x=p[0],y=p[1];for(let k=1;deepest&&k<=12&&anchors.some(a=>Math.hypot(a.x-x,a.y-y)<16);k++){x=p[0]+Math.cos(k*2.4)*(10+4*k);y=p[1]+Math.sin(k*2.4)*(10+4*k);}
       anchors.push({d,b,x,y,members:[d]});}
@@ -101,7 +106,6 @@
     // to the right of the dot or else to the left; a label that would cover another label or dot stays hidden until hover/focus.
     const hit=(a,c)=>a.l<c.r&&a.r>c.l&&a.t<c.b&&a.b>c.t;
     // Labels also keep clear of the scene window and the place panel; their boxes are re-read at most every 400ms, not every frame.
-    if(performance.now()-panelsAt>400){panelsAt=performance.now();panels=['#island','#place-library'].map(q=>$(q).getBoundingClientRect()).filter(r=>r&&r.width).map(r=>({l:r.left-6,r:r.right+6,t:r.top-6,b:r.bottom+6}));}
     const placed=[...panels];
     if(state.focused)anchors.sort((a,c)=>(c.d.id===state.selected)-(a.d.id===state.selected)||c.members.length-a.members.length);
     for(const a of anchors){const {d,b,x,y,members}=a;const n=members.length,region=n>1&&d.region&&members.every(m=>m.region===d.region)?d.region:'';b.style.left=x+'px';b.style.top=y+'px';b.classList.toggle('selected',d.id===state.selected);b.classList.toggle('cluster',n>1);b.dataset.count=n>1?n:'';b.dataset.region=region;b.members=members;b.classList.toggle('general',members.every(m=>m.tier==='general'));// a mixed cluster keeps the hot colour
@@ -132,8 +136,8 @@
     const land=ctx.createLinearGradient(cx-r,cy-r,cx+r,cy+r);land.addColorStop(0,'#fffdf2');land.addColorStop(.5,'#f6f5e8');land.addColorStop(1,'#e3e8d3');ctx.fillStyle=land;ctx.fill(landPath);ctx.strokeStyle='#c2cab486';ctx.lineWidth=.45;ctx.stroke(landPath);ctx.restore();
     if(dim){ctx.beginPath();geoPath(sphere);ctx.fillStyle='rgba(228,241,237,'+(.42*dim).toFixed(3)+')';ctx.fill();}// frosted veil over the background
     projection.precision(0);for(const d of countryRegions){const sel=state.focused&&d.iso===selected().iso,f=(sel?geography:renderGeography).features.find(f=>f.properties.iso===d.iso);if(!f||!inView(f))continue;ctx.save();if(sel){ctx.shadowColor='#4f7a6a52';ctx.shadowBlur=24;ctx.shadowOffsetY=9;}else ctx.globalAlpha=1-.8*dim;ctx.beginPath();geoPath(f);ctx.fillStyle=sel?'#ecf3bc':'#e8edda';ctx.fill();ctx.shadowColor='transparent';ctx.strokeStyle=sel?'#c6d571':'#c1d1b4';ctx.lineWidth=.75;ctx.stroke();ctx.restore();}
-    // 縣市界線：只在台灣的國家視角出現，跟著聚焦淡入
-    if(TW&&state.focused&&selected().iso==='TWN'&&dim){ctx.save();ctx.globalAlpha=dim;ctx.setLineDash([3,3]);ctx.strokeStyle='#a9b968';ctx.lineWidth=.8;ctx.beginPath();geoPath(TW.borders);ctx.stroke();ctx.restore();}
+    // 一級行政區界線（縣市、都道府縣、道）：只在該國的國家視角出現，跟著聚焦淡入
+    const R=state.focused&&dim&&REGIONS[selected().iso];if(R&&R.borders){ctx.save();ctx.globalAlpha=dim;ctx.setLineDash([3,3]);ctx.strokeStyle='#a9b968';ctx.lineWidth=.8;ctx.beginPath();geoPath(R.borders);ctx.stroke();ctx.restore();}
     projection.precision(.45);ctx.restore();ctx.beginPath();geoPath(sphere);ctx.strokeStyle='#ffffffb0';ctx.lineWidth=1.4;ctx.stroke();
     positionMarkers();$('#camera-coords').textContent=`${Math.abs(state.lat).toFixed(1)}° ${state.lat>=0?'N':'S'} / ${Math.abs(wrap(state.lon)).toFixed(1)}° ${wrap(state.lon)>=0?'E':'W'}`;
     $('#camera-label').textContent=state.flying?'TRAVELLING TO '+selected().en.split(' / ')[0]:state.focused?'A LITTLE CLOSER / '+selected().en.split(' / ')[0]:'GLOBAL VIEW';

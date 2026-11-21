@@ -1,7 +1,8 @@
-// 比對台灣每支影片「目前的 YouTube 標題」和 Excel 名稱，找出頻道已經換成別的地點的直播。
+// 比對每支影片「目前的 YouTube 標題」和 Excel 名稱，找出頻道已經換成別的地點的直播。
+// 只適用台灣：韓國的 YouTube 標題是韓文、名稱是中文，比不出來；日本的名稱本身就取自標題。
 // 判斷方式：把 Excel 名稱拆成中文兩字詞（去掉「台北」「360」這類通用字），看有幾個出現在標題裡；一個都沒有就列為「疑似換內容」。
-// 只讀不寫：不會改資料，結果印在終端機。用法：node scripts/check-taiwan-titles.cjs
-const data=require('./taiwan-livecams.json');
+// 只讀不寫：不會改資料，結果印在終端機。用法：node scripts/check-titles.cjs
+const data=require('./data/livecams-taiwan.json');
 
 const norm=s=>String(s).replace(/臺/g,'台').replace(/[\s\-_|｜・·#【】\[\]()（）「」:：,，.。!！?？/\\]/g,'').toLowerCase();
 // 只出現在名稱、不代表地點的字詞

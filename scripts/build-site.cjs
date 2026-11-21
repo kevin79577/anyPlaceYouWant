@@ -7,7 +7,7 @@ const isPublic=process.argv.includes('--public');
 const src=path.join(__dirname,'../preview'),out=path.join(__dirname,'../dist');
 const files=[
   'experience.html','privacy.html','privacy.css','globe.css','experience-ui.css','experience-fx.css','door.css',
-  'vendor/d3.min.js','vendor/D3-LICENSE.txt','assets/world-data.js','assets/world-low-data.js','assets/taiwan-map-data.js',
+  'vendor/d3.min.js','vendor/D3-LICENSE.txt','assets/world-data.js','assets/world-low-data.js','assets/region-map-data.js',
   'globe-flight.js','catalog.js','weather.js','media-player.js','globe.js','experience-ui.js',
   'assets/source-inventory.json',
   ...fs.readdirSync(path.join(src,'assets')).filter(f=>f.endsWith('.webp')).map(f=>'assets/'+f)

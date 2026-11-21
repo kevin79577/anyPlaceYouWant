@@ -1,0 +1,1429 @@
+{
+ "source": "refs/韓國_livecams.xlsx",
+ "checkedAt": "2026-11-21",
+ "playbackChecked": true,
+ "places": [
+  {
+   "id": "korea",
+   "name": "釜山 廣安里",
+   "region": "釜山廣域市",
+   "lat": 35.1532,
+   "lng": 129.1186,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "GZ8MwCX_n14",
+     "title": "釜山 廣安里",
+     "provider": "Busan Live Cam - Gwangan Bridge",
+     "channel": "https://www.youtube.com/@BusanLive"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-NBZdNZYF1gI",
+   "name": "釜山 松亭海水浴場",
+   "region": "慶尚南道",
+   "lat": 35.1785,
+   "lng": 129.1995,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "NBZdNZYF1gI",
+     "title": "釜山 松亭海水浴場",
+     "provider": "올라호텔ᅵ송정 해수욕장",
+     "channel": "https://www.youtube.com/@ollahotel1585"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-fehpiqUmdl0",
+   "name": "束草 海邊",
+   "region": "江原道",
+   "lat": 38.19,
+   "lng": 128.603,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "fehpiqUmdl0",
+     "title": "束草 海邊",
+     "provider": "속초바다",
+     "channel": "https://www.youtube.com/@%EC%9D%B4%EA%B2%BD%EC%98%A4-e3f"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-irmLhJ8gxPQ",
+   "name": "濟州 月汀里海邊（海邊咖啡館）",
+   "region": "濟州特別自治道",
+   "lat": 33.553,
+   "lng": 126.806,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "irmLhJ8gxPQ",
+     "title": "濟州 月汀里海邊（海邊咖啡館）",
+     "provider": "제주날씨 실시간 CCTV 방송중",
+     "channel": "https://www.youtube.com/@%EC%9D%B8%EC%B9%B4%ED%8E%98%EC%98%A8%EB%8D%94%EB%B9%84%EC%B9%98"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-qbPrpytwa-g",
+   "name": "仁川國際機場",
+   "region": "仁川廣域市",
+   "lat": 37.4602,
+   "lng": 126.4407,
+   "tier": "hot",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "qbPrpytwa-g",
+     "title": "仁川國際機場",
+     "provider": "Live Airways Korea",
+     "channel": "https://www.youtube.com/@LiveAirways_KR"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-m_EmGDe_P84",
+   "name": "釜山 廣安大橋",
+   "region": "釜山廣域市",
+   "lat": 35.147,
+   "lng": 129.13,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "m_EmGDe_P84",
+     "title": "釜山 廣安大橋",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-IDuJuDC6r4o",
+   "name": "釜山 廣安大橋 下層",
+   "region": "釜山廣域市",
+   "lat": 35.146,
+   "lng": 129.122,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "IDuJuDC6r4o",
+     "title": "釜山 廣安大橋 下層",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-D06mQkm0sgs",
+   "name": "釜山 廣安大橋 下層 交通機位 A",
+   "region": "釜山廣域市",
+   "lat": 35.15,
+   "lng": 129.129,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "D06mQkm0sgs",
+     "title": "釜山 廣安大橋 下層 交通機位 A",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-EODHB8byaOs",
+   "name": "釜山 廣安大橋 下層 交通機位 B",
+   "region": "釜山廣域市",
+   "lat": 35.142,
+   "lng": 129.119,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "EODHB8byaOs",
+     "title": "釜山 廣安大橋 下層 交通機位 B",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-WUCB2IW5rOc",
+   "name": "釜山 廣安大橋 下層 交通機位 C",
+   "region": "釜山廣域市",
+   "lat": 35.147,
+   "lng": 129.125,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "WUCB2IW5rOc",
+     "title": "釜山 廣安大橋 下層 交通機位 C",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-lyOv8e_6Bw0",
+   "name": "釜山 廣安大橋 上層",
+   "region": "釜山廣域市",
+   "lat": 35.1445,
+   "lng": 129.125,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "lyOv8e_6Bw0",
+     "title": "釜山 廣安大橋 上層",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-OSTJPiDg6GM",
+   "name": "釜山 廣安大橋 上層 交通機位 A",
+   "region": "釜山廣域市",
+   "lat": 35.148,
+   "lng": 129.127,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "OSTJPiDg6GM",
+     "title": "釜山 廣安大橋 上層 交通機位 A",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-uRTWY4kY9r8",
+   "name": "釜山 廣安大橋 上層 交通機位 B",
+   "region": "釜山廣域市",
+   "lat": 35.144,
+   "lng": 129.123,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "uRTWY4kY9r8",
+     "title": "釜山 廣安大橋 上層 交通機位 B",
+     "provider": "광안대교",
+     "channel": "https://www.youtube.com/@gwangan_bridge"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-UYUDqPD8uCM",
+   "name": "釜山 廣安大橋（KT）",
+   "region": "釜山廣域市",
+   "lat": 35.15,
+   "lng": 129.125,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "UYUDqPD8uCM",
+     "title": "釜山 廣安大橋（KT）",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-Q6WKC4vDsUU",
+   "name": "首爾 南山 N 首爾塔",
+   "region": "首爾",
+   "lat": 37.5512,
+   "lng": 126.9882,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Q6WKC4vDsUU",
+     "title": "首爾 南山 N 首爾塔",
+     "provider": "한강 라이브 365",
+     "channel": "https://www.youtube.com/@Live_HanGang"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-ZI65qc2i0VI",
+   "name": "首爾 南山塔 漢南大橋",
+   "region": "首爾",
+   "lat": 37.527,
+   "lng": 127.013,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ZI65qc2i0VI",
+     "title": "首爾 南山塔 漢南大橋",
+     "provider": "서울 한강 라이브 247 Seoul Live Cam",
+     "channel": "https://www.youtube.com/@247SeoulLiveCam"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-WLA4lAk7Qps",
+   "name": "首爾 龍山 漢江景",
+   "region": "首爾",
+   "lat": 37.523,
+   "lng": 126.97,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "WLA4lAk7Qps",
+     "title": "首爾 龍山 漢江景",
+     "provider": "Soulscape Seoul 24 7 live: Cinematic Han River",
+     "channel": "https://www.youtube.com/@SoulscapeSeoul"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-M_JRXiwzlXE",
+   "name": "聞慶 姑母山城",
+   "region": "慶尚北道",
+   "lat": 36.664,
+   "lng": 128.203,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "M_JRXiwzlXE",
+     "title": "聞慶 姑母山城",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-lL9vhv2J_Vo",
+   "name": "聞慶 丹山（滑翔傘起飛點）",
+   "region": "慶尚北道",
+   "lat": 36.706,
+   "lng": 128.144,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "lL9vhv2J_Vo",
+     "title": "聞慶 丹山（滑翔傘起飛點）",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-udRDI1uDdvQ",
+   "name": "濟州 城山日出峰",
+   "region": "濟州特別自治道",
+   "lat": 33.458,
+   "lng": 126.942,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "udRDI1uDdvQ",
+     "title": "濟州 城山日出峰",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-lqzoLK5R7Bw",
+   "name": "街頭漫步｜首爾 弘大熱門街區",
+   "region": "首爾",
+   "lat": 37.554,
+   "lng": 126.925,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "lqzoLK5R7Bw",
+     "title": "街頭漫步｜首爾 弘大熱門街區",
+     "provider": "Watchers Club",
+     "channel": "https://www.youtube.com/@watchersclub"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-eOb-AvTecH8",
+   "name": "街頭漫步｜首爾 明洞・鍾路・江南 4K",
+   "region": "首爾",
+   "lat": 37.561,
+   "lng": 126.983,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "eOb-AvTecH8",
+     "title": "街頭漫步｜首爾 明洞・鍾路・江南 4K",
+     "provider": "ZEROBIG WALKING TOUR",
+     "channel": "https://www.youtube.com/@ZEROBIG-WALKING-TOUR"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-uGs3HNVqjLA",
+   "name": "街頭漫步｜首爾 明洞・鍾路夜晚",
+   "region": "首爾",
+   "lat": 37.5636,
+   "lng": 126.985,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "uGs3HNVqjLA",
+     "title": "街頭漫步｜首爾 明洞・鍾路夜晚",
+     "provider": "Watchers Club",
+     "channel": "https://www.youtube.com/@watchersclub"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-EhVOnFGMBYA",
+   "name": "街頭漫步｜首爾 梨泰院（回顧）",
+   "region": "首爾",
+   "lat": 37.533,
+   "lng": 126.996,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "EhVOnFGMBYA",
+     "title": "街頭漫步｜首爾 梨泰院（回顧）",
+     "provider": "Watchers Club",
+     "channel": "https://www.youtube.com/@watchersclub"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-pvrjsRb4GLU",
+   "name": "街頭漫步｜首爾 梨泰院夜晚",
+   "region": "首爾",
+   "lat": 37.5345,
+   "lng": 126.994,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "pvrjsRb4GLU",
+     "title": "街頭漫步｜首爾 梨泰院夜晚",
+     "provider": "Watchers Club",
+     "channel": "https://www.youtube.com/@watchersclub"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-C3hW1VrwmNc",
+   "name": "首爾 首爾站廣場",
+   "region": "首爾",
+   "lat": 37.5547,
+   "lng": 126.9707,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "C3hW1VrwmNc",
+     "title": "首爾 首爾站廣場",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-s6RuuZaFNkU",
+   "name": "首爾 東大門設計廣場 DDP",
+   "region": "首爾",
+   "lat": 37.5665,
+   "lng": 127.0092,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "s6RuuZaFNkU",
+     "title": "首爾 東大門設計廣場 DDP",
+     "provider": "DDP Live Seoul",
+     "channel": "https://www.youtube.com/@DDPLiveSeoul"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-VWDvJ_WFIVg",
+   "name": "首爾 東大門 DDP",
+   "region": "首爾",
+   "lat": 37.567,
+   "lng": 127.009,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "VWDvJ_WFIVg",
+     "title": "首爾 東大門 DDP",
+     "provider": "DDP Live Seoul",
+     "channel": "https://www.youtube.com/@DDPLiveSeoul"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-3wMU48S3Cb4",
+   "name": "首爾 漢江 鷺得島",
+   "region": "首爾",
+   "lat": 37.5175,
+   "lng": 126.959,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "3wMU48S3Cb4",
+     "title": "首爾 漢江 鷺得島",
+     "provider": "Soulscape Seoul 24 7 live: Cinematic Han River",
+     "channel": "https://www.youtube.com/@SoulscapeSeoul"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-vk5BHoDxXf0",
+   "name": "首爾 漢江 汝矣島天際線（麻浦望去）",
+   "region": "首爾",
+   "lat": 37.544,
+   "lng": 126.935,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "vk5BHoDxXf0",
+     "title": "首爾 漢江 汝矣島天際線（麻浦望去）",
+     "provider": "RIVERWORKER",
+     "channel": "https://www.youtube.com/@riverworker"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-536M1XZGzIs",
+   "name": "首爾 光化門大路",
+   "region": "首爾",
+   "lat": 37.572,
+   "lng": 126.9769,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "536M1XZGzIs",
+     "title": "首爾 光化門大路",
+     "provider": "GiGAeyesliveTV City View",
+     "channel": "https://www.youtube.com/@GiGAeyesliveTVCityView"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-AKcsJqkcRP0",
+   "name": "首爾 石村湖",
+   "region": "首爾",
+   "lat": 37.509,
+   "lng": 127.103,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "AKcsJqkcRP0",
+     "title": "首爾 石村湖",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-gCBwHr41Z4E",
+   "name": "首爾 汝矣島 江邊北路",
+   "region": "首爾",
+   "lat": 37.5335,
+   "lng": 126.933,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "gCBwHr41Z4E",
+     "title": "首爾 汝矣島 江邊北路",
+     "provider": "Seoul City View - 여의도 한강 라이브",
+     "channel": "https://www.youtube.com/@seoulcityview"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-yWd4GtSDkik",
+   "name": "首爾 汝矣島 汐江 奧林匹克大路",
+   "region": "首爾",
+   "lat": 37.518,
+   "lng": 126.923,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "yWd4GtSDkik",
+     "title": "首爾 汝矣島 汐江 奧林匹克大路",
+     "provider": "Seoul Skyline Live",
+     "channel": "https://www.youtube.com/@cityview-g3q"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-GRwcf4_ZDYo",
+   "name": "首爾 樂天世界",
+   "region": "首爾",
+   "lat": 37.511,
+   "lng": 127.098,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "GRwcf4_ZDYo",
+     "title": "首爾 樂天世界",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-ONOp0kiG35g",
+   "name": "天安 獨立紀念館 楓樹林道",
+   "region": "忠清南道",
+   "lat": 36.783,
+   "lng": 127.223,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ONOp0kiG35g",
+     "title": "天安 獨立紀念館 楓樹林道",
+     "provider": "독립기념관 라이브",
+     "channel": "https://www.youtube.com/@Inde815Live"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-ABWGP0sRMTA",
+   "name": "聞慶 鳥嶺古裝劇拍攝場",
+   "region": "慶尚北道",
+   "lat": 36.759,
+   "lng": 128.081,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ABWGP0sRMTA",
+     "title": "聞慶 鳥嶺古裝劇拍攝場",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-fsfAy_Jo2ZI",
+   "name": "聞慶 聞慶鳥嶺 第一關門",
+   "region": "慶尚北道",
+   "lat": 36.765,
+   "lng": 128.077,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "fsfAy_Jo2ZI",
+     "title": "聞慶 聞慶鳥嶺 第一關門",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-WdGPWgVk4oo",
+   "name": "聞慶 聞慶鳥嶺 第三關門",
+   "region": "忠清北道",
+   "lat": 36.82,
+   "lng": 128.055,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "WdGPWgVk4oo",
+     "title": "聞慶 聞慶鳥嶺 第三關門",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-H_oez3mvWLk",
+   "name": "聞慶 聞慶鳥嶺 第二關門",
+   "region": "忠清北道",
+   "lat": 36.788,
+   "lng": 128.06,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "H_oez3mvWLk",
+     "title": "聞慶 聞慶鳥嶺 第二關門",
+     "provider": "문경시",
+     "channel": "https://www.youtube.com/@mungyeongsi"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-RzJ_EJr9_w0",
+   "name": "獨島",
+   "region": "慶尚北道",
+   "lat": 37.241,
+   "lng": 131.865,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "RzJ_EJr9_w0",
+     "title": "獨島",
+     "provider": "독도 코리아 Dokdo Korea",
+     "channel": "https://www.youtube.com/@%EB%8F%85%EB%8F%84%EC%BD%94%EB%A6%AC%EC%95%84"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-Hr3wOOZSaeg",
+   "name": "首爾 漢江 西江大橋",
+   "region": "首爾",
+   "lat": 37.5376,
+   "lng": 126.9248,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Hr3wOOZSaeg",
+     "title": "首爾 漢江 西江大橋",
+     "provider": "GiGAeyesliveTV City View",
+     "channel": "https://www.youtube.com/@GiGAeyesliveTVCityView"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-RVvYQghFCXk",
+   "name": "首爾 漢江 盤浦大橋",
+   "region": "首爾",
+   "lat": 37.5123,
+   "lng": 126.9959,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "RVvYQghFCXk",
+     "title": "首爾 漢江 盤浦大橋",
+     "provider": "데일리서울 한강 라이브캠",
+     "channel": "https://www.youtube.com/@DailySeoul"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-OCfFNf1oUFo",
+   "name": "首爾 漢江 蠶室大橋",
+   "region": "首爾",
+   "lat": 37.5267,
+   "lng": 127.0938,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "OCfFNf1oUFo",
+     "title": "首爾 漢江 蠶室大橋",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-5gVrWGRZo9s",
+   "name": "首爾 盤浦漢江公園 盤浦大橋",
+   "region": "首爾",
+   "lat": 37.51,
+   "lng": 126.995,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "5gVrWGRZo9s",
+     "title": "首爾 盤浦漢江公園 盤浦大橋",
+     "provider": "한강 라이브 365",
+     "channel": "https://www.youtube.com/@Live_HanGang"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-PY-3W9aqatI",
+   "name": "首爾 盤浦大橋 月光彩虹噴泉",
+   "region": "首爾",
+   "lat": 37.5114,
+   "lng": 126.996,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "PY-3W9aqatI",
+     "title": "首爾 盤浦大橋 月光彩虹噴泉",
+     "provider": "서울 한강 라이브 247 Seoul Live Cam",
+     "channel": "https://www.youtube.com/@247SeoulLiveCam"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-eg3JjDdHSyQ",
+   "name": "聞慶 穎江人行橋",
+   "region": "慶尚北道",
+   "lat": 36.596,
+   "lng": 128.188,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "eg3JjDdHSyQ",
+     "title": "聞慶 穎江人行橋"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt--G99Sz86WzA",
+   "name": "首爾 漢江 汝矣島近景",
+   "region": "首爾",
+   "lat": 37.542,
+   "lng": 126.93,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-G99Sz86WzA",
+     "title": "首爾 漢江 汝矣島近景",
+     "provider": "RIVERWORKER",
+     "channel": "https://www.youtube.com/@riverworker"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-IcTMxC_k57A",
+   "name": "首爾 景福宮",
+   "region": "首爾",
+   "lat": 37.5796,
+   "lng": 126.977,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "IcTMxC_k57A",
+     "title": "首爾 景福宮",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-w7hoJoWuVsY",
+   "name": "首爾 景福宮（首爾經濟機位）",
+   "region": "首爾",
+   "lat": 37.5788,
+   "lng": 126.976,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "w7hoJoWuVsY",
+     "title": "首爾 景福宮（首爾經濟機位）",
+     "provider": "Seoul Economic Daily",
+     "channel": "https://www.youtube.com/@en.sedaily"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-ZL1SUWuFxKQ",
+   "name": "首爾 汝矣島 漢江公園",
+   "region": "首爾",
+   "lat": 37.528,
+   "lng": 126.933,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ZL1SUWuFxKQ",
+     "title": "首爾 汝矣島 漢江公園",
+     "provider": "서울 한강 라이브 247 Seoul Live Cam",
+     "channel": "https://www.youtube.com/@247SeoulLiveCam"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-G1oHv3PyNLc",
+   "name": "首爾 樂天世界塔",
+   "region": "首爾",
+   "lat": 37.5126,
+   "lng": 127.1025,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "G1oHv3PyNLc",
+     "title": "首爾 樂天世界塔",
+     "provider": "GiGAeyesliveTV City View",
+     "channel": "https://www.youtube.com/@GiGAeyesliveTVCityView"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-7iAc4OkRt9k",
+   "name": "首爾 蘆原 牛耳川",
+   "region": "首爾",
+   "lat": 37.632,
+   "lng": 127.056,
+   "tier": "general",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "7iAc4OkRt9k",
+     "title": "首爾 蘆原 牛耳川",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-2LF0KcvHB94",
+   "name": "首爾 蘆原 牛耳川 全景",
+   "region": "首爾",
+   "lat": 37.628,
+   "lng": 127.045,
+   "tier": "general",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "2LF0KcvHB94",
+     "title": "首爾 蘆原 牛耳川 全景",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-7aWtOfl3eoM",
+   "name": "首爾 蘆原 堂峴川",
+   "region": "首爾",
+   "lat": 37.652,
+   "lng": 127.074,
+   "tier": "general",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "7aWtOfl3eoM",
+     "title": "首爾 蘆原 堂峴川",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-kMlbgbUh0s4",
+   "name": "高城郡 海邊",
+   "region": "江原道",
+   "lat": 38.38,
+   "lng": 128.47,
+   "tier": "general",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "kMlbgbUh0s4",
+     "title": "高城郡 海邊",
+     "provider": "강원고성군",
+     "channel": "https://www.youtube.com/@%EA%B0%95%EC%9B%90%EA%B3%A0%EC%84%B1%EA%B5%B0"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-O7NsfGN3JfA",
+   "name": "釜山 釜慶大學 大淵校區",
+   "region": "釜山廣域市",
+   "lat": 35.1336,
+   "lng": 129.106,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "O7NsfGN3JfA",
+     "title": "釜山 釜慶大學 大淵校區",
+     "provider": "국립부경대학교 PUKYONG NATIONAL UNIVERSITY",
+     "channel": "https://www.youtube.com/@PuKyongNationalUniversity"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-AgoYQkBnn_c",
+   "name": "高陽 一山湖水公園",
+   "region": "京畿道",
+   "lat": 37.6559,
+   "lng": 126.7665,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "AgoYQkBnn_c",
+     "title": "高陽 一山湖水公園",
+     "provider": "일산호수공원 ilsanlakepark",
+     "channel": "https://www.youtube.com/@ilsan_lakepark"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-O3u7DZe_0NQ",
+   "name": "高陽 一山湖水公園 夕陽機位",
+   "region": "京畿道",
+   "lat": 37.6545,
+   "lng": 126.77,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "O3u7DZe_0NQ",
+     "title": "高陽 一山湖水公園 夕陽機位",
+     "provider": "일산호수공원 ilsanlakepark",
+     "channel": "https://www.youtube.com/@ilsan_lakepark"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-Y_Ec4Ke9Arc",
+   "name": "首爾 北漢山",
+   "region": "京畿道",
+   "lat": 37.6585,
+   "lng": 126.9779,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Y_Ec4Ke9Arc",
+     "title": "首爾 北漢山",
+     "provider": "Bukhansan Live · Seoul",
+     "channel": "https://www.youtube.com/@BukhansanLive"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt--0d_igDqaoA",
+   "name": "首爾 從佛岩山看蘆原",
+   "region": "首爾",
+   "lat": 37.656,
+   "lng": 127.09,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-0d_igDqaoA",
+     "title": "首爾 從佛岩山看蘆原",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-pr03p8mI7n4",
+   "name": "首爾 蘆原 杜鵑花山丘",
+   "region": "首爾",
+   "lat": 37.646,
+   "lng": 127.09,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "pr03p8mI7n4",
+     "title": "首爾 蘆原 杜鵑花山丘",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-XpaiUwKYc8w",
+   "name": "扶安 邊山半島夕陽",
+   "region": "全羅北道",
+   "lat": 35.624,
+   "lng": 126.468,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "XpaiUwKYc8w",
+     "title": "扶安 邊山半島夕陽",
+     "provider": "부안 붉은노을 라이브",
+     "channel": "https://www.youtube.com/@Buansunset-g5n"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-CQO1Ka7HqCg",
+   "name": "大田 世博科學公園 韓光廣場",
+   "region": "大田廣域市",
+   "lat": 36.3763,
+   "lng": 127.3871,
+   "tier": "general",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "CQO1Ka7HqCg",
+     "title": "大田 世博科學公園 韓光廣場",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-P-STvpyu1yA",
+   "name": "KOREA LIVE 24/7 (多鏡頭)",
+   "region": "首爾",
+   "lat": 37.575,
+   "lng": 126.99,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "P-STvpyu1yA",
+     "title": "KOREA LIVE 24/7 (多鏡頭)",
+     "provider": "World Live Cam 24",
+     "channel": "https://www.youtube.com/@WorldLiveCam24"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-yl11N0NuHVQ",
+   "name": "South Korea Now (多鏡頭)",
+   "region": "首爾",
+   "lat": 37.5665,
+   "lng": 126.978,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "yl11N0NuHVQ",
+     "title": "South Korea Now (多鏡頭)",
+     "provider": "Earth Now",
+     "channel": "https://www.youtube.com/@EarthNowLive"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-TnZu4N19nw8",
+   "name": "大邱 TBC 城市直播",
+   "region": "大邱廣域市",
+   "lat": 35.8714,
+   "lng": 128.6014,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "TnZu4N19nw8",
+     "title": "大邱 TBC 城市直播",
+     "provider": "TBC뉴스",
+     "channel": "https://www.youtube.com/@tbc8news"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-HKNHxxWqHK0",
+   "name": "蔚珍 海浪",
+   "region": "江原道",
+   "lat": 36.993,
+   "lng": 129.41,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "HKNHxxWqHK0",
+     "title": "蔚珍 海浪",
+     "provider": "울진반도낚시",
+     "channel": "https://www.youtube.com/@ujbyoon"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-r06QHbh05qM",
+   "name": "浦項 虎尾岬",
+   "region": "慶尚北道",
+   "lat": 36.077,
+   "lng": 129.567,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "r06QHbh05qM",
+     "title": "浦項 虎尾岬",
+     "provider": "GiGAeyes Live TV",
+     "channel": "https://www.youtube.com/@GiGAeyesLiveTV"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt--7LdvUqVw50",
+   "name": "首爾 蘆原 旋轉鏡頭",
+   "region": "首爾",
+   "lat": 37.654,
+   "lng": 127.056,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-7LdvUqVw50",
+     "title": "首爾 蘆原 旋轉鏡頭",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-UC7Q8FzvT-8",
+   "name": "首爾 東部幹線道路 漢內橋",
+   "region": "首爾",
+   "lat": 37.646,
+   "lng": 127.064,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "UC7Q8FzvT-8",
+     "title": "首爾 東部幹線道路 漢內橋",
+     "provider": "HEALING NOWON LIVE",
+     "channel": "https://www.youtube.com/@healinglivenowon7260"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-J_vZS1xGSkk",
+   "name": "首爾 兒童大公園 水獺館",
+   "region": "首爾",
+   "lat": 37.5482,
+   "lng": 127.0816,
+   "tier": "general",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "J_vZS1xGSkk",
+     "title": "首爾 兒童大公園 水獺館",
+     "provider": "서울어린이대공원 수달캠",
+     "channel": "https://www.youtube.com/@%EC%84%9C%EC%9A%B8%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EA%B3%B5%EC%9B%90%EC%88%98%EB%8B%AC"
+    }
+   ]
+  },
+  {
+   "id": "kr-yt-eG54m1b4l2k",
+   "name": "水原 光教湖水公園",
+   "region": "京畿道",
+   "lat": 37.2835,
+   "lng": 127.0656,
+   "tier": "general",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "eG54m1b4l2k",
+     "title": "水原 光教湖水公園",
+     "provider": "GiGAeyesliveTV City View",
+     "channel": "https://www.youtube.com/@GiGAeyesliveTVCityView"
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "videoId": "_PiAaZ_ZsNM",
+   "name": "首爾 東部幹線道路 月溪一橋",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "gRGN4k65k00",
+   "name": "首爾 蘆原 中浪川",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "GFn_lLJbRAc",
+   "name": "盈德 海邊日出",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "s4gVzICXANQ",
+   "name": "釜山 北港 郵輪碼頭",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "AjxhLFTDSbE",
+   "name": "釜山 九德隧道（道路 CCTV）",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "qHuX-QLTUbM",
+   "name": "高陽 一山 150 公尺高空景",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "1jGMVQPXzlY",
+   "name": "首爾 蘆原 佛岩山全景",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "dIv5sND2OZY",
+   "name": "咸陽 遠眺智異山",
+   "tier": "general",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "B6s7jgV1A8M",
+   "name": "街頭漫步｜首爾 弘大夜晚",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "p2KVCWMWokQ",
+   "name": "街頭漫步｜首爾 鍾路",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "sVrpfQ-sjs0",
+   "name": "首爾 三清洞街景",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "vUd4w805yNU",
+   "name": "首爾 聖水站熱門街區",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "Cb9F58asQr4",
+   "name": "Korea Local Live (各地輪播)",
+   "tier": "general",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "hg5ib_HPSgQ",
+   "name": "首爾 三清洞門 屏風岩",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "yPJRiLlK4es",
+   "name": "旌善郡（官方）",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "FfVAUUbGQTU",
+   "name": "首爾 漢江 加陽大橋",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "AFaw9YsNQbo",
+   "name": "大邱 83 塔",
+   "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "InMSivUIhd0",
+   "name": "鬱陵島 海中觀景台（水下）",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  }
+ ]
+}

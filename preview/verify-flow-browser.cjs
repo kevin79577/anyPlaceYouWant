@@ -112,6 +112,9 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   console.log('通過：近期分享篩選與未串接的真實空狀態。');
   // Fail the provider request deliberately to verify the visible recovery flow.
   await page.route('**/www.youtube.com/iframe_api',route=>route.abort());
+  // Earlier steps already loaded the real player API (it is cached inside media-player.js), so reload first: the blocked load is then the only one.
+  await page.goto(origin+'/experience.html?v=door-10&blocked=1#stories');
+  await page.waitForFunction(()=>window.SomewhereExperience?.getState().view==='stories');
   await page.evaluate(()=>SomewhereExperience.openPlace('korea'));
   await page.click('#watch-start');
   await page.waitForFunction(()=>SomewhereMedia.getState().status==='error');
