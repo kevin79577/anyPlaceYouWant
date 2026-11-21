@@ -38,7 +38,6 @@
     $('#country-heading').textContent=current.view==='locations'?'探索'+d.country+'的每一面。':'深入探索'+d.country+'。';
     $('#country-eyebrow').textContent=countryNames[k]+' / '+items.length+' WINDOWS';
     $('#country-summary').textContent=countryCopy[k];
-    $('#all-places').hidden=current.view==='locations';
     $('#library-title').textContent=d.country+(current.view==='locations'?'・所有地點':'・從這裡開始');
   }
   function apply(state,{restore=false,keepCamera=false}={}){
@@ -67,7 +66,8 @@
       if(state.view==='search'){if(state.query!==undefined)$('#global-query').value=state.query;searchCountry=state.searchCountry??searchCountry;searchLimit=state.searchLimit||24;renderSearch();if(!$('#search-dialog').open)$('#search-dialog').showModal();$('#global-results').scrollTop=state.searchScroll||0;}
       if(['place','watch'].includes(state.view)){
         if(state.view==='watch'&&window.innerWidth>700)G.toggleLibrary(true);// before the camera is fitted, so the place panel counts
-        const d=byId(state.id);if(d&&G.getState().selected!==d.id)G.restoreCamera({selected:d.id,lon:d.point[0],lat:d.point[1],zoom:G.countryCamera(key(d)).zoom,focusMix:1,focused:true});
+        // Same country: keep the zoom the visitor chose and glide to the place (G.select); only a jump from elsewhere starts at the country's own zoom.
+        const d=byId(state.id),cam=G.getState();if(d&&cam.selected!==d.id){if(cam.focused&&key(byId(cam.selected))===key(d))G.select(d.id);else G.restoreCamera({selected:d.id,lon:d.point[0],lat:d.point[1],zoom:G.countryCamera(key(d)).zoom,focusMix:1,focused:true});}
         G.openDetails();configureDetail();
         // Desktop: the stream is a panel docked beside the map (owner's annotation), opened non-modally so other places stay clickable.
         // The place page stays a modal; switching between the two has to close and re-open the dialog in the other mode.
@@ -142,14 +142,12 @@
   }
   function decorateLibrary(filtered){
     const list=$('#place-list'),scroll=list.scrollTop||0,isFull=current.view==='locations';
-    // Desktop: the scene window already shows the selected place, so the unfiltered country list skips it (mobile hides that window).
-    const mobile=matchMedia('(max-width:700px)').matches,unfiltered=!$('#place-query').value.trim()&&!$('#place-region').value&&!mobile,sel=G.getState().selected;
-    const shown=isFull?filtered:(unfiltered?filtered.filter(p=>p.id!==sel):filtered).slice(0,3);
+    const shown=filtered;// every listed place; the panel scrolls (owner: 顯示全部並用卷軸往下瀏覽)
     // Search and region filters only look at what is listed; say so when 一般景點 would have matched.
     const hidden=($('#place-query').value.trim()||$('#place-region').value)?G.hiddenMatches():0,hint=hidden?`<button class="general-hint" data-show-general>一般景點中有 ${hidden} 筆符合，打開查看 →</button>`:'';
     list.innerHTML=shown.length?shown.map(p=>card(p)).join('')+hint:`<div class="library-empty"><h3>換個關鍵字，再出發。</h3><p>${hidden?'熱門景點中沒有符合的地點。':'這個區域尚無符合的地點。'}</p>${hint}<button data-clear-library class="outline-pill">清除篩選</button></div>`;
     list.scrollTop=scroll;list.classList.toggle('catalogue-grid',isFull);
-    if(!isFull)$('#library-count').textContent=`${filtered.length} 個符合地點 · 先看看這 ${shown.length} 個風景入口`;
+    if(!isFull)$('#library-count').textContent=`${filtered.length} 個地點`;
     syncCountry();
   }
   function countryPills(target,selected,attribute){
@@ -212,7 +210,6 @@ return current.view==='locations'?{x:.77,y:.52}:current.view==='home'?{x:.67,y:.
   $('#header-search').addEventListener('click',()=>withTransition(()=>showSearch()));
   $('#breadcrumb-world').addEventListener('click',()=>withTransition(()=>navigate('home')));
   $('#breadcrumb-country').addEventListener('click',()=>withTransition(()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true})));
-  $('#all-places').addEventListener('click',()=>withTransition(showLocations));
   $('#library-toggle').addEventListener('click',showLocations);
   $('#library-close').addEventListener('click',()=>withTransition(()=>navigate('country',key(byId(G.getState().selected)),{keepCamera:true})));
   $('#saved-close').addEventListener('click',()=>withTransition(()=>navigate(lastExplore.view,lastExplore.id)));

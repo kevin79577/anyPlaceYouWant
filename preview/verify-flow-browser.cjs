@@ -34,8 +34,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   console.log('通過：首頁選目的地、開門、略過、進入國家探索。');
   await page.click('[data-destination="taiwan"]');
   await page.waitForFunction(()=>!SomewhereGlobe.getState().flying);
-  await page.click('#all-places');
-  await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');// view transition applies on the next frame
+  // The place panel lists every place (no 查看全部 button) and scrolls.
   assert.equal(await page.locator('#place-list [data-place]').count(),115);
   await page.fill('#place-query','花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
@@ -53,7 +52,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await shot(page,'03-place.png');
   await page.click('#detail-save');
   await page.click('#detail-back');
-  await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');
+  await page.waitForFunction(()=>SomewhereExperience.getState().view==='country');
   assert.equal(await page.locator('#place-query').inputValue(),'花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
   console.log('通過：115 個台灣熱門地點、篩選、景點、收藏及返回保留篩選。');
