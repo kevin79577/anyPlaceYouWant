@@ -1,0 +1,2889 @@
+{
+ "source": "refs/台灣_livecams.xlsx",
+ "checkedAt": "2026-11-21",
+ "playbackChecked": true,
+ "places": [
+  {
+   "id": "taiwan",
+   "name": "新北 淡水渡船頭",
+   "region": "新北市",
+   "lat": 25.17,
+   "lng": 121.4405,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "SqMD1zqQm-E",
+     "title": "新北 淡水渡船頭",
+     "provider": "紅樹林有線電視",
+     "channel": "https://www.youtube.com/@%E7%B4%85%E6%A8%B9%E6%9E%97%E6%9C%89%E7%B7%9A%E9%9B%BB%E8%A6%96-h7k"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-GUCaVR88ZFU",
+   "name": "石門水庫",
+   "region": "桃園市",
+   "lat": 24.813,
+   "lng": 121.243,
+   "tier": "hot",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "GUCaVR88ZFU",
+     "title": "石門水庫",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-fP4ecxfsJos",
+   "name": "台北 大佳河濱公園",
+   "region": "台北市",
+   "lat": 25.0745,
+   "lng": 121.533,
+   "tier": "hot",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "fP4ecxfsJos",
+     "title": "台北 大佳河濱公園",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-XUWjAsajKXg",
+   "name": "大溪老街",
+   "region": "桃園市",
+   "lat": 24.883,
+   "lng": 121.287,
+   "tier": "hot",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "XUWjAsajKXg",
+     "title": "大溪老街",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-ka7FV0sCvxQ",
+   "name": "高雄 旗津海水浴場",
+   "region": "高雄市",
+   "lat": 22.612,
+   "lng": 120.267,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ka7FV0sCvxQ",
+     "title": "高雄 旗津海水浴場",
+     "provider": "高雄旅遊網",
+     "channel": "https://www.youtube.com/@travelkhh"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-jUnFuJSj0OU",
+   "name": "墾丁 南灣",
+   "region": "屏東縣",
+   "lat": 21.96,
+   "lng": 120.757,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "jUnFuJSj0OU",
+     "title": "墾丁 南灣",
+     "provider": "我愛墾丁旅遊票券中心",
+     "channel": "https://www.youtube.com/@%E6%88%91%E6%84%9B%E5%A2%BE%E4%B8%81%E6%97%85%E9%81%8A%E7%A5%A8%E5%88%B8%E4%B8%AD%E5%BF%83"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-VqS_Y8ZCj6M",
+   "name": "杉原灣",
+   "region": "台東縣",
+   "lat": 22.84,
+   "lng": 121.193,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "VqS_Y8ZCj6M",
+     "title": "杉原灣",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-uCXgNUJO9e8",
+   "name": "台南黃金海岸",
+   "region": "台南市",
+   "lat": 22.952,
+   "lng": 120.17,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "uCXgNUJO9e8",
+     "title": "台南黃金海岸",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-HPurNw8gu84",
+   "name": "大鵬灣大福西",
+   "region": "屏東縣",
+   "lat": 22.44,
+   "lng": 120.48,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "HPurNw8gu84",
+     "title": "大鵬灣大福西",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-sJ8q1aOQAPU",
+   "name": "大鵬灣潮口平台360",
+   "region": "屏東縣",
+   "lat": 22.436,
+   "lng": 120.468,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "sJ8q1aOQAPU",
+     "title": "大鵬灣潮口平台360",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt--KQE12zWVbc",
+   "name": "大鵬灣望海亭",
+   "region": "屏東縣",
+   "lat": 22.438,
+   "lng": 120.47,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "-KQE12zWVbc",
+     "title": "大鵬灣望海亭",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-uKVPPfmnQYM",
+   "name": "大鵬灣遊一區",
+   "region": "屏東縣",
+   "lat": 22.442,
+   "lng": 120.482,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "uKVPPfmnQYM",
+     "title": "大鵬灣遊一區",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-DK-AW0K9bcg",
+   "name": "大鵬灣濱灣之心360",
+   "region": "屏東縣",
+   "lat": 22.447,
+   "lng": 120.476,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "DK-AW0K9bcg",
+     "title": "大鵬灣濱灣之心360",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-FbB8WDUXXqU",
+   "name": "白沙灣",
+   "region": "新北市",
+   "lat": 25.284,
+   "lng": 121.518,
+   "tier": "hot",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "FbB8WDUXXqU",
+     "title": "白沙灣",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-0D6QgDOdI6c",
+   "name": "桃園機場 2K",
+   "region": "桃園市",
+   "lat": 25.077,
+   "lng": 121.232,
+   "tier": "hot",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "0D6QgDOdI6c",
+     "title": "桃園機場 2K",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-68GFgzQxrXs",
+   "name": "桃園機場 4K-A",
+   "region": "桃園市",
+   "lat": 25.079,
+   "lng": 121.228,
+   "tier": "hot",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "68GFgzQxrXs",
+     "title": "桃園機場 4K-A",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-BxMeMnX6Qqw",
+   "name": "桃園機場 4K-B",
+   "region": "桃園市",
+   "lat": 25.075,
+   "lng": 121.236,
+   "tier": "hot",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "BxMeMnX6Qqw",
+     "title": "桃園機場 4K-B",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-wWEnxWA7nnY",
+   "name": "桃園機場北跑道觀景台",
+   "region": "桃園市",
+   "lat": 25.088,
+   "lng": 121.235,
+   "tier": "hot",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "wWEnxWA7nnY",
+     "title": "桃園機場北跑道觀景台",
+     "provider": "Taoyuan Airport",
+     "channel": "https://www.youtube.com/@taoyuanairport"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6zOsnHxN7_I",
+   "name": "金門料羅港",
+   "region": "金門縣",
+   "lat": 24.411,
+   "lng": 118.429,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6zOsnHxN7_I",
+     "title": "金門料羅港",
+     "provider": "樂遊金門",
+     "channel": "https://www.youtube.com/@kinmentravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-nDxJ7sWfG_E",
+   "name": "高雄 大港橋 360",
+   "region": "高雄市",
+   "lat": 22.62,
+   "lng": 120.283,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "nDxJ7sWfG_E",
+     "title": "高雄 大港橋 360",
+     "provider": "棧貳庫KW2",
+     "channel": "https://www.youtube.com/@kw2tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-bsmxwRLdB3k",
+   "name": "彰化王功漁港",
+   "region": "彰化縣",
+   "lat": 23.969,
+   "lng": 120.326,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "bsmxwRLdB3k",
+     "title": "彰化王功漁港",
+     "provider": "愛玩彰化 Changhua Travels",
+     "channel": "https://www.youtube.com/@changhua_travels"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-xwAWSh35uuw",
+   "name": "新北 淡水漁人碼頭",
+   "region": "新北市",
+   "lat": 25.1831,
+   "lng": 121.4115,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "xwAWSh35uuw",
+     "title": "新北 淡水漁人碼頭",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-IPNWtdR6QkE",
+   "name": "台南 安平港",
+   "region": "台南市",
+   "lat": 22.993,
+   "lng": 120.16,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "IPNWtdR6QkE",
+     "title": "台南 安平港",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Ndo_8RuefH4",
+   "name": "台北 大稻埕碼頭",
+   "region": "台北市",
+   "lat": 25.0563,
+   "lng": 121.5083,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Ndo_8RuefH4",
+     "title": "台北 大稻埕碼頭",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-rB0Nw8JmTXg",
+   "name": "大鵬灣濱灣碼頭360",
+   "region": "屏東縣",
+   "lat": 22.446,
+   "lng": 120.473,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "rB0Nw8JmTXg",
+     "title": "大鵬灣濱灣碼頭360",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-5plRdP_APCk",
+   "name": "日月潭 伊達邵碼頭",
+   "region": "南投縣",
+   "lat": 23.851,
+   "lng": 120.931,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "5plRdP_APCk",
+     "title": "日月潭 伊達邵碼頭",
+     "provider": " Itathau Visitor Center",
+     "channel": "https://www.youtube.com/@Itathaosml"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-cahSuOwzYQ8",
+   "name": "碧砂漁港",
+   "region": "基隆市",
+   "lat": 25.144,
+   "lng": 121.791,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "cahSuOwzYQ8",
+     "title": "碧砂漁港",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-wTHhv7M0vCI",
+   "name": "綠島 南寮漁港",
+   "region": "台東縣",
+   "lat": 22.672,
+   "lng": 121.467,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "wTHhv7M0vCI",
+     "title": "綠島 南寮漁港",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6Y97q9KrhwA",
+   "name": "阿里山 小笠原觀日平台",
+   "region": "嘉義縣",
+   "lat": 23.517,
+   "lng": 120.806,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6Y97q9KrhwA",
+     "title": "阿里山 小笠原觀日平台",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-dY2cRNr5Buw",
+   "name": "阿里山 太平雲梯",
+   "region": "嘉義縣",
+   "lat": 23.556,
+   "lng": 120.571,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "dY2cRNr5Buw",
+     "title": "阿里山 太平雲梯",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-j2L_559nCjc",
+   "name": "阿里山 二延平步道",
+   "region": "嘉義縣",
+   "lat": 23.4575,
+   "lng": 120.682,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "j2L_559nCjc",
+     "title": "阿里山 二延平步道",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-B6eki-0-w0g",
+   "name": "阿里山 奮起湖",
+   "region": "嘉義縣",
+   "lat": 23.505,
+   "lng": 120.696,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "B6eki-0-w0g",
+     "title": "阿里山 奮起湖",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-8cq-t5yKjvs",
+   "name": "阿里山 林業鐵路",
+   "region": "嘉義縣",
+   "lat": 23.511,
+   "lng": 120.802,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "8cq-t5yKjvs",
+     "title": "阿里山 林業鐵路",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-8KnqJBf_dow",
+   "name": "阿里山 觸口遊客中心",
+   "region": "嘉義縣",
+   "lat": 23.444,
+   "lng": 120.604,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "8KnqJBf_dow",
+     "title": "阿里山 觸口遊客中心",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-agEzlv9n9Eg",
+   "name": "阿里山生力農場",
+   "region": "嘉義縣",
+   "lat": 23.48,
+   "lng": 120.71,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "agEzlv9n9Eg",
+     "title": "阿里山生力農場",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-zDt8FBPozZQ",
+   "name": "阿里山里佳",
+   "region": "嘉義縣",
+   "lat": 23.4,
+   "lng": 120.72,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "zDt8FBPozZQ",
+     "title": "阿里山里佳",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-PvJr2efA6n0",
+   "name": "遠眺七星山",
+   "region": "台北市",
+   "lat": 25.17,
+   "lng": 121.56,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "PvJr2efA6n0",
+     "title": "遠眺七星山",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-DliL9uMtPrI",
+   "name": "花蓮 六十石山",
+   "region": "花蓮縣",
+   "lat": 23.13,
+   "lng": 121.282,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "DliL9uMtPrI",
+     "title": "花蓮 六十石山",
+     "provider": "ervnsa",
+     "channel": "https://www.youtube.com/@ervnsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-3Za9y4z_Lzc",
+   "name": "角板山思親亭",
+   "region": "桃園市",
+   "lat": 24.817,
+   "lng": 121.347,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "3Za9y4z_Lzc",
+     "title": "角板山思親亭",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt--xT1bZhWLuU",
+   "name": "角板山梅園",
+   "region": "桃園市",
+   "lat": 24.815,
+   "lng": 121.353,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-xT1bZhWLuU",
+     "title": "角板山梅園",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-YcazXhwRf4g",
+   "name": "宜蘭 太平山",
+   "region": "宜蘭縣",
+   "lat": 24.497,
+   "lng": 121.533,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "YcazXhwRf4g",
+     "title": "宜蘭 太平山",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-C03Itx8iSC0",
+   "name": "高雄 壽山情人觀景台",
+   "region": "高雄市",
+   "lat": 22.638,
+   "lng": 120.27,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "C03Itx8iSC0",
+     "title": "高雄 壽山情人觀景台",
+     "provider": "高雄旅遊網",
+     "channel": "https://www.youtube.com/@travelkhh"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-2lVMTs_Fj0M",
+   "name": "合歡山 武嶺亭",
+   "region": "南投縣",
+   "lat": 24.1371,
+   "lng": 121.276,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "2lVMTs_Fj0M",
+     "title": "合歡山 武嶺亭",
+     "provider": "台灣即時影像監視器",
+     "channel": "https://www.youtube.com/@twipcam"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-BiBNiJAW3dY",
+   "name": "合歡山武嶺",
+   "region": "南投縣",
+   "lat": 24.137,
+   "lng": 121.275,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "BiBNiJAW3dY",
+     "title": "合歡山武嶺",
+     "provider": "台灣即時影像監視器",
+     "channel": "https://www.youtube.com/@twipcam"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-5GTFLN9gZrc",
+   "name": "赤科山",
+   "region": "花蓮縣",
+   "lat": 23.33,
+   "lng": 121.33,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "5GTFLN9gZrc",
+     "title": "赤科山",
+     "provider": "ervnsa",
+     "channel": "https://www.youtube.com/@ervnsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-z_fY1pj1VBw",
+   "name": "台北 象山看台北101",
+   "region": "台北市",
+   "lat": 25.0272,
+   "lng": 121.576,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "z_fY1pj1VBw",
+     "title": "台北 象山看台北101",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-uvwfYzwY8tg",
+   "name": "台北 碧山巖",
+   "region": "台北市",
+   "lat": 25.0975,
+   "lng": 121.5845,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "uvwfYzwY8tg",
+     "title": "台北 碧山巖",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-34h_Cy_n0Ok",
+   "name": "台北 劍潭山微風平台",
+   "region": "台北市",
+   "lat": 25.0873,
+   "lng": 121.528,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "34h_Cy_n0Ok",
+     "title": "台北 劍潭山微風平台",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-tEcHWBlxAGM",
+   "name": "日月潭 金龍山",
+   "region": "南投縣",
+   "lat": 23.8795,
+   "lng": 120.946,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "tEcHWBlxAGM",
+     "title": "日月潭 金龍山",
+     "provider": "jinlong",
+     "channel": "https://www.youtube.com/@jinlong-x3k"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6ghffcNt3Nw",
+   "name": "陽明山 大屯自然公園",
+   "region": "新北市",
+   "lat": 25.18,
+   "lng": 121.5215,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6ghffcNt3Nw",
+     "title": "陽明山 大屯自然公園",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-d9KuXrPCWYU",
+   "name": "陽明山 二子坪",
+   "region": "新北市",
+   "lat": 25.186,
+   "lng": 121.524,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "d9KuXrPCWYU",
+     "title": "陽明山 二子坪",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-RttyIGHbN_w",
+   "name": "陽明山 陽明書屋",
+   "region": "台北市",
+   "lat": 25.16,
+   "lng": 121.557,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "RttyIGHbN_w",
+     "title": "陽明山 陽明書屋",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-GB64WeZZQPQ",
+   "name": "陽明山 冷水坑",
+   "region": "台北市",
+   "lat": 25.1665,
+   "lng": 121.563,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "GB64WeZZQPQ",
+     "title": "陽明山 冷水坑",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-UX4FTHVXcz4",
+   "name": "陽明山 擎天崗 360",
+   "region": "台北市",
+   "lat": 25.168,
+   "lng": 121.5745,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "UX4FTHVXcz4",
+     "title": "陽明山 擎天崗 360",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-YNCc2Xb3Ahk",
+   "name": "奎壁山摩西分海",
+   "region": "澎湖縣",
+   "lat": 23.597,
+   "lng": 119.66,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "YNCc2Xb3Ahk",
+     "title": "奎壁山摩西分海",
+     "provider": "交通部觀光署澎湖國家風景區管理處",
+     "channel": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-YkIUZjVlhv4",
+   "name": "拉拉山遊客中心",
+   "region": "桃園市",
+   "lat": 24.715,
+   "lng": 121.43,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "YkIUZjVlhv4",
+     "title": "拉拉山遊客中心",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-gNWeZsaqD98",
+   "name": "觀音山",
+   "region": "新北市",
+   "lat": 25.135,
+   "lng": 121.425,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "gNWeZsaqD98",
+     "title": "觀音山",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-enD2lFVDNiU",
+   "name": "太平山蹦蹦車站",
+   "region": "宜蘭縣",
+   "lat": 24.494,
+   "lng": 121.531,
+   "tier": "hot",
+   "category": "車站鐵道",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "enD2lFVDNiU",
+     "title": "太平山蹦蹦車站",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-ASzrS-4ZcA8",
+   "name": "花蓮 東大門夜市",
+   "region": "花蓮縣",
+   "lat": 23.977,
+   "lng": 121.612,
+   "tier": "hot",
+   "category": "商店街・店家",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ASzrS-4ZcA8",
+     "title": "花蓮 東大門夜市",
+     "provider": "花蓮縣政府觀光處東大門夜市即時影像",
+     "channel": "https://www.youtube.com/@%E8%8A%B1%E8%93%AE%E7%B8%A3%E6%94%BF%E5%BA%9C%E8%A7%80%E5%85%89%E8%99%95%E6%9D%B1%E5%A4%A7"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-hrpwltQqtq0",
+   "name": "墾丁 墾丁大街",
+   "region": "屏東縣",
+   "lat": 21.9445,
+   "lng": 120.796,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "hrpwltQqtq0",
+     "title": "墾丁 墾丁大街",
+     "provider": "墾丁國家公園",
+     "channel": "https://www.youtube.com/@ktnpworld"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-l0MykkrTvo4",
+   "name": "墾丁大街牌樓",
+   "region": "屏東縣",
+   "lat": 21.947,
+   "lng": 120.796,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "l0MykkrTvo4",
+     "title": "墾丁大街牌樓",
+     "provider": "墾丁國家公園",
+     "channel": "https://www.youtube.com/@ktnpworld"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-pSQ0e-ZTZ5g",
+   "name": "慈湖水岸廣場",
+   "region": "桃園市",
+   "lat": 24.843,
+   "lng": 121.294,
+   "tier": "hot",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "pSQ0e-ZTZ5g",
+     "title": "慈湖水岸廣場",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-AKl3F6cAY2Q",
+   "name": "加路蘭",
+   "region": "台東縣",
+   "lat": 22.807,
+   "lng": 121.196,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "AKl3F6cAY2Q",
+     "title": "加路蘭",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-j3l32VFi5M8",
+   "name": "花蓮 七星潭",
+   "region": "花蓮縣",
+   "lat": 24.03,
+   "lng": 121.627,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "j3l32VFi5M8",
+     "title": "花蓮 七星潭",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-KMyFrEQq-XY",
+   "name": "基隆和平島",
+   "region": "基隆市",
+   "lat": 25.161,
+   "lng": 121.766,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "KMyFrEQq-XY",
+     "title": "基隆和平島",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-bsp9kqrSFW8",
+   "name": "宜蘭外澳",
+   "region": "宜蘭縣",
+   "lat": 24.875,
+   "lng": 121.843,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "bsp9kqrSFW8",
+     "title": "宜蘭外澳",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-q3KJt-SZc2s",
+   "name": "金樽(4K)",
+   "region": "台東縣",
+   "lat": 22.956,
+   "lng": 121.291,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "q3KJt-SZc2s",
+     "title": "金樽(4K)",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-SR-6i6S8plg",
+   "name": "金門慈湖三角堡",
+   "region": "金門縣",
+   "lat": 24.456,
+   "lng": 118.29,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "SR-6i6S8plg",
+     "title": "金門慈湖三角堡",
+     "provider": "金門國家公園管理處",
+     "channel": "https://www.youtube.com/@kmnpofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-AF550Wx7Ba0",
+   "name": "後慈湖",
+   "region": "桃園市",
+   "lat": 24.84,
+   "lng": 121.29,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "AF550Wx7Ba0",
+     "title": "後慈湖",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-yQpz1IeRVgw",
+   "name": "後壁湖",
+   "region": "屏東縣",
+   "lat": 21.946,
+   "lng": 120.744,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "yQpz1IeRVgw",
+     "title": "後壁湖",
+     "provider": "墾丁國家公園",
+     "channel": "https://www.youtube.com/@ktnpworld"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-aaKOV4qkDHw",
+   "name": "鯉魚潭",
+   "region": "花蓮縣",
+   "lat": 23.928,
+   "lng": 121.508,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "aaKOV4qkDHw",
+     "title": "鯉魚潭",
+     "provider": "ervnsa",
+     "channel": "https://www.youtube.com/@ervnsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-BnPoNatG-HE",
+   "name": "高雄 蓮池潭",
+   "region": "高雄市",
+   "lat": 22.682,
+   "lng": 120.296,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "BnPoNatG-HE",
+     "title": "高雄 蓮池潭",
+     "provider": "高雄旅遊網",
+     "channel": "https://www.youtube.com/@travelkhh"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-7WOJMh_eSfY",
+   "name": "墾丁 船帆石",
+   "region": "屏東縣",
+   "lat": 21.946,
+   "lng": 120.832,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "7WOJMh_eSfY",
+     "title": "墾丁 船帆石",
+     "provider": "墾丁國家公園",
+     "channel": "https://www.youtube.com/@ktnpworld"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-qg-aHp2mvS8",
+   "name": "七星潭北埔",
+   "region": "花蓮縣",
+   "lat": 24.035,
+   "lng": 121.627,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "qg-aHp2mvS8",
+     "title": "七星潭北埔",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-HirBQsQEUeA",
+   "name": "十分瀑布",
+   "region": "新北市",
+   "lat": 25.048,
+   "lng": 121.786,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "HirBQsQEUeA",
+     "title": "十分瀑布",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-neaiCec1kec",
+   "name": "小烏來天空步道",
+   "region": "桃園市",
+   "lat": 24.788,
+   "lng": 121.378,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "neaiCec1kec",
+     "title": "小烏來天空步道",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-kKD-ZBLs8-4",
+   "name": "小油坑",
+   "region": "台北市",
+   "lat": 25.177,
+   "lng": 121.547,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "kKD-ZBLs8-4",
+     "title": "小油坑",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-XSD5ptYisw8",
+   "name": "新北 九份",
+   "region": "新北市",
+   "lat": 25.1093,
+   "lng": 121.8448,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "XSD5ptYisw8",
+     "title": "新北 九份",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-mXnigLvIL0Q",
+   "name": "石梯坪",
+   "region": "花蓮縣",
+   "lat": 23.488,
+   "lng": 121.511,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "mXnigLvIL0Q",
+     "title": "石梯坪",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Bc6PX90YfrY",
+   "name": "石碇千島湖",
+   "region": "新北市",
+   "lat": 24.95,
+   "lng": 121.64,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Bc6PX90YfrY",
+     "title": "石碇千島湖",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-2KDE860OW_A",
+   "name": "雪霸 雪見遊憩區",
+   "region": "苗栗縣",
+   "lat": 24.424,
+   "lng": 121.017,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "2KDE860OW_A",
+     "title": "雪霸 雪見遊憩區",
+     "provider": "雪霸國家公園 Shei-Pa National Park",
+     "channel": "https://www.youtube.com/@spnp852"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-aGOFDlySzoQ",
+   "name": "雪霸 武陵遊憩區",
+   "region": "台中市",
+   "lat": 24.383,
+   "lng": 121.311,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "aGOFDlySzoQ",
+     "title": "雪霸 武陵遊憩區",
+     "provider": "雪霸國家公園 Shei-Pa National Park",
+     "channel": "https://www.youtube.com/@spnp852"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-gHBwgnzaBKg",
+   "name": "雪霸 觀霧遊憩區",
+   "region": "苗栗縣",
+   "lat": 24.506,
+   "lng": 121.115,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "gHBwgnzaBKg",
+     "title": "雪霸 觀霧遊憩區",
+     "provider": "雪霸國家公園 Shei-Pa National Park",
+     "channel": "https://www.youtube.com/@spnp852"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-K3VZNxKt01o",
+   "name": "太魯閣 遊客中心 360",
+   "region": "花蓮縣",
+   "lat": 24.1585,
+   "lng": 121.6215,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "K3VZNxKt01o",
+     "title": "太魯閣 遊客中心 360",
+     "provider": "太魯閣國家公園",
+     "channel": "https://www.youtube.com/@thecmmedia"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-lhXXhDyjFtI",
+   "name": "台中望高寮",
+   "region": "台中市",
+   "lat": 24.138,
+   "lng": 120.588,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "lhXXhDyjFtI",
+     "title": "台中望高寮",
+     "provider": "大玩台中-臺中觀光旅遊局",
+     "channel": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-ZdqHgQwvZOw",
+   "name": "台東 金樽遊憩區",
+   "region": "台東縣",
+   "lat": 22.95,
+   "lng": 121.293,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ZdqHgQwvZOw",
+     "title": "台東 金樽遊憩區",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-X_fchztvqI0",
+   "name": "台東 三仙台",
+   "region": "台東縣",
+   "lat": 23.123,
+   "lng": 121.415,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "X_fchztvqI0",
+     "title": "台東 三仙台",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-rvc1klNIgQc",
+   "name": "台東 鹿野高台",
+   "region": "台東縣",
+   "lat": 22.92,
+   "lng": 121.12,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "rvc1klNIgQc",
+     "title": "台東 鹿野高台",
+     "provider": "ervnsa",
+     "channel": "https://www.youtube.com/@ervnsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6kUEK3LVrro",
+   "name": "台東 池上天堂路",
+   "region": "台東縣",
+   "lat": 23.096,
+   "lng": 121.214,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6kUEK3LVrro",
+     "title": "台東 池上天堂路",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-JhQuR77AR7U",
+   "name": "台東 都歷遊客中心",
+   "region": "台東縣",
+   "lat": 22.893,
+   "lng": 121.25,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "JhQuR77AR7U",
+     "title": "台東 都歷遊客中心",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-EYmZLt-QSj4",
+   "name": "日月潭 九蛙疊像",
+   "region": "南投縣",
+   "lat": 23.859,
+   "lng": 120.9135,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "EYmZLt-QSj4",
+     "title": "日月潭 九蛙疊像",
+     "provider": "九蛙伊達邵",
+     "channel": "https://www.youtube.com/@%E4%B9%9D%E8%9B%99%E4%BC%8A%E9%81%94%E9%82%B5"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-kLa8DRQ0i8Q",
+   "name": "日月潭 達克拉哈步道",
+   "region": "南投縣",
+   "lat": 23.87,
+   "lng": 120.9155,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "kLa8DRQ0i8Q",
+     "title": "日月潭 達克拉哈步道",
+     "provider": "達克拉哈",
+     "channel": "https://www.youtube.com/@%E9%81%94%E5%85%8B%E6%8B%89%E5%93%88"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-IS9KKN8i_Pg",
+   "name": "日月潭 文武廟",
+   "region": "南投縣",
+   "lat": 23.877,
+   "lng": 120.9275,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "IS9KKN8i_Pg",
+     "title": "日月潭 文武廟",
+     "provider": "文武廟",
+     "channel": "https://www.youtube.com/@%E6%96%87%E6%AD%A6%E5%BB%9F-b1t6v"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-zLIkTOCGCA4",
+   "name": "福隆",
+   "region": "新北市",
+   "lat": 25.02,
+   "lng": 121.945,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "zLIkTOCGCA4",
+     "title": "福隆",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-B3FCnD4ZY_M",
+   "name": "龍洞",
+   "region": "新北市",
+   "lat": 25.113,
+   "lng": 121.919,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "B3FCnD4ZY_M",
+     "title": "龍洞",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Wefj3zbl-tI",
+   "name": "老梅綠石槽",
+   "region": "新北市",
+   "lat": 25.287,
+   "lng": 121.536,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Wefj3zbl-tI",
+     "title": "老梅綠石槽",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-bEaNjS7xCJ0",
+   "name": "澎湖 東嶼坪 360",
+   "region": "澎湖縣",
+   "lat": 23.258,
+   "lng": 119.509,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "bEaNjS7xCJ0",
+     "title": "澎湖 東嶼坪 360",
+     "provider": "海洋國家公園管理處 MNP Headquarters",
+     "channel": "https://www.youtube.com/@marinenph"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-tJSJMfxfivY",
+   "name": "澎湖 觀音亭 360",
+   "region": "澎湖縣",
+   "lat": 23.568,
+   "lng": 119.56,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "tJSJMfxfivY",
+     "title": "澎湖 觀音亭 360",
+     "provider": "AS_RCHSS_GIS",
+     "channel": "https://www.youtube.com/@AS_RCHSS_GIS"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt--bv8pG-vk1Y",
+   "name": "澎湖菓葉觀日樓",
+   "region": "澎湖縣",
+   "lat": 23.606,
+   "lng": 119.677,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-bv8pG-vk1Y",
+     "title": "澎湖菓葉觀日樓",
+     "provider": "交通部觀光署澎湖國家風景區管理處",
+     "channel": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-ZcO5dbciNU4",
+   "name": "澎湖北寮",
+   "region": "澎湖縣",
+   "lat": 23.596,
+   "lng": 119.665,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ZcO5dbciNU4",
+     "title": "澎湖北寮",
+     "provider": "交通部觀光署澎湖國家風景區管理處",
+     "channel": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-T9QS6Y4i-9k",
+   "name": "澎湖內垵",
+   "region": "澎湖縣",
+   "lat": 23.54,
+   "lng": 119.508,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "T9QS6Y4i-9k",
+     "title": "澎湖內垵",
+     "provider": "交通部觀光署澎湖國家風景區管理處",
+     "channel": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6HeYP46CMgg",
+   "name": "擎天崗草原",
+   "region": "台北市",
+   "lat": 25.168,
+   "lng": 121.575,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6HeYP46CMgg",
+     "title": "擎天崗草原",
+     "provider": "陽明山國家公園管理處INFO",
+     "channel": "https://www.youtube.com/@ymsnpinfo"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-xxMRjVwCQ3o",
+   "name": "烘爐地",
+   "region": "新北市",
+   "lat": 24.982,
+   "lng": 121.495,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "xxMRjVwCQ3o",
+     "title": "烘爐地",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-a8nJQr5rBGs",
+   "name": "綠島 柴口浮潛區",
+   "region": "台東縣",
+   "lat": 22.677,
+   "lng": 121.483,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "a8nJQr5rBGs",
+     "title": "綠島 柴口浮潛區",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-fv1yFousBvc",
+   "name": "綠島 帆船鼻",
+   "region": "台東縣",
+   "lat": 22.648,
+   "lng": 121.501,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "fv1yFousBvc",
+     "title": "綠島 帆船鼻",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-XEbo8NzMTbQ",
+   "name": "角板山生態池",
+   "region": "桃園市",
+   "lat": 24.818,
+   "lng": 121.35,
+   "tier": "hot",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "XEbo8NzMTbQ",
+     "title": "角板山生態池",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-KfBv0kT3ezE",
+   "name": "墾丁 森林遊樂區觀海樓",
+   "region": "屏東縣",
+   "lat": 21.963,
+   "lng": 120.81,
+   "tier": "hot",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "KfBv0kT3ezE",
+     "title": "墾丁 森林遊樂區觀海樓",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-vh2JdQx0PYU",
+   "name": "壽山動物園狐獴",
+   "region": "高雄市",
+   "lat": 22.635,
+   "lng": 120.276,
+   "tier": "hot",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "vh2JdQx0PYU",
+     "title": "壽山動物園狐獴",
+     "provider": "高雄旅遊網",
+     "channel": "https://www.youtube.com/@travelkhh"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt--nyTOqcRDIQ",
+   "name": "烏來吊橋",
+   "region": "新北市",
+   "lat": 24.866,
+   "lng": 121.55,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "-nyTOqcRDIQ",
+     "title": "烏來吊橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Nz9-_x5ecWc",
+   "name": "淡江大橋",
+   "region": "新北市",
+   "lat": 25.18,
+   "lng": 121.42,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Nz9-_x5ecWc",
+     "title": "淡江大橋",
+     "provider": "台灣即時影像監視器",
+     "channel": "https://www.youtube.com/@twipcam"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-yn_8QwCWsyI",
+   "name": "淡水竹圍路口",
+   "region": "新北市",
+   "lat": 25.135,
+   "lng": 121.46,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "yn_8QwCWsyI",
+     "title": "淡水竹圍路口",
+     "provider": "紅樹林有線電視",
+     "channel": "https://www.youtube.com/@%E7%B4%85%E6%A8%B9%E6%9E%97%E6%9C%89%E7%B7%9A%E9%9B%BB%E8%A6%96-h7k"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-JnD8Rk3o0BM",
+   "name": "長虹橋",
+   "region": "花蓮縣",
+   "lat": 23.471,
+   "lng": 121.494,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "JnD8Rk3o0BM",
+     "title": "長虹橋",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-215ahZ_0rTg",
+   "name": "台北 貓空指南宮",
+   "region": "台北市",
+   "lat": 24.9815,
+   "lng": 121.587,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "215ahZ_0rTg",
+     "title": "台北 貓空指南宮",
+     "provider": "Taipei Travel Live Cam  台北觀光即時影像 ",
+     "channel": "https://www.youtube.com/@taipeitravelofficial"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-ZjuY4qKaj40",
+   "name": "野柳地質公園",
+   "region": "新北市",
+   "lat": 25.206,
+   "lng": 121.69,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "ZjuY4qKaj40",
+     "title": "野柳地質公園",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-2SiZ6VUKbZI",
+   "name": "和平島公園",
+   "region": "基隆市",
+   "lat": 25.16,
+   "lng": 121.763,
+   "tier": "hot",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "2SiZ6VUKbZI",
+     "title": "和平島公園",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-oFJ6gCaBb_Q",
+   "name": "大溪橋",
+   "region": "桃園市",
+   "lat": 24.884,
+   "lng": 121.283,
+   "tier": "general",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "oFJ6gCaBb_Q",
+     "title": "大溪橋",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-yeoV-wBdoxQ",
+   "name": "林田山萬里溪",
+   "region": "花蓮縣",
+   "lat": 23.73,
+   "lng": 121.4,
+   "tier": "general",
+   "category": "河川",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "yeoV-wBdoxQ",
+     "title": "林田山萬里溪",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-pUWjZsODbmU",
+   "name": "新竹海岸",
+   "region": "新竹市",
+   "lat": 24.85,
+   "lng": 120.92,
+   "tier": "general",
+   "category": "海岸",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "pUWjZsODbmU",
+     "title": "新竹海岸",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-CJ8FA10bg3E",
+   "name": "新北 中角灣",
+   "region": "新北市",
+   "lat": 25.2392,
+   "lng": 121.629,
+   "tier": "general",
+   "category": "海岸",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "CJ8FA10bg3E",
+     "title": "新北 中角灣",
+     "provider": "北觀國家風景區管理處",
+     "channel": "https://www.youtube.com/@northguan"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-91PfFoqvuUk",
+   "name": "桃園國際機場",
+   "region": "桃園市",
+   "lat": 25.0777,
+   "lng": 121.2328,
+   "tier": "general",
+   "category": "機場",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "91PfFoqvuUk",
+     "title": "桃園國際機場",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-tD_a03trUvE",
+   "name": "永安漁港",
+   "region": "桃園市",
+   "lat": 24.99,
+   "lng": 121.016,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "tD_a03trUvE",
+     "title": "永安漁港",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-44JArbF682k",
+   "name": "許厝港濕地",
+   "region": "桃園市",
+   "lat": 25.085,
+   "lng": 121.183,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "44JArbF682k",
+     "title": "許厝港濕地",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-VJA5cUqnM-A",
+   "name": "南方澳第二漁港",
+   "region": "宜蘭縣",
+   "lat": 24.586,
+   "lng": 121.865,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "VJA5cUqnM-A",
+     "title": "南方澳第二漁港",
+     "provider": "斯爾本科技有限公司",
+     "channel": "https://www.youtube.com/@Suburban-Security"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-D945F_dauls",
+   "name": "富岡漁港",
+   "region": "台東縣",
+   "lat": 22.79,
+   "lng": 121.192,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "D945F_dauls",
+     "title": "富岡漁港",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-8okFzGbfwz8",
+   "name": "富岡漁港(海)",
+   "region": "台東縣",
+   "lat": 22.792,
+   "lng": 121.194,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "8okFzGbfwz8",
+     "title": "富岡漁港(海)",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-2NMrGvTYqN4",
+   "name": "濱灣碼頭C堤360",
+   "region": "屏東縣",
+   "lat": 22.444,
+   "lng": 120.472,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "2NMrGvTYqN4",
+     "title": "濱灣碼頭C堤360",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-fLYOccOgG8A",
+   "name": "濱灣碼頭D堤360",
+   "region": "屏東縣",
+   "lat": 22.445,
+   "lng": 120.471,
+   "tier": "general",
+   "category": "港口漁港",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "fLYOccOgG8A",
+     "title": "濱灣碼頭D堤360",
+     "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
+     "channel": "https://www.youtube.com/@dbnsa1345"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-tu_gsIkNt-w",
+   "name": "虎頭山環保公園",
+   "region": "桃園市",
+   "lat": 24.988,
+   "lng": 121.323,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "tu_gsIkNt-w",
+     "title": "虎頭山環保公園",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-BUJJaW0vkJs",
+   "name": "台東 鯉魚山",
+   "region": "台東縣",
+   "lat": 22.755,
+   "lng": 121.143,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "BUJJaW0vkJs",
+     "title": "台東 鯉魚山",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-JkoXcXI04Qk",
+   "name": "大石鼻山",
+   "region": "台東縣",
+   "lat": 23.205,
+   "lng": 121.4,
+   "tier": "general",
+   "category": "山岳",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "JkoXcXI04Qk",
+     "title": "大石鼻山",
+     "provider": "東部海岸國家風景區管理處",
+     "channel": "https://www.youtube.com/@eastcoastnsa0501"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-UCG1aXVO8H8",
+   "name": "台東 多良車站",
+   "region": "台東縣",
+   "lat": 22.506,
+   "lng": 120.958,
+   "tier": "general",
+   "category": "車站鐵道",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "UCG1aXVO8H8",
+     "title": "台東 多良車站",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-TUYZ7-9-rWw",
+   "name": "基隆 海洋廣場",
+   "region": "基隆市",
+   "lat": 25.131,
+   "lng": 121.7412,
+   "tier": "general",
+   "category": "城市街景",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "TUYZ7-9-rWw",
+     "title": "基隆 海洋廣場",
+     "provider": "中嘉新聞",
+     "channel": "https://www.youtube.com/@HOMEPLUSNEWS"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-EUOp2LchPQM",
+   "name": "阿姆坪薑母島",
+   "region": "桃園市",
+   "lat": 24.833,
+   "lng": 121.268,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "EUOp2LchPQM",
+     "title": "阿姆坪薑母島",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-sKrqs-5Auqo",
+   "name": "梓官蚵寮",
+   "region": "高雄市",
+   "lat": 22.73,
+   "lng": 120.24,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "sKrqs-5Auqo",
+     "title": "梓官蚵寮",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-aWIeVanMFD0",
+   "name": "花蓮忘憂亭",
+   "region": "花蓮縣",
+   "lat": 23.99,
+   "lng": 121.63,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "aWIeVanMFD0",
+     "title": "花蓮忘憂亭",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-3qj3-vr9Rjk",
+   "name": "宜蘭蘇澳",
+   "region": "宜蘭縣",
+   "lat": 24.595,
+   "lng": 121.866,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "3qj3-vr9Rjk",
+     "title": "宜蘭蘇澳",
+     "provider": "中央氣象署",
+     "channel": "https://www.youtube.com/@cwa-tw"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-hMYs60qtkK8",
+   "name": "牛埔仔大草原",
+   "region": "嘉義縣",
+   "lat": 23.44,
+   "lng": 120.63,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "hMYs60qtkK8",
+     "title": "牛埔仔大草原",
+     "provider": "阿里山國家風景區管理處",
+     "channel": "https://www.youtube.com/@Alishannsa"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-5YDXZ1aiR5Y",
+   "name": "三龜戲水",
+   "region": "桃園市",
+   "lat": 24.73,
+   "lng": 121.37,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "5YDXZ1aiR5Y",
+     "title": "三龜戲水",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-nV-DKquUjFs",
+   "name": "上巴陵",
+   "region": "桃園市",
+   "lat": 24.68,
+   "lng": 121.393,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "nV-DKquUjFs",
+     "title": "上巴陵",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-di-4DCblWq4",
+   "name": "新北 八里左岸",
+   "region": "新北市",
+   "lat": 25.163,
+   "lng": 121.4385,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "di-4DCblWq4",
+     "title": "新北 八里左岸",
+     "provider": "新北旅客 New Taipei Tour",
+     "channel": "https://www.youtube.com/@ntctour"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-uFWjCr5YbUg",
+   "name": "雪霸 汶水遊客中心",
+   "region": "苗栗縣",
+   "lat": 24.523,
+   "lng": 120.88,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "uFWjCr5YbUg",
+     "title": "雪霸 汶水遊客中心",
+     "provider": "雪霸國家公園 Shei-Pa National Park",
+     "channel": "https://www.youtube.com/@spnp852"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-LSkq-wHMxQY",
+   "name": "台東 南橫埡口",
+   "region": "高雄市",
+   "lat": 23.276,
+   "lng": 120.92,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "LSkq-wHMxQY",
+     "title": "台東 南橫埡口",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-OQnwVN5lzsk",
+   "name": "南濱守望哨",
+   "region": "花蓮縣",
+   "lat": 23.965,
+   "lng": 121.615,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "OQnwVN5lzsk",
+     "title": "南濱守望哨",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-3JzbzXqusDg",
+   "name": "巴陵馬崙砲台",
+   "region": "桃園市",
+   "lat": 24.672,
+   "lng": 121.395,
+   "tier": "general",
+   "category": "其他",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "3JzbzXqusDg",
+     "title": "巴陵馬崙砲台",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-yQSmajHyMhU",
+   "name": "虎頭山奧爾森林學堂",
+   "region": "桃園市",
+   "lat": 24.985,
+   "lng": 121.319,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "yQSmajHyMhU",
+     "title": "虎頭山奧爾森林學堂",
+     "provider": "遊桃園 Taoyuan Travel",
+     "channel": "https://www.youtube.com/@TaoyuanTravel"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-5Txm70G4CLo",
+   "name": "東眼山森林遊樂區",
+   "region": "桃園市",
+   "lat": 24.83,
+   "lng": 121.41,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "5Txm70G4CLo",
+     "title": "東眼山森林遊樂區",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-xwBG32yOwtQ",
+   "name": "白色海豚屋",
+   "region": "彰化縣",
+   "lat": 23.92,
+   "lng": 120.32,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "推估位置（非鏡頭精確座標）",
+   "sources": [
+    {
+     "videoId": "xwBG32yOwtQ",
+     "title": "白色海豚屋",
+     "provider": "愛玩彰化 Changhua Travels",
+     "channel": "https://www.youtube.com/@changhua_travels"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Ma4jFAs3lYw",
+   "name": "八仙山森林遊樂區",
+   "region": "台中市",
+   "lat": 24.188,
+   "lng": 121,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Ma4jFAs3lYw",
+     "title": "八仙山森林遊樂區",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-G7xk5xYxe-w",
+   "name": "滿月圓森林遊樂區",
+   "region": "新北市",
+   "lat": 24.835,
+   "lng": 121.448,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "G7xk5xYxe-w",
+     "title": "滿月圓森林遊樂區",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-6vdny5aFyNY",
+   "name": "內洞森林遊樂區",
+   "region": "新北市",
+   "lat": 24.81,
+   "lng": 121.54,
+   "tier": "general",
+   "category": "動物自然",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "6vdny5aFyNY",
+     "title": "內洞森林遊樂區",
+     "provider": "國家森林遊樂區即時影像",
+     "channel": "https://www.youtube.com/@fancarecreation"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-13C8jdbqQcI",
+   "name": "佳冬羌光橋",
+   "region": "屏東縣",
+   "lat": 22.43,
+   "lng": 120.55,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "13C8jdbqQcI",
+     "title": "佳冬羌光橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-BDs9UIRw4zc",
+   "name": "花蓮大橋",
+   "region": "花蓮縣",
+   "lat": 23.93,
+   "lng": 121.58,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "BDs9UIRw4zc",
+     "title": "花蓮大橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-9QqBz3kNHis",
+   "name": "金崙大橋",
+   "region": "台東縣",
+   "lat": 22.533,
+   "lng": 120.968,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "9QqBz3kNHis",
+     "title": "金崙大橋",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Tb6bay3UB18",
+   "name": "田寮崇德橋",
+   "region": "高雄市",
+   "lat": 22.86,
+   "lng": 120.36,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Tb6bay3UB18",
+     "title": "田寮崇德橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-1vVCtk5OXVk",
+   "name": "楠梓聖興橋",
+   "region": "高雄市",
+   "lat": 22.73,
+   "lng": 120.32,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "1vVCtk5OXVk",
+     "title": "楠梓聖興橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-QBgn5a3k_T0",
+   "name": "美濃橋",
+   "region": "高雄市",
+   "lat": 22.889,
+   "lng": 120.542,
+   "tier": "general",
+   "category": "道路",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "QBgn5a3k_T0",
+     "title": "美濃橋",
+     "provider": "水利署水利防災組",
+     "channel": "https://www.youtube.com/@fhy00"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-TY4qQElcUrA",
+   "name": "華源曙光觀景台",
+   "region": "台東縣",
+   "lat": 22.625,
+   "lng": 120.985,
+   "tier": "general",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "TY4qQElcUrA",
+     "title": "華源曙光觀景台",
+     "provider": "Amazing Taitung 台東就醬玩",
+     "channel": "https://www.youtube.com/@taitungamazing7249"
+    }
+   ]
+  },
+  {
+   "id": "tw-yt-Z4x4aQsmT2M",
+   "name": "南方澳南天宮",
+   "region": "宜蘭縣",
+   "lat": 24.584,
+   "lng": 121.868,
+   "tier": "general",
+   "category": "觀光地",
+   "coordinatePrecision": "鏡頭約略座標",
+   "sources": [
+    {
+     "videoId": "Z4x4aQsmT2M",
+     "title": "南方澳南天宮",
+     "provider": "斯爾本科技有限公司",
+     "channel": "https://www.youtube.com/@Suburban-Security"
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "videoId": "adyocA8Mbxo",
+   "name": "玄光寺碼頭",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "JTJ-kv04i24",
+   "name": "日月潭 水社碼頭",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "WTnZQS367C8",
+   "name": "日月潭各碼頭",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "pDY5QOTvcjc",
+   "name": "八卦山大佛",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "XJPhX51c-QM",
+   "name": "小琉球 花瓶岩",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "miLHWPexR3w",
+   "name": "萬里桐",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  }
+ ]
+}

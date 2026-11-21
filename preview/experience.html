@@ -5,19 +5,20 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>任意門 — 打開門，就到了</title>
   <meta name="description" content="選一個想去的地方，打開門，看看日本、韓國、台灣、泰國現在的樣子。">
-  <link rel="stylesheet" href="globe.css?v=door-10">
-  <link rel="stylesheet" href="experience-ui.css?v=door-10">
-  <link rel="stylesheet" href="experience-fx.css?v=door-10">
-  <link rel="stylesheet" href="door.css?v=door-10">
+  <link rel="stylesheet" href="globe.css?v=door-12">
+  <link rel="stylesheet" href="experience-ui.css?v=door-12">
+  <link rel="stylesheet" href="experience-fx.css?v=door-12">
+  <link rel="stylesheet" href="door.css?v=door-12">
   <script defer src="vendor/d3.min.js"></script>
   <script defer src="assets/world-data.js"></script>
   <script defer src="assets/world-low-data.js"></script>
-  <script defer src="globe-flight.js?v=door-10"></script>
-  <script defer src="catalog.js?v=door-10"></script>
-  <script defer src="weather.js?v=door-10"></script>
-  <script defer src="media-player.js?v=door-10"></script>
-  <script defer src="globe.js?v=door-10"></script>
-  <script defer src="experience-ui.js?v=door-10"></script>
+  <script defer src="assets/taiwan-map-data.js"></script>
+  <script defer src="globe-flight.js?v=door-12"></script>
+  <script defer src="catalog.js?v=door-12"></script>
+  <script defer src="weather.js?v=door-12"></script>
+  <script defer src="media-player.js?v=door-12"></script>
+  <script defer src="globe.js?v=door-12"></script>
+  <script defer src="experience-ui.js?v=door-12"></script>
 </head>
 <body>
 <svg class="wx-defs" aria-hidden="true" focusable="false">
@@ -57,7 +58,7 @@
     <button class="saved-toggle glass" id="saved-toggle" aria-expanded="false">♡ <span>我的靈感</span><b id="saved-count">0</b></button>
   <div class="explore-context" id="explore-context" hidden><nav class="breadcrumbs" aria-label="目前位置"><button id="breadcrumb-world">世界</button><span>／</span><button id="breadcrumb-country"></button><span id="breadcrumb-section"></span></nav><p class="overline" id="country-eyebrow">A LITTLE CLOSER</p><h1 id="country-heading">深入探索日本。</h1><p id="country-summary"></p></div>
   <div class="motion-tools glass" aria-label="轉場預覽控制"><button id="motion-toggle" aria-pressed="true"><span id="motion-status">轉場動效：開</span></button><span></span><button id="replay-flight">重播轉場 ↻</button><span></span><button id="library-toggle" aria-expanded="false">地點清單 ☷</button></div>
-  <aside id="place-library" class="place-library glass" aria-label="國家內的地點與來源" hidden><button class="sheet-handle" id="sheet-handle" aria-label="展開或收起地點面板" aria-expanded="false"><span></span></button><div class="panel-title"><div><p class="overline">FIND YOUR NEXT WINDOW</p><h2 id="library-title">地點與來源</h2></div><button id="library-close" aria-label="返回國家探索">✕</button></div><p id="library-count" class="panel-note"></p><div class="library-filters"><label class="sr-only" for="place-query">搜尋這個國家的地點</label><input id="place-query" placeholder="搜尋地點、景點或地區…"><label class="sr-only" for="place-region">選擇地區</label><select id="place-region"><option value="">全部地區</option></select></div><div id="place-list" class="place-list"></div><button class="all-places" id="all-places">查看全部地點 <span>↗</span></button><p class="library-disclosure">風景圖為示意；公開影像入口均待播放與即時性驗證。<a href="assets/source-inventory.json" target="_blank" rel="noopener">來源清單 ↗</a></p></aside>
+  <aside id="place-library" class="place-library glass" aria-label="國家內的地點與來源" hidden><button class="sheet-handle" id="sheet-handle" aria-label="展開或收起地點面板" aria-expanded="false"><span></span></button><div class="panel-title"><div><p class="overline">FIND YOUR NEXT WINDOW</p><h2 id="library-title">地點與來源</h2></div><button id="library-close" aria-label="返回國家探索">✕</button></div><p id="library-count" class="panel-note"></p><div class="library-filters"><label class="sr-only" for="place-query">搜尋這個國家的地點</label><input id="place-query" placeholder="搜尋地點、景點或地區…"><label class="sr-only" for="place-region">選擇地區</label><select id="place-region"><option value="">全部地區</option></select></div><div id="tier-switch" class="tier-switch" role="group" aria-label="顯示哪些景點" hidden><button data-tier="hot" aria-pressed="true"><i class="tier-dot" aria-hidden="true"></i>熱門 <b></b></button><button data-tier="all" aria-pressed="false"><i class="tier-dot general" aria-hidden="true"></i>含一般景點 <b></b></button></div><div id="place-list" class="place-list"></div><button class="all-places" id="all-places">查看全部地點 <span>↗</span></button><p class="library-disclosure">風景圖為示意；公開影像入口均待播放與即時性驗證。<a href="assets/source-inventory.json" target="_blank" rel="noopener">來源清單 ↗</a></p></aside>
   <section class="intro" id="intro">
     <p class="overline">ONE DOOR · FOUR COUNTRIES</p>
     <h1>打開門，<br>就到了。</h1>
@@ -81,7 +82,7 @@
   <button class="restore-island glass" id="restore-island" hidden>展開風景窗口 ↗</button>
   <aside class="saved-panel glass" id="saved-panel" aria-label="已收藏的旅行靈感" hidden><div class="collection-heading"><div><p class="overline">KEEP THE PLACES YOU LOVE</p><h1>把心動，留給<br><em>下一次出發。</em></h1><p>收藏儲存在此裝置，隨時回到讓你心動的地方。</p></div><button id="saved-close" class="outline-pill">返回探索 ↗</button></div><div id="saved-filters" class="filter-pills" aria-label="依國家篩選收藏"></div><div id="saved-list"></div><button id="saved-start" class="yellow-pill">開始探索 →</button></aside>
   <section class="stories-page glass" id="stories-page" hidden aria-labelledby="stories-heading"><div class="collection-heading"><div><p class="overline">WHAT IT LOOKS LIKE LATELY</p><h1 id="stories-heading">看看，<br><em>最近的那裡。</em></h1><p>讓有日期的旅行分享，補上鏡頭以外的風景。</p></div><button id="stories-back" class="outline-pill">返回探索 ↗</button></div><div class="stories-filters"><label>目的地<select id="stories-country"><option value="">全部國家</option><option value="japan">日本</option><option value="korea">韓國</option><option value="taiwan">台灣</option><option value="thailand">泰國</option></select></label><div class="filter-pills" aria-label="貼文日期篩選"><button data-period="7" aria-pressed="true">最近 7 天</button><button data-period="30" aria-pressed="false">最近 30 天</button></div></div><div class="stories-empty"><span class="empty-orbit" aria-hidden="true">✧</span><p class="overline">STORIES ARE ON THEIR WAY</p><h2>下一段旅行故事，還在路上。</h2><p id="stories-empty-copy">近期社群貼文尚未串接。先從當地影像與天氣，認識一個地方。</p><button id="stories-explore" class="yellow-pill">看看這裡的風景 →</button></div><div id="stories-suggestions" class="story-suggestions"></div></section>
-  <footer class="map-footer"><span>Made with <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> · 全球輪廓，非街道導航 · <a href="privacy.html">隱私權政策</a><a data-feedback hidden target="_blank" rel="noopener"> · 意見回報</a></span><span>FLOW 10 / 175 個地點 · 模型天氣 · 候選影像來源</span></footer>
+  <footer class="map-footer"><span>Made with <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>、<a href="https://data.gov.tw/dataset/7441" target="_blank" rel="noopener" title="台灣海岸線與縣市界線：內政部國土測繪中心（政府資料開放授權）">內政部</a> · 全球輪廓，非街道導航 · <a href="privacy.html">隱私權政策</a><a data-feedback hidden target="_blank" rel="noopener"> · 意見回報</a></span><span>FLOW 10 / 175 個地點 · 模型天氣 · 候選影像來源</span></footer>
   <nav class="mobile-nav glass" aria-label="手機主要導覽"><button data-mobile-nav="explore" aria-current="page">◎<span>探索</span></button><button data-mobile-nav="stories">◷<span>近期</span></button><button data-mobile-nav="saved">♡<span>收藏</span></button></nav>
   <div class="undo-toast glass" id="undo-toast" role="status" hidden><span>已移除收藏</span><button id="undo-save">復原</button><button id="undo-dismiss" aria-label="關閉復原提示">✕</button></div>
   <div id="status" class="status-toast" role="status" aria-live="polite"></div>

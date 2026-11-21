@@ -36,8 +36,8 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.waitForFunction(()=>!SomewhereGlobe.getState().flying);
   await page.click('#all-places');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');// view transition applies on the next frame
-  assert.equal(await page.locator('#place-list [data-place]').count(),118);
-  await page.fill('#place-query','高美濕地');
+  assert.equal(await page.locator('#place-list [data-place]').count(),115);
+  await page.fill('#place-query','花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
   await shot(page,'02-locations.png');
   await page.click('#place-list [data-place]');
@@ -49,14 +49,29 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='place');
   assert.equal(await page.evaluate(()=>document.querySelector('#destination-dialog').matches(':modal')),true);
   assert.equal(await page.locator('#destination-dialog').isVisible(),true);
-  assert.match(await page.locator('#detail-title').textContent(),/高美/);
+  assert.match(await page.locator('#detail-title').textContent(),/七星潭/);
   await shot(page,'03-place.png');
   await page.click('#detail-save');
   await page.click('#detail-back');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='locations');
-  assert.equal(await page.locator('#place-query').inputValue(),'高美濕地');
+  assert.equal(await page.locator('#place-query').inputValue(),'花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
-  console.log('通過：118 個台灣地點、篩選、景點、收藏及返回保留篩選。');
+  console.log('通過：115 個台灣熱門地點、篩選、景點、收藏及返回保留篩選。');
+  // 一般景點：預設不出現；搜尋到時提示，點提示打開後出現並帶「一般」標籤，地圖多出灰綠色標記
+  await page.fill('#place-query','大溪橋');
+  assert.equal(await page.locator('#place-list [data-place]').count(),0);
+  assert.match(await page.locator('#place-list .general-hint').textContent(),/一般景點中有 1 筆符合/);
+  await page.click('#place-list .general-hint');
+  assert.equal(await page.locator('#place-list [data-place]').count(),1);
+  assert.match(await page.locator('#place-list .tier-tag.general').textContent(),/一般/);
+  assert.equal(await page.locator('#tier-switch [data-tier="all"]').getAttribute('aria-pressed'),'true');
+  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 158/);
+  await page.fill('#place-query','');
+  assert.equal(await page.locator('#place-list [data-place]').count(),158);
+  await page.click('#tier-switch [data-tier="hot"]');
+  assert.equal(await page.locator('#place-list [data-place]').count(),115);
+  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 115/);
+  console.log('通過：一般景點預設隱藏、搜尋提示、開關切換與國家切換列數字。');
   await page.click('#nav-saved');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='saved');
   assert.equal(await page.locator('#saved-list .collection-card').count(),1);

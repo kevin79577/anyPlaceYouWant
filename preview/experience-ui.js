@@ -32,7 +32,7 @@
     $('#nav-saved-count').textContent=G.getState().saved.length;
   }
   function syncCountry(){
-    const d=byId(G.getState().selected),k=key(d),items=places.filter(p=>key(p)===k);
+    const d=byId(G.getState().selected),k=key(d),items=places.filter(p=>key(p)===k&&G.listed(p));
     $('#breadcrumb-country').textContent=d.country;
     $('#breadcrumb-section').textContent=current.view==='locations'?'／ 所有地點':'';
     $('#country-heading').textContent=current.view==='locations'?'探索'+d.country+'的每一面。':'深入探索'+d.country+'。';
@@ -130,16 +130,24 @@
   }
   function enterWatch(){watchDirect=false;navigate('watch',G.getState().selected);window.SomewhereMedia?.play();}
   function leaveWatch(){if(current.view==='watch'){if(watchDirect){watchDirect=false;navigate('place',current.id,{replace:true});}else back();}else{window.SomewhereMedia?.close();$('#destination-dialog').classList.remove('watching');$('#watch-return').hidden=true;}}
+  // Cards show the stream's own YouTube thumbnail (16:9, refreshed by YouTube every few minutes). A dead video answers with a
+  // 120x90 grey placeholder (HTTP 404, but still an image), so both `error` and a too-small `load` fall back to the plain tile.
+  function thumb(p){const s=(C.sources[p.id]||[]).find(x=>x.videoId);return s?`https://i.ytimg.com/vi/${encodeURIComponent(s.videoId)}/mqdefault_live.jpg`:'';}
+  function plainVisual(p){return p.id===key(p)?`<img src="${esc(p.image)}" alt="${esc(p.alt)}" loading="lazy"><span>風景示意</span>`:typeTile(p);}
+  function thumbSettled(event){const img=event.target;if(!img.classList||!img.classList.contains('tile-thumb')||(event.type==='load'&&img.naturalWidth>120))return;const p=byId(img.closest('[data-place]')?.dataset.place);if(p)img.parentNode.innerHTML=plainVisual(p);}
+  document.addEventListener('error',thumbSettled,true);document.addEventListener('load',thumbSettled,true);// neither event bubbles; inline onerror is blocked by the CSP
   function card(p){
-    const visual=p.id===key(p)?`<img src="${esc(p.image)}" alt="${esc(p.alt)}" loading="lazy"><span>風景示意</span>`:typeTile(p);
-    return `<button class="scene-tile" data-place="${esc(p.id)}"><div class="tile-photo">${visual}</div><div class="tile-copy"><small>${esc(p.country)} / ${esc(p.region||'旅遊靈感')}</small><strong>${esc(p.name)}</strong><span class="tile-meta">${p.sourceCount||1} 個來源入口 <span>候選・待確認 ↗</span></span></div></button>`;
+    const t=thumb(p),visual=t?`<img class="tile-thumb" src="${t}" alt="${esc(p.name)} 直播縮圖" loading="lazy" referrerpolicy="no-referrer"><span>直播縮圖</span>`:plainVisual(p);
+    return `<button class="scene-tile" data-place="${esc(p.id)}"><div class="tile-photo">${visual}</div><div class="tile-copy"><small class="tier-tag${p.tier==='general'?' general':''}">${p.tier==='general'?'一般・':''}${esc(p.country)} / ${esc(p.region||'旅遊靈感')}</small><strong>${esc(p.name)}</strong><span class="tile-meta">${p.sourceCount||1} 個來源入口 <span>候選・待確認 ↗</span></span></div></button>`;
   }
   function decorateLibrary(filtered){
     const list=$('#place-list'),scroll=list.scrollTop||0,isFull=current.view==='locations';
     // Desktop: the scene window already shows the selected place, so the unfiltered country list skips it (mobile hides that window).
     const mobile=matchMedia('(max-width:700px)').matches,unfiltered=!$('#place-query').value.trim()&&!$('#place-region').value&&!mobile,sel=G.getState().selected;
     const shown=isFull?filtered:(unfiltered?filtered.filter(p=>p.id!==sel):filtered).slice(0,3);
-    list.innerHTML=shown.length?shown.map(p=>card(p)).join(''):'<div class="library-empty"><h3>換個關鍵字，再出發。</h3><p>這個區域尚無符合的地點。</p><button data-clear-library class="outline-pill">清除篩選</button></div>';
+    // Search and region filters only look at what is listed; say so when 一般景點 would have matched.
+    const hidden=($('#place-query').value.trim()||$('#place-region').value)?G.hiddenMatches():0,hint=hidden?`<button class="general-hint" data-show-general>一般景點中有 ${hidden} 筆符合，打開查看 →</button>`:'';
+    list.innerHTML=shown.length?shown.map(p=>card(p)).join('')+hint:`<div class="library-empty"><h3>換個關鍵字，再出發。</h3><p>${hidden?'熱門景點中沒有符合的地點。':'這個區域尚無符合的地點。'}</p>${hint}<button data-clear-library class="outline-pill">清除篩選</button></div>`;
     list.scrollTop=scroll;list.classList.toggle('catalogue-grid',isFull);
     if(!isFull)$('#library-count').textContent=`${filtered.length} 個符合地點 · 先看看這 ${shown.length} 個風景入口`;
     syncCountry();
@@ -163,23 +171,26 @@
     const q=query.trim().toLowerCase(),pattern=moodPatterns[q];
     return places.filter(p=>(!searchCountry||key(p)===searchCountry)&&(!q||(pattern?pattern.test(p.name+' '+p.region):[p.name,p.country,p.region,p.en,...p.aliases].filter(Boolean).join(' ').toLowerCase().includes(q))));
   }
+  function searchListed(query){const all=searchMatches(query);return {shown:all.filter(G.listed),hidden:all.length-all.filter(G.listed).length};
+  }
   function renderSearch(){
     countryPills('#search-countries',searchCountry,'data-search-country');
-    const matches=searchMatches($('#global-query').value);
+    const {shown:matches,hidden}=searchListed($('#global-query').value),hint=hidden&&$('#global-query').value.trim()?`<button class="general-hint" data-show-general>一般景點中有 ${hidden} 筆符合，打開查看 →</button>`:'';
     $('#global-result-count').textContent=`${matches.length} 個地點${matches.length>searchLimit?'・先顯示 '+searchLimit+' 個':''}`;
-    $('#global-results').innerHTML=matches.length?matches.slice(0,searchLimit).map(p=>card(p)).join(''):'<div class="search-empty"><span class="empty-orbit">⌕</span><h3>換個關鍵字，再出發。</h3><p>可以搜尋城市、景點，或試試海邊、山景。</p><button id="clear-search" class="yellow-pill">清除搜尋與篩選 →</button></div>';
+    $('#global-results').innerHTML=matches.length?matches.slice(0,searchLimit).map(p=>card(p)).join('')+hint:`<div class="search-empty"><span class="empty-orbit">⌕</span><h3>換個關鍵字，再出發。</h3><p>可以搜尋城市、景點，或試試海邊、山景。</p>${hint}<button id="clear-search" class="yellow-pill">清除搜尋與篩選 →</button></div>`;
     $('#search-more').hidden=matches.length<=searchLimit;
   }
   function renderStories(){
-    const k=$('#stories-country').value,items=places.filter(p=>!k||key(p)===k);
+    const k=$('#stories-country').value,items=places.filter(p=>(!k||key(p)===k)&&G.listed(p));
     document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.period)===period)));
     $('#stories-empty-copy').textContent=`${k?countries[k].name:'四國'}最近 ${period} 天的社群貼文尚未串接。先從當地影像與天氣，認識一個地方。`;
     const suggestions=k?items.slice(0,3):Object.keys(countries).map(byId);
     $('#stories-suggestions').innerHTML='<div class="suggestions-heading"><p class="overline">MEANWHILE, EXPLORE THESE WINDOWS</p><h2>先看看，這裡的風景。</h2></div>'+suggestions.map(p=>card(p)).join('');
   }
   window.SomewhereExperience={
+    tierChanged(){syncCountry();if(current.view==='search')renderSearch();},
     chooseCountry,pickCountry,openPlace,showLocations,showSearch,showSaved:()=>navigate('saved'),decorateLibrary,savedRendered,savedChanged,typeTile,closeDetailView,
-    nextPlace:()=>{const others=places.filter(p=>p.id!==G.getState().selected);navigate('place',others[Math.floor(Math.random()*others.length)].id,{replace:true});},
+    nextPlace:()=>{const others=places.filter(p=>p.id!==G.getState().selected&&G.listed(p));navigate('place',others[Math.floor(Math.random()*others.length)].id,{replace:true});},
     chooseMarker:id=>{const p=byId(id);if(!p)return;if(current.view==='home')chooseCountry(key(p));else openPlace(id,true);},// inside a country a place marker opens its stream directly
     selectionChanged(d){if(busy)return;if(['home','country','locations'].includes(current.view)){const nextKey=key(d);if(G.getState().focused&&(current.view==='home'||current.id!==nextKey)){navigate('country',nextKey,{keepCamera:true,replace:current.view==='home'});rememberEntry();}else syncCountry();}},
     detailsOpened(d){if(!busy){detailParent=current.view;navigate('place',d.id);}configureDetail();},
@@ -239,6 +250,7 @@ return current.view==='locations'?{x:.77,y:.52}:current.view==='home'?{x:.67,y:.
     if(button.dataset.mood){$('#global-query').value=button.dataset.mood;searchLimit=24;renderSearch();}
     if(button.dataset.period){period=Number(button.dataset.period);renderStories();}
     if(button.id==='clear-search'){$('#global-query').value='';searchCountry='';renderSearch();}
+    if(button.hasAttribute('data-show-general')){G.setShowGeneral(true);return;}
     if(button.hasAttribute('data-clear-library')){$('#place-query').value='';$('#place-query').dispatchEvent(new Event('input'));$('#place-region').value='';$('#place-region').dispatchEvent(new Event('change'));}
     if(button.dataset.mobileNav){const section=button.dataset.mobileNav;withTransition(()=>section==='explore'?navigate(lastExplore.view,lastExplore.id):navigate(section));}
   });
