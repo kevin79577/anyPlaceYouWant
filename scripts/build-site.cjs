@@ -12,7 +12,8 @@ const files=[
   'assets/source-inventory.json',
   ...fs.readdirSync(path.join(src,'assets')).filter(f=>f.endsWith('.webp')).map(f=>'assets/'+f)
 ];
-fs.rmSync(out,{recursive:true,force:true});
+// Keep dist/.vercel (the Vercel project link) so redeploys go to the same project instead of creating a new one named dist.
+for(const e of fs.existsSync(out)?fs.readdirSync(out):[])if(e!=='.vercel')fs.rmSync(path.join(out,e),{recursive:true,force:true});
 for(const f of files){fs.mkdirSync(path.dirname(path.join(out,f)),{recursive:true});fs.copyFileSync(path.join(src,f),path.join(out,f));}
 // The explorer is the home page.
 fs.copyFileSync(path.join(out,'experience.html'),path.join(out,'index.html'));
