@@ -34,6 +34,15 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   console.log('通過：首頁選目的地、開門、略過、進入國家探索。');
   await page.click('[data-destination="taiwan"]');
   await page.waitForFunction(()=>!SomewhereGlobe.getState().flying);
+  // Wheel over a marker still zooms, and zooms about the cursor: the marker under the mouse stays under it.
+  const spot=await page.evaluate(()=>{const m=[...document.querySelectorAll('.geo-marker:not(.cluster)')].map(m=>({m,r:m.querySelector('.marker-dot').getBoundingClientRect()})).find(({m,r})=>r.width&&getComputedStyle(m).visibility!=='hidden'&&document.elementFromPoint(r.x+r.width/2,r.y+r.height/2)?.closest('.geo-marker')===m);
+    return m&&{label:m.m.getAttribute('aria-label'),x:m.r.x+m.r.width/2,y:m.r.y+m.r.height/2,zoom:SomewhereGlobe.getState().zoom};});
+  assert(spot,'no single marker to hover');
+  await page.mouse.move(spot.x,spot.y);await page.mouse.wheel(0,-300);await page.waitForTimeout(400);
+  const after=await page.evaluate(label=>{const m=[...document.querySelectorAll('.geo-marker')].find(m=>m.getAttribute('aria-label')===label),r=m.querySelector('.marker-dot').getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2,zoom:SomewhereGlobe.getState().zoom};},spot.label);
+  assert(after.zoom>spot.zoom*1.2,`wheel over a marker did not zoom (${spot.zoom} → ${after.zoom})`);
+  assert(Math.hypot(after.x-spot.x,after.y-spot.y)<4,`zoom is not about the cursor: marker moved ${Math.round(Math.hypot(after.x-spot.x,after.y-spot.y))}px`);
+  console.log('通過：滑鼠在標記上滾輪可放大，且以滑鼠位置為中心。');
   // The place panel lists every place (no 查看全部 button) and scrolls.
   assert.equal(await page.locator('#place-list [data-place]').count(),115);
   await page.fill('#place-query','花蓮 七星潭');
