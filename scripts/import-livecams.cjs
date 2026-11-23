@@ -1,5 +1,5 @@
 // 把 refs/<國家>_livecams.xlsx 轉成 scripts/data/livecams-<country>.json（build-catalog.cjs 讀這些檔）。
-//   - 「熱門景點」工作表的影片為 tier:'hot'，只在「全部」的為 tier:'general'；其他工作表（待確認、目前不能看）不收
+//   - 「熱門景點」工作表的影片為 tier:'hot'，只在「全部」的為 tier:'general'；「待確認」只收其中的 YouTube 影片（general），「目前不能看」不收
 //   - 影片檢查：oEmbed（不存在、禁止嵌入就排除）；設定 PLAYWRIGHT_MODULE 時再實際播放（需先 node preview/serve.cjs）。
 //     結果快取在 tmp/video-checks.json，7 天內不重查
 //   - 行政區：用座標比對界線（台灣：內政部縣市；日韓：Natural Earth 1:10m），落在海上的取最近的行政區；不採用 Excel 的行政區欄
@@ -71,9 +71,11 @@ async function playback(list){
 }
 
 (async()=>{
-  const sheets=readSheets(path.join(ROOT,C.xlsx)),all=sheets['全部'],hot=sheets['熱門景點'];
-  if(!all||!hot)throw new Error('找不到「全部」或「熱門景點」工作表：'+Object.keys(sheets));
   const vid=u=>(String(u).match(/[?&]v=([\w-]{11})/)||[])[1];
+  const sheets=readSheets(path.join(ROOT,C.xlsx)),hot=sheets['熱門景點'];
+  if(!sheets['全部']||!hot)throw new Error('找不到「全部」或「熱門景點」工作表：'+Object.keys(sheets));
+  // 「待確認」大多是彙整網站（沒有影片），但其中的 YouTube 網址是可以檢查的影片，一併收（日本：二世古 Grand Hirafu 3 支）
+  const all=[...sheets['全部'],...(sheets['待確認']||[]).filter(r=>vid(r['網址']))];
   const hotIds=new Set(hot.map(r=>vid(r['網址'])));
   const geo=C.geocode&&fs.existsSync(path.join(DATA,C.geocode))?JSON.parse(fs.readFileSync(path.join(DATA,C.geocode),'utf8')):{};
   const namesZh=fs.existsSync(path.join(DATA,`names-zh-${key}.json`))?JSON.parse(fs.readFileSync(path.join(DATA,`names-zh-${key}.json`),'utf8')):{};
@@ -94,13 +96,13 @@ async function playback(list){
   const trusted=(id,g)=>{if(!g||g.miss||reject.has(id))return false;const q=g.query,first=g.match.split(',')[0].trim();return q.length>=3&&!GENERIC.has(q)&&(first.includes(q)||q.includes(first));};
   const spot=r=>r.lat&&r.lng?r.lat+','+r.lng:'',count=new Map();for(const r of rows)if(spot(r))count.set(spot(r),(count.get(spot(r))||0)+1);
   if(C.geocode)for(const r of rows){const g=geo[r.videoId],found=trusted(r.videoId,g),use=()=>Object.assign(r,{lat:g.lat,lng:g.lng,located:'name'});
-    if(!spot(r)){if(found)use();else{drop(r,'沒有座標，依名稱也查不到地點');r.gone=true;}}
+    if(!spot(r)){if(found)use();else r.gone=true;}
     else if(count.get(spot(r))>1){if(found)use();else r.located='city';}
     else if(found&&D.geoDistance([r.lng,r.lat],[g.lng,g.lat])*6371>80){r.moved=Math.round(D.geoDistance([r.lng,r.lat],[g.lng,g.lat])*6371);use();}}
   // 人工校正（日本熱門的知名地標，見 japan-coords-manual.json）最優先：Excel 錯誤、名稱也查不到可信位置的
   const manual=C.geocode&&fs.existsSync(path.join(DATA,'japan-coords-manual.json'))?JSON.parse(fs.readFileSync(path.join(DATA,'japan-coords-manual.json'),'utf8')):{};
   for(const r of rows){const m=manual[r.videoId];if(Array.isArray(m)){Object.assign(r,{lat:m[0],lng:m[1],located:'manual'});delete r.gone;r.moved=0;}}
-  rows=rows.filter(r=>!r.gone);
+  rows=rows.filter(r=>!r.gone||(drop(r,'沒有座標，依名稱也查不到地點'),false));// 人工校正之後才排除，救回的不會留在排除清單
 
   // 影片檢查（快取）
   const cache=fs.existsSync(CHECKS)?JSON.parse(fs.readFileSync(CHECKS,'utf8')):{},fresh=c=>c&&Date.now()-c.at<CHECK_DAYS*864e5&&c.oembed!=='network-error';

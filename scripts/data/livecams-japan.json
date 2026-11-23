@@ -1,6 +1,6 @@
 {
  "source": "refs/日本_livecams.xlsx",
- "checkedAt": "2026-11-21",
+ "checkedAt": "2026-11-23",
  "playbackChecked": true,
  "places": [
   {
@@ -2410,6 +2410,42 @@
    ]
   },
   {
+   "id": "jp-yt-_hi7d0TkKwU",
+   "name": "小清水・止別川",
+   "region": "北海道",
+   "lat": 43.8555,
+   "lng": 144.459,
+   "tier": "hot",
+   "category": "河川",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "_hi7d0TkKwU",
+     "title": "小清水・止別川",
+     "provider": "小清水町役場ライブカメラ",
+     "channel": "https://www.youtube.com/@koshimizu-camera"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-z4xJYd7931A",
+   "name": "二世古・安努普利國際滑雪場",
+   "region": "北海道",
+   "lat": 42.8437,
+   "lng": 140.6487,
+   "tier": "hot",
+   "category": "滑雪場",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "z4xJYd7931A",
+     "title": "二世古・安努普利國際滑雪場",
+     "provider": "ニセコアンヌプリ国際スキー場",
+     "channel": "https://www.youtube.com/@nisekoannupuri"
+    }
+   ]
+  },
+  {
    "id": "jp-yt-hN8mxz3-1pg",
    "name": "草津溫泉・滑雪場天狗山山頂",
    "region": "群馬縣",
@@ -2434,6 +2470,24 @@
    ]
   },
   {
+   "id": "jp-yt-esFYniMlxC0",
+   "name": "二世古・安努普利滑雪場（山頂側）",
+   "region": "北海道",
+   "lat": 42.87,
+   "lng": 140.657,
+   "tier": "hot",
+   "category": "滑雪場",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "esFYniMlxC0",
+     "title": "二世古・安努普利滑雪場（山頂側）",
+     "provider": "POWDER COMPANY",
+     "channel": "https://www.youtube.com/@POWDERCOMPANY"
+    }
+   ]
+  },
+  {
    "id": "jp-yt-jR1VLwE1vmY",
    "name": "中標津・大通北 2 丁目路口",
    "region": "北海道",
@@ -2452,6 +2506,24 @@
    ]
   },
   {
+   "id": "jp-yt-Q9gMh3v35L8",
+   "name": "石狩・石狩灣新港",
+   "region": "北海道",
+   "lat": 43.1661,
+   "lng": 141.2854,
+   "tier": "hot",
+   "category": "港口漁港",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "Q9gMh3v35L8",
+     "title": "石狩・石狩灣新港",
+     "provider": "石狩開発株式会社",
+     "channel": "https://www.youtube.com/@%E7%9F%B3%E7%8B%A9%E9%96%8B%E7%99%BA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE"
+    }
+   ]
+  },
+  {
    "id": "jp-yt-6sin2Z5WM3I",
    "name": "富士山・富士景觀飯店",
    "region": "山梨縣",
@@ -2466,6 +2538,42 @@
      "title": "富士山・富士景觀飯店",
      "provider": "富士ビューホテルライブカメラ",
      "channel": "https://www.youtube.com/@fujiview-hotel"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-hEaggGOlsDg",
+   "name": "二世古・安努普利高原",
+   "region": "北海道",
+   "lat": 42.843,
+   "lng": 140.66,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "hEaggGOlsDg",
+     "title": "二世古・安努普利高原",
+     "provider": "ニセコノーザンリゾート・アンヌプリ",
+     "channel": "https://www.youtube.com/@niseko_northern"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-0AkMnQW4XOk",
+   "name": "北斗・木地挽高原看函館",
+   "region": "北海道",
+   "lat": 41.8935,
+   "lng": 140.6197,
+   "tier": "hot",
+   "category": "山岳",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "0AkMnQW4XOk",
+     "title": "北斗・木地挽高原看函館",
+     "provider": "【公式】北海道北斗市役所",
+     "channel": "https://www.youtube.com/@%E5%85%AC%E5%BC%8F%E5%8C%97%E6%B5%B7%E9%81%93%E5%8C%97%E6%96%97%E5%B8%82%E5%BD%B9%E6%89%80"
     }
    ]
   },
@@ -2548,6 +2656,24 @@
    ]
   },
   {
+   "id": "jp-yt-XyMRbMYO7vA",
+   "name": "小清水・町公所屋頂",
+   "region": "北海道",
+   "lat": 43.8572,
+   "lng": 144.4625,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "XyMRbMYO7vA",
+     "title": "小清水・町公所屋頂",
+     "provider": "小清水町役場ライブカメラ",
+     "channel": "https://www.youtube.com/@koshimizu-camera"
+    }
+   ]
+  },
+  {
    "id": "jp-yt-O4Lr6EdXZqY",
    "name": "小樽・Marina Scape",
    "region": "北海道",
@@ -2562,6 +2688,30 @@
      "title": "小樽・Marina Scape",
      "provider": "LIVE the SCAPE 〜出張定点カメラ展開中〜",
      "channel": "https://www.youtube.com/@live-the-scape"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-QkJ8KoMPYTQ",
+   "name": "知床・360 度全景",
+   "region": "北海道",
+   "lat": 44.0915,
+   "lng": 145.023,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "QkJ8KoMPYTQ",
+     "title": "知床・360 度全景",
+     "provider": "Forest Notes 森の動画チャンネル",
+     "channel": "https://www.youtube.com/@ForestNotes_YT"
+    },
+    {
+     "videoId": "CcgT5MFiL6Q",
+     "title": "知床・動物觀察",
+     "provider": "Forest Notes 森の動画チャンネル",
+     "channel": "https://www.youtube.com/@ForestNotes_YT"
     }
    ]
   },
@@ -2598,6 +2748,42 @@
      "title": "小樽・天狗山",
      "provider": "小樽天狗山ロープウエイ",
      "channel": "https://www.youtube.com/@Otarutenguyamaropeway"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-XpMo0l7D1jo",
+   "name": "苫小牧・櫻木町 糸井東大通",
+   "region": "北海道",
+   "lat": 42.644,
+   "lng": 141.554,
+   "tier": "hot",
+   "category": "其他",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "XpMo0l7D1jo",
+     "title": "苫小牧・櫻木町 糸井東大通",
+     "provider": "北海道苫小牧市桜木町 糸井東大通ライブカメラ",
+     "channel": "https://www.youtube.com/@%E8%8B%AB%E5%B0%8F%E7%89%A7%E5%B8%82%E6%A1%9C%E6%9C%A8%E7%94%BA%E3%83%A9%E3%82%A4%E3%83%96%E3%82%AB%E3%83%A1%E3%83%A9"
+    }
+   ]
+  },
+  {
+   "id": "jp-yt-wRYonRnKsKw",
+   "name": "札幌・薄野路口",
+   "region": "北海道",
+   "lat": 43.0554,
+   "lng": 141.3534,
+   "tier": "hot",
+   "category": "道路",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "wRYonRnKsKw",
+     "title": "札幌・薄野路口",
+     "provider": "SODANEチャンネル",
+     "channel": "https://www.youtube.com/@SODANE"
     }
    ]
   },
@@ -13064,6 +13250,24 @@
      "channel": "https://www.youtube.com/@%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%A4%A7%E7%94%B0%E5%8E%9F%E5%B8%82%E5%85%AC%E5%BC%8FYou"
     }
    ]
+  },
+  {
+   "id": "jp-yt-taDZzy8yMTw",
+   "name": "ニセコ東急 グラン・ヒラフ マウンテンセンター",
+   "region": "北海道",
+   "lat": 42.8595,
+   "lng": 140.701,
+   "tier": "general",
+   "category": "滑雪場",
+   "coordinatePrecision": "人工校正的地標位置（非鏡頭位置）",
+   "sources": [
+    {
+     "videoId": "taDZzy8yMTw",
+     "title": "ニセコ東急 グラン・ヒラフ マウンテンセンター",
+     "provider": "Niseko Tokyu Grand HIRAFU",
+     "channel": "https://www.youtube.com/@GrandHIRAFU"
+    }
+   ]
   }
  ],
  "excluded": [
@@ -13089,12 +13293,6 @@
    "videoId": "dXU37npMY5U",
    "name": "【作業用BGM】釧路湿原の小川｜せせらぎと野鳥のさえずり 24/7 LIVE【自然音ASMR/途中広告なし】｜勉強・リラ",
    "tier": "general",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "_hi7d0TkKwU",
-   "name": "ポン止別川 小清水市街西第2仲通り 河川監視カメラ | Pon-Yamubetsu River camera near ",
-   "tier": "hot",
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
@@ -13158,24 +13356,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "1ZFKKwCJ3J8",
-   "name": "北海道登別市鷲別町海岸南ライブカメラ",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "z4xJYd7931A",
-   "name": "[4K]ニセコアンヌプリ国際スキー場ライブカメラ - niseko annupuri international ski",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "esFYniMlxC0",
-   "name": "【山頂側】ニセコアンヌプリ国際スキー場 POWCOMライブカメラ",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "Azbdr5jbN6o",
    "name": "【LIVE】いまの新千歳空港／Live streaming from Hokkaido　 New Chitose Air",
    "tier": "general",
@@ -13194,12 +13374,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "Q9gMh3v35L8",
-   "name": "【LIVE】石狩湾新港地域ライブカメラ　石狩市新港西１丁目（市道流通通・道道小樽石狩線交差点）",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "SzIvHPoVMwQ",
    "name": "厚岸町床潭漁港ライブカメラ",
    "tier": "general",
@@ -13212,21 +13386,9 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "hEaggGOlsDg",
-   "name": "【LIVE】大自然の絶景をリアルタイムで！ニセコ アンヌプリ高原 ライブカメラ映像",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "_v5y5bpCAAw",
    "name": "きじひき高原ライブカメラ～大沼方面～",
    "tier": "general",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "0AkMnQW4XOk",
-   "name": "きじひき高原ライブカメラ～函館方面～",
-   "tier": "hot",
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
@@ -13386,12 +13548,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "BGNT83EKJ_4",
-   "name": "【ライブ】北海道 函館山と十字街  / Mt. Hakodate and Tram [LIVE]",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "O0jZ8tkKFlg",
    "name": "【ライブカメラ】エゾリスとキタキツネの生配信/Birds Squirrels webcam in Hokkaido Ja",
    "tier": "general",
@@ -13452,12 +13608,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "tJSANybseXo",
-   "name": "レンブラントリゾート知床RRS のライブ配信",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "gKUzyD2SAU4",
    "name": "岩見沢市役所北村支所ライブカメラ",
    "tier": "general",
@@ -13476,12 +13626,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "XyMRbMYO7vA",
-   "name": "小清水町役場屋上カメラ | Koshimizu Town Hall Rooftop Camera",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "cB2zmucl4D0",
    "name": "西当別コミュニティーセンターライブカメラ",
    "tier": "general",
@@ -13497,18 +13641,6 @@
    "videoId": "ZX6QY3tTmEI",
    "name": "大放牧地カメラ配信　2026年11月15日 | ヴェルサイユリゾートファーム",
    "tier": "general",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "QkJ8KoMPYTQ",
-   "name": "知床 360° 4K カメラライブ 7/17 ~",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "CcgT5MFiL6Q",
-   "name": "知床 動物観察カメラライブ（07/17～）",
-   "tier": "hot",
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
@@ -13644,18 +13776,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "kp98l5ExLXk",
-   "name": "北海道滝川市幸町函館本線付近ライブカメラ",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "XpMo0l7D1jo",
-   "name": "北海道苫小牧市桜木町 糸井東大通ライブカメラ",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "xiP-p9ayRGY",
    "name": "北海道苫小牧市桜木町ライブカメラ",
    "tier": "general",
@@ -13770,12 +13890,6 @@
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
-   "videoId": "wRYonRnKsKw",
-   "name": "【LIVE】いまの札幌・すすきの交差点　| 24時間ライブカメラ",
-   "tier": "hot",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
    "videoId": "FV17da94F7Q",
    "name": "【LIVE】道路状況・札幌市中央区南1条通り/東4丁目通り交差点",
    "tier": "general",
@@ -13815,12 +13929,6 @@
    "videoId": "axwQcEzXEjc",
    "name": "北竜町ひまわり観光協会 のライブ配信　１",
    "tier": "general",
-   "reason": "沒有座標，依名稱也查不到地點"
-  },
-  {
-   "videoId": "BqO5kZKLld8",
-   "name": "函館湯の川温泉の空 のライブ配信",
-   "tier": "hot",
    "reason": "沒有座標，依名稱也查不到地點"
   },
   {
@@ -14712,6 +14820,12 @@
    "reason": "實際播放失敗（error-150）"
   },
   {
+   "videoId": "1ZFKKwCJ3J8",
+   "name": "北海道登別市鷲別町海岸南ライブカメラ",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
    "videoId": "gEjAwkf8Ka8",
    "name": "【ゴンドラ側】ニセコアンヌプリ国際スキー場 POWCOMライブカメラ",
    "tier": "hot",
@@ -14754,6 +14868,12 @@
    "reason": "擁有者禁止嵌入"
   },
   {
+   "videoId": "BGNT83EKJ_4",
+   "name": "【ライブ】北海道 函館山と十字街  / Mt. Hakodate and Tram [LIVE]",
+   "tier": "hot",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
    "videoId": "V3m1z-Om5Qg",
    "name": "【ライブカメラ】札幌市中央区宮の森～ラジオカロスサッポロ本社屋上より　【Live Camera】Miyanomori, ",
    "tier": "general",
@@ -14770,6 +14890,12 @@
    "name": "【北海道十勝芽室町】お天気ライブ！現在の空模様",
    "tier": "general",
    "reason": "影片不存在或已下架"
+  },
+  {
+   "videoId": "tJSANybseXo",
+   "name": "レンブラントリゾート知床RRS のライブ配信",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
   },
   {
    "videoId": "NiVykmRcLGM",
@@ -14820,6 +14946,12 @@
    "reason": "實際播放失敗（error-150）"
   },
   {
+   "videoId": "kp98l5ExLXk",
+   "name": "北海道滝川市幸町函館本線付近ライブカメラ",
+   "tier": "hot",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
    "videoId": "oVNu14vQyMM",
    "name": "北海道稚内市富士見ライブカメラ",
    "tier": "general",
@@ -14835,6 +14967,12 @@
    "videoId": "tDUTydFOqOU",
    "name": "北海道網走市呼人ライブカメラ",
    "tier": "general",
+   "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "BqO5kZKLld8",
+   "name": "函館湯の川温泉の空 のライブ配信",
+   "tier": "hot",
    "reason": "擁有者禁止嵌入"
   },
   {
@@ -15256,6 +15394,18 @@
    "name": "大田原市 お天気カメラ",
    "tier": "general",
    "reason": "擁有者禁止嵌入"
+  },
+  {
+   "videoId": "c_Mftnh0iJI",
+   "name": "ニセコ東急 グラン・ヒラフ（エースヒル（アンヌプリ側））",
+   "tier": "general",
+   "reason": "實際播放失敗（error-150）"
+  },
+  {
+   "videoId": "UjmKoVmjcBE",
+   "name": "ニセコ東急 グラン・ヒラフ（エースヒル（羊蹄山側））",
+   "tier": "general",
+   "reason": "實際播放失敗（error-150）"
   }
  ]
 }
