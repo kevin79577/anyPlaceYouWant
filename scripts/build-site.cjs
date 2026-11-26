@@ -1,22 +1,23 @@
 // Build the public site into dist/ for static hosting (e.g. Cloudflare Pages: build output directory = dist).
-// Only the explorer and its runtime files ship; design proposals, verify scripts and original PNGs stay out.
+// Only the door site (home.html → index.html, country.html) and its runtime files ship; the old explorer (experience.html),
+// design proposals, verify scripts and original PNGs stay out.
 // Usage: node scripts/build-site.cjs            private preview: search engines are told not to index it (default)
 //        node scripts/build-site.cjs --public   public launch: indexable; refuses while privacy.html still has 待填 placeholders
 const fs=require('node:fs'),path=require('node:path');
 const isPublic=process.argv.includes('--public');
 const src=path.join(__dirname,'../preview'),out=path.join(__dirname,'../dist');
 const files=[
-  'experience.html','privacy.html','privacy.css','globe.css','experience-ui.css','experience-fx.css','door.css',
-  'vendor/d3.min.js','vendor/D3-LICENSE.txt','assets/world-data.js','assets/world-low-data.js','assets/region-map-data.js',
-  'globe-flight.js','catalog.js','weather.js','media-player.js','globe.js','experience-ui.js',
-  'assets/source-inventory.json',
-  ...fs.readdirSync(path.join(src,'assets')).filter(f=>f.endsWith('.webp')).map(f=>'assets/'+f)
+  'home.html','country.html','privacy.html','privacy.css','site.css','home.css','country.css',
+  'home.js','country.js','shell.js','mystic.js','catalog.js','weather.js','media-player.js',
+  'vendor/three.module.min.js','vendor/THREE-LICENSE.txt','assets/region-map-data.js','assets/source-inventory.json','assets/door/borders.json',
+  ...fs.readdirSync(path.join(src,'assets')).filter(f=>f.endsWith('.webp')).map(f=>'assets/'+f),// catalog.js still names these scene images
+  ...['earth','door'].flatMap(d=>fs.readdirSync(path.join(src,'assets',d)).filter(f=>f.endsWith('.webp')).map(f=>`assets/${d}/${f}`))
 ];
 // Keep dist/.vercel (the Vercel project link) so redeploys go to the same project instead of creating a new one named dist.
 for(const e of fs.existsSync(out)?fs.readdirSync(out):[])if(e!=='.vercel')fs.rmSync(path.join(out,e),{recursive:true,force:true});
 for(const f of files){fs.mkdirSync(path.dirname(path.join(out,f)),{recursive:true});fs.copyFileSync(path.join(src,f),path.join(out,f));}
-// The explorer is the home page.
-fs.copyFileSync(path.join(out,'experience.html'),path.join(out,'index.html'));
+// The door is the home page.
+fs.renameSync(path.join(out,'home.html'),path.join(out,'index.html'));
 // Response headers, defined once and written in both host formats: vercel.json (Vercel) and _headers (Cloudflare Pages / Netlify).
 // YouTube loads only after "play"; weather calls go straight to Open-Meteo.
 const siteHeaders={
@@ -45,4 +46,4 @@ const size=fs.readdirSync(out,{recursive:true}).reduce((n,f)=>{const s=fs.statSy
 const unfilled=isPublic&&fs.readFileSync(path.join(out,'privacy.html'),'utf8').includes('待填');
 if(missing.length){console.error('Missing files in dist:\n  '+[...new Set(missing)].join('\n  '));process.exitCode=1;}
 else if(unfilled){fs.rmSync(out,{recursive:true,force:true});console.error('Public build refused: preview/privacy.html still has 待填 placeholders (operator, contact, host). dist/ removed.');process.exitCode=1;}
-else console.log(`dist/ ready (${isPublic?'PUBLIC, indexable':'private preview, noindex'}): ${files.length+3} files, ${(size/1048576).toFixed(1)} MB, all local references resolve.`);
+else console.log(`dist/ ready (${isPublic?'PUBLIC, indexable':'private preview, noindex'}): ${files.length+2} files, ${(size/1048576).toFixed(1)} MB, all local references resolve.`);
