@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M7 30V14a9 9 0 0 1 18 0v16z%22 fill=%22%23a9d8ff%22/%3E%3C/svg%3E">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>任意門 — 門後是哪裡</title>
+<meta name="description" content="看一張風景照，在地圖上猜它在哪裡。5 題，離得越近分數越高，還能把同樣 5 題丟給朋友挑戰。">
+<link rel="stylesheet" href="site.css?v=door-23">
+<link rel="stylesheet" href="game.css?v=door-23">
+<script src="catalog.js?v=door-23"></script>
+<script type="module" src="game.js?v=door-23"></script>
+</head>
+<body>
+<header class="bar glass">
+<a class="logo" href="./" aria-label="任意門 首頁"><b>任意門</b><i>anywhere door</i><sup>BETA</sup></a>
+<nav class="nav" aria-label="主選單"><a id="nav-explore" href="./">探索</a><button type="button" id="nav-recent" data-sheet="recent">近期<span class="lbl">分享</span></button><button type="button" id="nav-saved" data-sheet="saved"><span class="lbl">我的</span>收藏<span class="n" id="saved-n" hidden></span></button><a id="nav-game" href="game.html" aria-current="page"><span class="lbl">小</span>遊戲</a></nav>
+<button type="button" class="search" id="open-search" aria-label="搜尋地點"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>搜尋地點，或一種心情</span></button>
+</header>
+
+<main class="game">
+  <div class="g-head">
+    <div><p class="k">MINI GAME</p><h1>門後是哪裡</h1><p class="sub" id="gSub">門打開了，猜猜門後是哪裡：在地圖上點一下</p></div>
+    <dl class="g-score glass"><div><dt>回合</dt><dd id="gRound">1 / 5</dd></div><div><dt>總分</dt><dd id="gTotal">0</dd></div></dl>
+  </div>
+  <div class="g-grid">
+    <figure class="photo glass"><img id="gImg" alt="要猜的景點照片"><figcaption id="gReveal" hidden></figcaption></figure>
+    <div class="mapcol glass">
+      <svg id="map" role="application" tabindex="0" aria-label="東亞與東南亞衛星地圖。點一下放下猜測；也可以用方向鍵移動、Enter 確定"></svg>
+      <p class="hint" id="mapHint">點地圖放下你的猜測</p>
+    </div>
+  </div>
+  <div class="g-bar"><button class="btn" id="gGo" type="button" disabled>確定</button><p class="result" id="gResult" aria-live="polite"></p></div>
+
+  <section class="final glass" id="final" hidden aria-labelledby="fTitle">
+    <p class="k" id="fTotal"></p>
+    <h2 id="fTitle"></h2>
+    <p class="vs" id="fVs"></p>
+    <ol id="fLog"></ol>
+    <div class="share">
+      <code id="fLink"></code>
+      <button class="btn" type="button" id="fCopy">複製挑戰連結</button>
+      <a class="ghost" id="fThreads" target="_blank" rel="noopener noreferrer">發到 Threads ↗</a>
+      <button class="ghost" type="button" id="fAgain">再玩一次</button>
+    </div>
+  </section>
+</main>
+<div class="toast glass" id="toast" role="status"></div>
+<p class="foot">景點照片：Wikimedia Commons（CC 授權）· 地圖：NASA Blue Marble · <a href="privacy.html">隱私權政策</a></p>
+</body>
+</html>

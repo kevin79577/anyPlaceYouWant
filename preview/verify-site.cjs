@@ -73,6 +73,17 @@ const hot=k=>C.places.filter(p=>(p.countryKey||p.id)===k&&p.tier==='hot').length
   assert.equal(await page.evaluate(()=>location.hash.split('/')[0]),'#taiwan');assert.equal(await page.locator('#nightBox .soon').count(),1);
   console.log('通過：全站搜尋跨國打開景點；非夜之門地點顯示即將開放。');await page.close();
 
+  // 小遊戲：收藏旁的入口、5 題作答、挑戰連結
+  page=await open('/country.html#japan');await page.click('#nav-game');await page.waitForURL(/game\.html$/);
+  for(let i=0;i<5;i++){await page.waitForFunction(()=>document.getElementById('gImg').complete&&document.getElementById('gImg').naturalWidth>0);
+    const b=await page.locator('#map').boundingBox();await page.mouse.click(b.x+b.width*(.3+i*.1),b.y+b.height*.5);
+    await page.click('#gGo');assert.match(await page.textContent('#gResult'),/差了 [\d,]+ 公里/);await page.click('#gGo')}
+  await page.waitForFunction(()=>!document.getElementById('final').hidden);
+  const link=await page.textContent('#fLink'),total=+(await page.textContent('#gTotal')).replace(/,/g,'');
+  assert.match(link,/#c-(\d{1,2}-){5}s\d+$/);assert(total>=0&&total<=25000);
+  await page.goto(link);await page.waitForFunction(()=>/朋友出的挑戰/.test(document.getElementById('gSub').textContent));
+  console.log('通過：小遊戲入口、5 題作答與計分（'+total+' 分）、挑戰連結。');await page.close();
+
   // 手機版
   page=await open('/country.html#korea',{viewport:{width:390,height:844},isMobile:true,hasTouch:true});
   await page.waitForFunction(()=>document.querySelectorAll('#list .card').length>0);

@@ -7,11 +7,11 @@ const fs=require('node:fs'),path=require('node:path');
 const isPublic=process.argv.includes('--public');
 const src=path.join(__dirname,'../preview'),out=path.join(__dirname,'../dist');
 const files=[
-  'home.html','country.html','privacy.html','privacy.css','site.css','home.css','country.css',
+  'home.html','country.html','game.html','game.css','game.js','privacy.html','privacy.css','site.css','home.css','country.css',
   'home.js','country.js','shell.js','mystic.js','catalog.js','weather.js','media-player.js',
   'vendor/three.module.min.js','vendor/THREE-LICENSE.txt','assets/region-map-data.js','assets/source-inventory.json','assets/door/borders.json',
   ...fs.readdirSync(path.join(src,'assets')).filter(f=>f.endsWith('.webp')).map(f=>'assets/'+f),// catalog.js still names these scene images
-  ...['earth','door'].flatMap(d=>fs.readdirSync(path.join(src,'assets',d)).filter(f=>f.endsWith('.webp')).map(f=>`assets/${d}/${f}`))
+  ...['earth','door','game'].flatMap(d=>fs.readdirSync(path.join(src,'assets',d)).filter(f=>/.(webp|jpg)$/.test(f)).map(f=>`assets/${d}/${f}`))
 ];
 // Keep dist/.vercel (the Vercel project link) so redeploys go to the same project instead of creating a new one named dist.
 for(const e of fs.existsSync(out)?fs.readdirSync(out):[])if(e!=='.vercel')fs.rmSync(path.join(out,e),{recursive:true,force:true});
