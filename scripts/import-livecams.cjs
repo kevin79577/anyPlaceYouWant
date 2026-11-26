@@ -15,7 +15,8 @@ const CHECKS=path.join(ROOT,'tmp/video-checks.json'),CHECK_DAYS=7;
 const origin=process.env.PREVIEW_ORIGIN||'http://127.0.0.1:4173';
 
 const COUNTRIES={
-  taiwan:{xlsx:'refs/台灣_livecams.xlsx',name:'名稱（原文）',regions:'atlas',entry:{video:'SqMD1zqQm-E'},foreign:/日本|Japan|韓國|韓国|Korea/i},
+  taiwan:{xlsx:'refs/台灣_livecams.xlsx',name:'名稱（原文）',regions:'atlas',entry:{video:'SqMD1zqQm-E'},foreign:/日本|Japan|韓國|韓国|Korea/i,
+    extra:'refs/任意門_前端/taiwan/assets/cams.json'},// 組員前端的 324 支清單（含座標 ll）；只補 Excel 沒有的影片，同樣經過檢查
   korea:{xlsx:'refs/韓國_livecams.xlsx',name:'名稱（韓文原文）',regions:'KOR',entry:{name:'釜山 廣安里'},foreign:/台灣|臺灣|台湾|Taiwan|日本|Japan/i},
   japan:{xlsx:'refs/日本_livecams.xlsx',name:'名稱（日文原文）',regions:'JPN',entry:{video:'J3xHBUgWRqc'},foreign:/台湾|台灣|臺灣|Taiwan|韓国|韓國|Korea|ソウル|Seoul|釜山/i,
     geocode:'japan-geocode.json',cleanName:true,keepStacked:true}};
@@ -82,6 +83,10 @@ async function playback(list){
   const excluded=[];const drop=(r,reason)=>excluded.push({videoId:r.videoId,name:r.rawName.slice(0,60),tier:r.tier,reason});
 
   let rows=all.map(r=>({videoId:vid(r['網址']),rawName:String(r[C.name]).trim(),category:r['類別']||'',lat:+r['緯度']||null,lng:+r['經度']||null,estimated:/位置為推估/.test(r['備註']),tier:hotIds.has(vid(r['網址']))?'hot':'general'}));
+  if(C.extra){const have=new Set(rows.map(r=>r.videoId));
+    for(const c of JSON.parse(fs.readFileSync(path.join(ROOT,C.extra),'utf8'))){const v=vid(c.url);if(!v||have.has(v))continue;have.add(v);
+      const r={videoId:v,rawName:String(c.name).trim(),category:c.cat||'',lat:c.ll?+c.ll[1]:null,lng:c.ll?+c.ll[0]:null,estimated:false,tier:c.hot?'hot':'general'};
+      if(r.lat&&r.lng)rows.push(r);else drop(r,'補充清單沒有座標');}}
   rows=rows.filter(r=>r.videoId||(drop(r,'沒有 YouTube 影片網址'),false));
   rows=rows.filter(r=>!C.foreign.test(r.rawName)||(drop(r,'不是這個國家的鏡頭'),false));
 

@@ -44,7 +44,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   assert(Math.hypot(after.x-spot.x,after.y-spot.y)<4,`zoom is not about the cursor: marker moved ${Math.round(Math.hypot(after.x-spot.x,after.y-spot.y))}px`);
   console.log('通過：滑鼠在標記上滾輪可放大，且以滑鼠位置為中心。');
   // The place panel lists every place (no 查看全部 button) and scrolls.
-  assert.equal(await page.locator('#place-list [data-place]').count(),115);
+  assert.equal(await page.locator('#place-list [data-place]').count(),121);
   await page.fill('#place-query','花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
   await shot(page,'02-locations.png');
@@ -64,7 +64,7 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='country');
   assert.equal(await page.locator('#place-query').inputValue(),'花蓮 七星潭');
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
-  console.log('通過：115 個台灣熱門地點、篩選、景點、收藏及返回保留篩選。');
+  console.log('通過：121 個台灣熱門地點、篩選、景點、收藏及返回保留篩選。');
   // 一般景點：預設不出現；搜尋到時提示，點提示打開後出現並帶「一般」標籤，地圖多出灰綠色標記
   await page.fill('#place-query','大溪橋');
   assert.equal(await page.locator('#place-list [data-place]').count(),0);
@@ -73,12 +73,12 @@ const shot=(p,name)=>p.waitForTimeout(700).then(()=>p.screenshot({path:path.join
   assert.equal(await page.locator('#place-list [data-place]').count(),1);
   assert.match(await page.locator('#place-list .tier-tag.general').textContent(),/一般/);
   assert.equal(await page.locator('#tier-switch [data-tier="all"]').getAttribute('aria-pressed'),'true');
-  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 158/);
+  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 217/);
   await page.fill('#place-query','');
-  assert.equal(await page.locator('#place-list [data-place]').count(),158);
+  assert.equal(await page.locator('#place-list [data-place]').count(),217);
   await page.click('#tier-switch [data-tier="hot"]');
-  assert.equal(await page.locator('#place-list [data-place]').count(),115);
-  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 115/);
+  assert.equal(await page.locator('#place-list [data-place]').count(),121);
+  assert.match(await page.locator('[data-destination="taiwan"]').textContent(),/台灣 121/);
   console.log('通過：一般景點預設隱藏、搜尋提示、開關切換與國家切換列數字。');
   await page.click('#nav-saved');
   await page.waitForFunction(()=>SomewhereExperience.getState().view==='saved');

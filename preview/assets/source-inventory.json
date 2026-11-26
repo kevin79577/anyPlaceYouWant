@@ -13,9 +13,9 @@
       "sources": 73
     },
     "taiwan": {
-      "places": 158,
-      "hot": 115,
-      "sources": 158
+      "places": 217,
+      "hot": 121,
+      "sources": 250
     },
     "thailand": {
       "places": 12,
@@ -20559,7 +20559,7 @@
           "fallback": "https://www.youtube.com/@%E7%B4%85%E6%A8%B9%E6%9E%97%E6%9C%89%E7%B7%9A%E9%9B%BB%E8%A6%96-h7k",
           "provider": "紅樹林有線電視",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "taiwan-0",
           "status": "candidate"
         }
@@ -20584,7 +20584,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-GUCaVR88ZFU-0",
           "status": "candidate"
         }
@@ -20609,7 +20609,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-fP4ecxfsJos-0",
           "status": "candidate"
         }
@@ -20634,7 +20634,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-XUWjAsajKXg-0",
           "status": "candidate"
         }
@@ -20659,7 +20659,7 @@
           "fallback": "https://www.youtube.com/@travelkhh",
           "provider": "高雄旅遊網",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-ka7FV0sCvxQ-0",
           "status": "candidate"
         }
@@ -20684,7 +20684,7 @@
           "fallback": "https://www.youtube.com/@%E6%88%91%E6%84%9B%E5%A2%BE%E4%B8%81%E6%97%85%E9%81%8A%E7%A5%A8%E5%88%B8%E4%B8%AD%E5%BF%83",
           "provider": "我愛墾丁旅遊票券中心",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-jUnFuJSj0OU-0",
           "status": "candidate"
         }
@@ -20709,7 +20709,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-VqS_Y8ZCj6M-0",
           "status": "candidate"
         }
@@ -20734,7 +20734,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-uCXgNUJO9e8-0",
           "status": "candidate"
         }
@@ -20759,7 +20759,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-HPurNw8gu84-0",
           "status": "candidate"
         }
@@ -20784,7 +20784,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-sJ8q1aOQAPU-0",
           "status": "candidate"
         }
@@ -20809,7 +20809,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt--KQE12zWVbc-0",
           "status": "candidate"
         }
@@ -20834,7 +20834,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-uKVPPfmnQYM-0",
           "status": "candidate"
         }
@@ -20859,7 +20859,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-DK-AW0K9bcg-0",
           "status": "candidate"
         }
@@ -20884,7 +20884,7 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-FbB8WDUXXqU-0",
           "status": "candidate"
         }
@@ -20909,7 +20909,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-0D6QgDOdI6c-0",
           "status": "candidate"
         }
@@ -20934,7 +20934,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-68GFgzQxrXs-0",
           "status": "candidate"
         }
@@ -20959,7 +20959,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-BxMeMnX6Qqw-0",
           "status": "candidate"
         }
@@ -20984,7 +20984,7 @@
           "fallback": "https://www.youtube.com/@taoyuanairport",
           "provider": "Taoyuan Airport",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-wWEnxWA7nnY-0",
           "status": "candidate"
         }
@@ -21009,7 +21009,7 @@
           "fallback": "https://www.youtube.com/@kinmentravel",
           "provider": "樂遊金門",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6zOsnHxN7_I-0",
           "status": "candidate"
         }
@@ -21034,7 +21034,7 @@
           "fallback": "https://www.youtube.com/@kw2tw",
           "provider": "棧貳庫KW2",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-nDxJ7sWfG_E-0",
           "status": "candidate"
         }
@@ -21059,7 +21059,7 @@
           "fallback": "https://www.youtube.com/@changhua_travels",
           "provider": "愛玩彰化 Changhua Travels",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-bsmxwRLdB3k-0",
           "status": "candidate"
         }
@@ -21084,7 +21084,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-xwAWSh35uuw-0",
           "status": "candidate"
         }
@@ -21109,7 +21109,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-IPNWtdR6QkE-0",
           "status": "candidate"
         }
@@ -21134,7 +21134,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Ndo_8RuefH4-0",
           "status": "candidate"
         }
@@ -21159,7 +21159,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-rB0Nw8JmTXg-0",
           "status": "candidate"
         }
@@ -21184,7 +21184,7 @@
           "fallback": "https://www.youtube.com/@Itathaosml",
           "provider": "Itathau Visitor Center",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-5plRdP_APCk-0",
           "status": "candidate"
         }
@@ -21209,7 +21209,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-cahSuOwzYQ8-0",
           "status": "candidate"
         }
@@ -21234,7 +21234,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-wTHhv7M0vCI-0",
           "status": "candidate"
         }
@@ -21259,7 +21259,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6Y97q9KrhwA-0",
           "status": "candidate"
         }
@@ -21284,7 +21284,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-dY2cRNr5Buw-0",
           "status": "candidate"
         }
@@ -21309,7 +21309,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-j2L_559nCjc-0",
           "status": "candidate"
         }
@@ -21334,7 +21334,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-B6eki-0-w0g-0",
           "status": "candidate"
         }
@@ -21359,7 +21359,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-8cq-t5yKjvs-0",
           "status": "candidate"
         }
@@ -21384,7 +21384,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-8KnqJBf_dow-0",
           "status": "candidate"
         }
@@ -21409,7 +21409,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-agEzlv9n9Eg-0",
           "status": "candidate"
         }
@@ -21434,7 +21434,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-zDt8FBPozZQ-0",
           "status": "candidate"
         }
@@ -21459,7 +21459,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-PvJr2efA6n0-0",
           "status": "candidate"
         }
@@ -21484,7 +21484,7 @@
           "fallback": "https://www.youtube.com/@ervnsa",
           "provider": "ervnsa",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-DliL9uMtPrI-0",
           "status": "candidate"
         }
@@ -21509,7 +21509,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-3Za9y4z_Lzc-0",
           "status": "candidate"
         }
@@ -21534,7 +21534,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt--xT1bZhWLuU-0",
           "status": "candidate"
         }
@@ -21559,7 +21559,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-YcazXhwRf4g-0",
           "status": "candidate"
         }
@@ -21584,7 +21584,7 @@
           "fallback": "https://www.youtube.com/@travelkhh",
           "provider": "高雄旅遊網",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-C03Itx8iSC0-0",
           "status": "candidate"
         }
@@ -21609,7 +21609,7 @@
           "fallback": "https://www.youtube.com/@twipcam",
           "provider": "台灣即時影像監視器",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-2lVMTs_Fj0M-0",
           "status": "candidate"
         }
@@ -21634,7 +21634,7 @@
           "fallback": "https://www.youtube.com/@twipcam",
           "provider": "台灣即時影像監視器",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-BiBNiJAW3dY-0",
           "status": "candidate"
         }
@@ -21659,7 +21659,7 @@
           "fallback": "https://www.youtube.com/@ervnsa",
           "provider": "ervnsa",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-5GTFLN9gZrc-0",
           "status": "candidate"
         }
@@ -21684,7 +21684,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-z_fY1pj1VBw-0",
           "status": "candidate"
         }
@@ -21709,7 +21709,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-uvwfYzwY8tg-0",
           "status": "candidate"
         }
@@ -21734,7 +21734,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-34h_Cy_n0Ok-0",
           "status": "candidate"
         }
@@ -21759,7 +21759,7 @@
           "fallback": "https://www.youtube.com/@jinlong-x3k",
           "provider": "jinlong",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-tEcHWBlxAGM-0",
           "status": "candidate"
         }
@@ -21784,7 +21784,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6ghffcNt3Nw-0",
           "status": "candidate"
         }
@@ -21809,7 +21809,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-d9KuXrPCWYU-0",
           "status": "candidate"
         }
@@ -21834,7 +21834,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-RttyIGHbN_w-0",
           "status": "candidate"
         }
@@ -21859,7 +21859,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-GB64WeZZQPQ-0",
           "status": "candidate"
         }
@@ -21884,7 +21884,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-UX4FTHVXcz4-0",
           "status": "candidate"
         }
@@ -21909,7 +21909,7 @@
           "fallback": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6",
           "provider": "交通部觀光署澎湖國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-YNCc2Xb3Ahk-0",
           "status": "candidate"
         }
@@ -21934,7 +21934,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-YkIUZjVlhv4-0",
           "status": "candidate"
         }
@@ -21959,7 +21959,7 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-gNWeZsaqD98-0",
           "status": "candidate"
         }
@@ -21984,7 +21984,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-enD2lFVDNiU-0",
           "status": "candidate"
         }
@@ -22009,7 +22009,7 @@
           "fallback": "https://www.youtube.com/@%E8%8A%B1%E8%93%AE%E7%B8%A3%E6%94%BF%E5%BA%9C%E8%A7%80%E5%85%89%E8%99%95%E6%9D%B1%E5%A4%A7",
           "provider": "花蓮縣政府觀光處東大門夜市即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-ASzrS-4ZcA8-0",
           "status": "candidate"
         }
@@ -22034,7 +22034,7 @@
           "fallback": "https://www.youtube.com/@ktnpworld",
           "provider": "墾丁國家公園",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-hrpwltQqtq0-0",
           "status": "candidate"
         }
@@ -22059,7 +22059,7 @@
           "fallback": "https://www.youtube.com/@ktnpworld",
           "provider": "墾丁國家公園",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-l0MykkrTvo4-0",
           "status": "candidate"
         }
@@ -22084,7 +22084,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-pSQ0e-ZTZ5g-0",
           "status": "candidate"
         }
@@ -22109,7 +22109,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-AKl3F6cAY2Q-0",
           "status": "candidate"
         }
@@ -22134,7 +22134,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-j3l32VFi5M8-0",
           "status": "candidate"
         }
@@ -22159,7 +22159,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-KMyFrEQq-XY-0",
           "status": "candidate"
         }
@@ -22184,7 +22184,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-bsp9kqrSFW8-0",
           "status": "candidate"
         }
@@ -22209,7 +22209,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-q3KJt-SZc2s-0",
           "status": "candidate"
         }
@@ -22234,7 +22234,7 @@
           "fallback": "https://www.youtube.com/@kmnpofficial",
           "provider": "金門國家公園管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-SR-6i6S8plg-0",
           "status": "candidate"
         }
@@ -22259,7 +22259,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-AF550Wx7Ba0-0",
           "status": "candidate"
         }
@@ -22284,7 +22284,7 @@
           "fallback": "https://www.youtube.com/@ktnpworld",
           "provider": "墾丁國家公園",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-yQpz1IeRVgw-0",
           "status": "candidate"
         }
@@ -22309,7 +22309,7 @@
           "fallback": "https://www.youtube.com/@ervnsa",
           "provider": "ervnsa",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-aaKOV4qkDHw-0",
           "status": "candidate"
         }
@@ -22334,7 +22334,7 @@
           "fallback": "https://www.youtube.com/@travelkhh",
           "provider": "高雄旅遊網",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-BnPoNatG-HE-0",
           "status": "candidate"
         }
@@ -22359,7 +22359,7 @@
           "fallback": "https://www.youtube.com/@ktnpworld",
           "provider": "墾丁國家公園",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-7WOJMh_eSfY-0",
           "status": "candidate"
         }
@@ -22384,7 +22384,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-qg-aHp2mvS8-0",
           "status": "candidate"
         }
@@ -22409,7 +22409,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-HirBQsQEUeA-0",
           "status": "candidate"
         }
@@ -22434,7 +22434,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-neaiCec1kec-0",
           "status": "candidate"
         }
@@ -22459,7 +22459,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-kKD-ZBLs8-4-0",
           "status": "candidate"
         }
@@ -22484,7 +22484,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-XSD5ptYisw8-0",
           "status": "candidate"
         }
@@ -22509,7 +22509,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-mXnigLvIL0Q-0",
           "status": "candidate"
         }
@@ -22534,7 +22534,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Bc6PX90YfrY-0",
           "status": "candidate"
         }
@@ -22559,7 +22559,7 @@
           "fallback": "https://www.youtube.com/@spnp852",
           "provider": "雪霸國家公園 Shei-Pa National Park",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-2KDE860OW_A-0",
           "status": "candidate"
         }
@@ -22584,7 +22584,7 @@
           "fallback": "https://www.youtube.com/@spnp852",
           "provider": "雪霸國家公園 Shei-Pa National Park",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-aGOFDlySzoQ-0",
           "status": "candidate"
         }
@@ -22609,7 +22609,7 @@
           "fallback": "https://www.youtube.com/@spnp852",
           "provider": "雪霸國家公園 Shei-Pa National Park",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-gHBwgnzaBKg-0",
           "status": "candidate"
         }
@@ -22634,7 +22634,7 @@
           "fallback": "https://www.youtube.com/@thecmmedia",
           "provider": "太魯閣國家公園",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-K3VZNxKt01o-0",
           "status": "candidate"
         }
@@ -22659,7 +22659,7 @@
           "fallback": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85",
           "provider": "大玩台中-臺中觀光旅遊局",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-lhXXhDyjFtI-0",
           "status": "candidate"
         }
@@ -22684,7 +22684,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-ZdqHgQwvZOw-0",
           "status": "candidate"
         }
@@ -22709,7 +22709,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-X_fchztvqI0-0",
           "status": "candidate"
         }
@@ -22734,7 +22734,7 @@
           "fallback": "https://www.youtube.com/@ervnsa",
           "provider": "ervnsa",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-rvc1klNIgQc-0",
           "status": "candidate"
         }
@@ -22759,7 +22759,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6kUEK3LVrro-0",
           "status": "candidate"
         }
@@ -22784,7 +22784,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-JhQuR77AR7U-0",
           "status": "candidate"
         }
@@ -22809,7 +22809,7 @@
           "fallback": "https://www.youtube.com/@%E4%B9%9D%E8%9B%99%E4%BC%8A%E9%81%94%E9%82%B5",
           "provider": "九蛙伊達邵",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-EYmZLt-QSj4-0",
           "status": "candidate"
         }
@@ -22834,7 +22834,7 @@
           "fallback": "https://www.youtube.com/@%E9%81%94%E5%85%8B%E6%8B%89%E5%93%88",
           "provider": "達克拉哈",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-kLa8DRQ0i8Q-0",
           "status": "candidate"
         }
@@ -22859,7 +22859,7 @@
           "fallback": "https://www.youtube.com/@%E6%96%87%E6%AD%A6%E5%BB%9F-b1t6v",
           "provider": "文武廟",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-IS9KKN8i_Pg-0",
           "status": "candidate"
         }
@@ -22884,7 +22884,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-zLIkTOCGCA4-0",
           "status": "candidate"
         }
@@ -22909,7 +22909,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-B3FCnD4ZY_M-0",
           "status": "candidate"
         }
@@ -22934,7 +22934,7 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Wefj3zbl-tI-0",
           "status": "candidate"
         }
@@ -22959,7 +22959,7 @@
           "fallback": "https://www.youtube.com/@marinenph",
           "provider": "海洋國家公園管理處 MNP Headquarters",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-bEaNjS7xCJ0-0",
           "status": "candidate"
         }
@@ -22984,7 +22984,7 @@
           "fallback": "https://www.youtube.com/@AS_RCHSS_GIS",
           "provider": "AS_RCHSS_GIS",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-tJSJMfxfivY-0",
           "status": "candidate"
         }
@@ -23009,7 +23009,7 @@
           "fallback": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6",
           "provider": "交通部觀光署澎湖國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt--bv8pG-vk1Y-0",
           "status": "candidate"
         }
@@ -23034,7 +23034,7 @@
           "fallback": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6",
           "provider": "交通部觀光署澎湖國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-ZcO5dbciNU4-0",
           "status": "candidate"
         }
@@ -23059,7 +23059,7 @@
           "fallback": "https://www.youtube.com/@%E4%BA%A4%E9%80%9A%E9%83%A8%E8%A7%80%E5%85%89%E7%BD%B2%E6%BE%8E%E6%B9%96%E5%9C%8B%E5%AE%B6",
           "provider": "交通部觀光署澎湖國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-T9QS6Y4i-9k-0",
           "status": "candidate"
         }
@@ -23084,7 +23084,7 @@
           "fallback": "https://www.youtube.com/@ymsnpinfo",
           "provider": "陽明山國家公園管理處INFO",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6HeYP46CMgg-0",
           "status": "candidate"
         }
@@ -23109,7 +23109,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-xxMRjVwCQ3o-0",
           "status": "candidate"
         }
@@ -23134,7 +23134,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-a8nJQr5rBGs-0",
           "status": "candidate"
         }
@@ -23159,7 +23159,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-fv1yFousBvc-0",
           "status": "candidate"
         }
@@ -23184,7 +23184,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-XEbo8NzMTbQ-0",
           "status": "candidate"
         }
@@ -23209,7 +23209,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-KfBv0kT3ezE-0",
           "status": "candidate"
         }
@@ -23234,7 +23234,7 @@
           "fallback": "https://www.youtube.com/@travelkhh",
           "provider": "高雄旅遊網",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-vh2JdQx0PYU-0",
           "status": "candidate"
         }
@@ -23259,7 +23259,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt--nyTOqcRDIQ-0",
           "status": "candidate"
         }
@@ -23284,7 +23284,7 @@
           "fallback": "https://www.youtube.com/@twipcam",
           "provider": "台灣即時影像監視器",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Nz9-_x5ecWc-0",
           "status": "candidate"
         }
@@ -23309,7 +23309,7 @@
           "fallback": "https://www.youtube.com/@%E7%B4%85%E6%A8%B9%E6%9E%97%E6%9C%89%E7%B7%9A%E9%9B%BB%E8%A6%96-h7k",
           "provider": "紅樹林有線電視",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-yn_8QwCWsyI-0",
           "status": "candidate"
         }
@@ -23334,7 +23334,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-JnD8Rk3o0BM-0",
           "status": "candidate"
         }
@@ -23359,7 +23359,7 @@
           "fallback": "https://www.youtube.com/@taipeitravelofficial",
           "provider": "Taipei Travel Live Cam  台北觀光即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-215ahZ_0rTg-0",
           "status": "candidate"
         }
@@ -23384,7 +23384,7 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-ZjuY4qKaj40-0",
           "status": "candidate"
         }
@@ -23409,8 +23409,302 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-2SiZ6VUKbZI-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-nLiYOxh6bGE",
+      "country": "台灣",
+      "name": "福隆海水浴場",
+      "region": "新北市",
+      "point": [
+        121.9191,
+        25.0256
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "nLiYOxh6bGE",
+          "title": "福隆海水浴場",
+          "url": "https://www.youtube.com/watch?v=nLiYOxh6bGE",
+          "reference": "https://www.youtube.com/@necoastnsa2903",
+          "fallback": "https://www.youtube.com/@necoastnsa2903",
+          "provider": "necoast nsa",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-nLiYOxh6bGE-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "7fDA_cR12qg",
+          "title": "龍洞灣觀景台",
+          "url": "https://www.youtube.com/watch?v=7fDA_cR12qg",
+          "reference": "https://www.youtube.com/@necoastnsa2903",
+          "fallback": "https://www.youtube.com/@necoastnsa2903",
+          "provider": "necoast nsa",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-nLiYOxh6bGE-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "Yhj5qvupJDk",
+          "title": "福隆海灣（海況）",
+          "url": "https://www.youtube.com/watch?v=Yhj5qvupJDk",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-nLiYOxh6bGE-2",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-fjhg3gAnMFg",
+      "country": "台灣",
+      "name": "高美濕地",
+      "region": "台中市",
+      "point": [
+        120.5772,
+        24.2937
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "fjhg3gAnMFg",
+          "title": "高美濕地",
+          "url": "https://www.youtube.com/watch?v=fjhg3gAnMFg",
+          "reference": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85",
+          "fallback": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85",
+          "provider": "大玩台中-臺中觀光旅遊局",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-fjhg3gAnMFg-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-cVxpg5d_D58",
+      "country": "台灣",
+      "name": "日月潭 慈恩塔",
+      "region": "南投縣",
+      "point": [
+        120.9257,
+        23.8761
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "cVxpg5d_D58",
+          "title": "日月潭 慈恩塔",
+          "url": "https://www.youtube.com/watch?v=cVxpg5d_D58",
+          "reference": "https://www.youtube.com/@%E6%85%88%E6%81%A9%E5%A1%94",
+          "fallback": "https://www.youtube.com/@%E6%85%88%E6%81%A9%E5%A1%94",
+          "provider": "慈恩塔",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-cVxpg5d_D58-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "_aTgiT8J-Ps",
+          "title": "日月潭 達克拉哈水上自行車步道",
+          "url": "https://www.youtube.com/watch?v=_aTgiT8J-Ps",
+          "reference": "https://www.youtube.com/@%E9%81%94%E5%85%8B%E6%8B%89%E5%93%88",
+          "fallback": "https://www.youtube.com/@%E9%81%94%E5%85%8B%E6%8B%89%E5%93%88",
+          "provider": "達克拉哈",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-cVxpg5d_D58-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-Hr6OdfOmboI",
+      "country": "台灣",
+      "name": "井仔腳瓦盤鹽田",
+      "region": "台南市",
+      "point": [
+        120.1256,
+        23.2786
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "Hr6OdfOmboI",
+          "title": "井仔腳瓦盤鹽田",
+          "url": "https://www.youtube.com/watch?v=Hr6OdfOmboI",
+          "reference": "https://www.youtube.com/@4%E4%BA%95%E4%BB%94%E8%85%B3%E7%93%A6%E7%9B%A4%E9%B9%BD%E7%94%B0",
+          "fallback": "https://www.youtube.com/@4%E4%BA%95%E4%BB%94%E8%85%B3%E7%93%A6%E7%9B%A4%E9%B9%BD%E7%94%B0",
+          "provider": "雲嘉南管理處-生態系列-井仔腳瓦盤鹽田",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Hr6OdfOmboI-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "EDRKQ5ddlr0",
+          "title": "北門潟湖",
+          "url": "https://www.youtube.com/watch?v=EDRKQ5ddlr0",
+          "reference": "https://www.youtube.com/@5%E5%8C%97%E9%96%80%E6%BD%9F%E6%B9%96",
+          "fallback": "https://www.youtube.com/@5%E5%8C%97%E9%96%80%E6%BD%9F%E6%B9%96",
+          "provider": "雲嘉南管理處-生態系列-海巡哨所",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Hr6OdfOmboI-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-qbHeXFdvqgg",
+      "country": "台灣",
+      "name": "太魯閣 長春祠",
+      "region": "花蓮縣",
+      "point": [
+        121.4808,
+        24.1237
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "qbHeXFdvqgg",
+          "title": "太魯閣 長春祠",
+          "url": "https://www.youtube.com/watch?v=qbHeXFdvqgg",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "2g30yjOzRNw",
+          "title": "太魯閣 天祥遊憩區",
+          "url": "https://www.youtube.com/watch?v=2g30yjOzRNw",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "CWxL6PJXjX8",
+          "title": "太魯閣 東西橫貫公路牌樓",
+          "url": "https://www.youtube.com/watch?v=CWxL6PJXjX8",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-2",
+          "status": "candidate"
+        },
+        {
+          "videoId": "SfWakxotMKM",
+          "title": "合歡山 小風口四季景觀",
+          "url": "https://www.youtube.com/watch?v=SfWakxotMKM",
+          "reference": "https://www.youtube.com/@%E5%A4%AA%E9%AD%AF%E9%96%A3%E5%9B%9B%E5%AD%A3",
+          "fallback": "https://www.youtube.com/@%E5%A4%AA%E9%AD%AF%E9%96%A3%E5%9B%9B%E5%AD%A3",
+          "provider": "太魯閣四季",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-3",
+          "status": "candidate"
+        },
+        {
+          "videoId": "svgb2aqamYg",
+          "title": "合歡山 群峰全景",
+          "url": "https://www.youtube.com/watch?v=svgb2aqamYg",
+          "reference": "https://www.youtube.com/@%E5%A4%AA%E9%AD%AF%E9%96%A3%E5%9B%9B%E5%AD%A3",
+          "fallback": "https://www.youtube.com/@%E5%A4%AA%E9%AD%AF%E9%96%A3%E5%9B%9B%E5%AD%A3",
+          "provider": "太魯閣四季",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-4",
+          "status": "candidate"
+        },
+        {
+          "videoId": "1nhh-9K_yCc",
+          "title": "太魯閣 布洛灣台地",
+          "url": "https://www.youtube.com/watch?v=1nhh-9K_yCc",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-5",
+          "status": "candidate"
+        },
+        {
+          "videoId": "MN73B7YmbTk",
+          "title": "太魯閣 布洛灣吊橋",
+          "url": "https://www.youtube.com/watch?v=MN73B7YmbTk",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-6",
+          "status": "candidate"
+        },
+        {
+          "videoId": "4uLG98B7QaU",
+          "title": "太魯閣 匯德觀景台",
+          "url": "https://www.youtube.com/watch?v=4uLG98B7QaU",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-7",
+          "status": "candidate"
+        },
+        {
+          "videoId": "KDrgZaP-Hpg",
+          "title": "太魯閣 崇德休憩區",
+          "url": "https://www.youtube.com/watch?v=KDrgZaP-Hpg",
+          "reference": "https://www.youtube.com/@thecmmedia",
+          "fallback": "https://www.youtube.com/@thecmmedia",
+          "provider": "太魯閣國家公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-qbHeXFdvqgg-8",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-uh_yNAE01w8",
+      "country": "台灣",
+      "name": "金門 建功嶼",
+      "region": "金門縣",
+      "point": [
+        118.3134,
+        24.4129
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "uh_yNAE01w8",
+          "title": "金門 建功嶼",
+          "url": "https://www.youtube.com/watch?v=uh_yNAE01w8",
+          "reference": "https://www.youtube.com/@kinmentravel",
+          "fallback": "https://www.youtube.com/@kinmentravel",
+          "provider": "樂遊金門",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-uh_yNAE01w8-0",
           "status": "candidate"
         }
       ]
@@ -23434,7 +23728,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-oFJ6gCaBb_Q-0",
           "status": "candidate"
         }
@@ -23459,7 +23753,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-yeoV-wBdoxQ-0",
           "status": "candidate"
         }
@@ -23484,7 +23778,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-pUWjZsODbmU-0",
           "status": "candidate"
         }
@@ -23509,7 +23803,7 @@
           "fallback": "https://www.youtube.com/@northguan",
           "provider": "北觀國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-CJ8FA10bg3E-0",
           "status": "candidate"
         }
@@ -23534,7 +23828,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-91PfFoqvuUk-0",
           "status": "candidate"
         }
@@ -23559,7 +23853,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-tD_a03trUvE-0",
           "status": "candidate"
         }
@@ -23584,7 +23878,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-44JArbF682k-0",
           "status": "candidate"
         }
@@ -23609,7 +23903,7 @@
           "fallback": "https://www.youtube.com/@Suburban-Security",
           "provider": "斯爾本科技有限公司",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-VJA5cUqnM-A-0",
           "status": "candidate"
         }
@@ -23634,7 +23928,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-D945F_dauls-0",
           "status": "candidate"
         }
@@ -23659,7 +23953,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-8okFzGbfwz8-0",
           "status": "candidate"
         }
@@ -23684,7 +23978,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-2NMrGvTYqN4-0",
           "status": "candidate"
         }
@@ -23709,7 +24003,7 @@
           "fallback": "https://www.youtube.com/@dbnsa1345",
           "provider": "大鵬灣國家風景區管理處 Dapeng Bay NSA",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-fLYOccOgG8A-0",
           "status": "candidate"
         }
@@ -23734,7 +24028,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-tu_gsIkNt-w-0",
           "status": "candidate"
         }
@@ -23759,7 +24053,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-BUJJaW0vkJs-0",
           "status": "candidate"
         }
@@ -23784,7 +24078,7 @@
           "fallback": "https://www.youtube.com/@eastcoastnsa0501",
           "provider": "東部海岸國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-JkoXcXI04Qk-0",
           "status": "candidate"
         }
@@ -23809,7 +24103,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-UCG1aXVO8H8-0",
           "status": "candidate"
         }
@@ -23834,7 +24128,7 @@
           "fallback": "https://www.youtube.com/@HOMEPLUSNEWS",
           "provider": "中嘉新聞",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-TUYZ7-9-rWw-0",
           "status": "candidate"
         }
@@ -23859,7 +24153,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-EUOp2LchPQM-0",
           "status": "candidate"
         }
@@ -23884,7 +24178,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-sKrqs-5Auqo-0",
           "status": "candidate"
         }
@@ -23909,7 +24203,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-aWIeVanMFD0-0",
           "status": "candidate"
         }
@@ -23934,7 +24228,7 @@
           "fallback": "https://www.youtube.com/@cwa-tw",
           "provider": "中央氣象署",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-3qj3-vr9Rjk-0",
           "status": "candidate"
         }
@@ -23959,7 +24253,7 @@
           "fallback": "https://www.youtube.com/@Alishannsa",
           "provider": "阿里山國家風景區管理處",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-hMYs60qtkK8-0",
           "status": "candidate"
         }
@@ -23984,7 +24278,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-5YDXZ1aiR5Y-0",
           "status": "candidate"
         }
@@ -24009,7 +24303,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-nV-DKquUjFs-0",
           "status": "candidate"
         }
@@ -24034,7 +24328,7 @@
           "fallback": "https://www.youtube.com/@ntctour",
           "provider": "新北旅客 New Taipei Tour",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-di-4DCblWq4-0",
           "status": "candidate"
         }
@@ -24059,7 +24353,7 @@
           "fallback": "https://www.youtube.com/@spnp852",
           "provider": "雪霸國家公園 Shei-Pa National Park",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-uFWjCr5YbUg-0",
           "status": "candidate"
         }
@@ -24084,7 +24378,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-LSkq-wHMxQY-0",
           "status": "candidate"
         }
@@ -24109,7 +24403,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-OQnwVN5lzsk-0",
           "status": "candidate"
         }
@@ -24134,7 +24428,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-3JzbzXqusDg-0",
           "status": "candidate"
         }
@@ -24159,7 +24453,7 @@
           "fallback": "https://www.youtube.com/@TaoyuanTravel",
           "provider": "遊桃園 Taoyuan Travel",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-yQSmajHyMhU-0",
           "status": "candidate"
         }
@@ -24184,7 +24478,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-5Txm70G4CLo-0",
           "status": "candidate"
         }
@@ -24209,7 +24503,7 @@
           "fallback": "https://www.youtube.com/@changhua_travels",
           "provider": "愛玩彰化 Changhua Travels",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-xwBG32yOwtQ-0",
           "status": "candidate"
         }
@@ -24234,7 +24528,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Ma4jFAs3lYw-0",
           "status": "candidate"
         }
@@ -24259,7 +24553,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-G7xk5xYxe-w-0",
           "status": "candidate"
         }
@@ -24284,7 +24578,7 @@
           "fallback": "https://www.youtube.com/@fancarecreation",
           "provider": "國家森林遊樂區即時影像",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-6vdny5aFyNY-0",
           "status": "candidate"
         }
@@ -24309,7 +24603,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-13C8jdbqQcI-0",
           "status": "candidate"
         }
@@ -24334,7 +24628,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-BDs9UIRw4zc-0",
           "status": "candidate"
         }
@@ -24359,7 +24653,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-9QqBz3kNHis-0",
           "status": "candidate"
         }
@@ -24384,7 +24678,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Tb6bay3UB18-0",
           "status": "candidate"
         }
@@ -24409,7 +24703,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-1vVCtk5OXVk-0",
           "status": "candidate"
         }
@@ -24434,7 +24728,7 @@
           "fallback": "https://www.youtube.com/@fhy00",
           "provider": "水利署水利防災組",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-QBgn5a3k_T0-0",
           "status": "candidate"
         }
@@ -24459,7 +24753,7 @@
           "fallback": "https://www.youtube.com/@taitungamazing7249",
           "provider": "Amazing Taitung 台東就醬玩",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-TY4qQElcUrA-0",
           "status": "candidate"
         }
@@ -24484,8 +24778,1585 @@
           "fallback": "https://www.youtube.com/@Suburban-Security",
           "provider": "斯爾本科技有限公司",
           "discovery": "匯入時實際播放成功",
-          "checkedAt": "2026-11-21",
+          "checkedAt": "2026-11-26",
           "id": "tw-yt-Z4x4aQsmT2M-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-J2vDFfe9CRE",
+      "country": "台灣",
+      "name": "文化大學 大屯山環景",
+      "region": "台北市",
+      "point": [
+        121.5509,
+        25.1256
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "J2vDFfe9CRE",
+          "title": "文化大學 大屯山環景",
+          "url": "https://www.youtube.com/watch?v=J2vDFfe9CRE",
+          "reference": "https://www.youtube.com/@%E4%B8%AD%E5%9C%8B%E6%96%87%E5%8C%96%E5%A4%A7%E5%AD%B8%E6%B0%A3%E8%B3%AA%E7%B3%BB",
+          "fallback": "https://www.youtube.com/@%E4%B8%AD%E5%9C%8B%E6%96%87%E5%8C%96%E5%A4%A7%E5%AD%B8%E6%B0%A3%E8%B3%AA%E7%B3%BB",
+          "provider": "中國文化大學大氣與地質科學系",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-J2vDFfe9CRE-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-97xu_qQPe6E",
+      "country": "台灣",
+      "name": "大屯山區群峰",
+      "region": "台北市",
+      "point": [
+        121.5178,
+        25.1482
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "97xu_qQPe6E",
+          "title": "大屯山區群峰",
+          "url": "https://www.youtube.com/watch?v=97xu_qQPe6E",
+          "reference": "https://www.youtube.com/@%E4%B8%AD%E5%9C%8B%E6%96%87%E5%8C%96%E5%A4%A7%E5%AD%B8%E6%B0%A3%E8%B3%AA%E7%B3%BB",
+          "fallback": "https://www.youtube.com/@%E4%B8%AD%E5%9C%8B%E6%96%87%E5%8C%96%E5%A4%A7%E5%AD%B8%E6%B0%A3%E8%B3%AA%E7%B3%BB",
+          "provider": "中國文化大學大氣與地質科學系",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-97xu_qQPe6E-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-Jpg_V7f7rW8",
+      "country": "台灣",
+      "name": "中角灣（海況）",
+      "region": "新北市",
+      "point": [
+        121.6056,
+        25.2176
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "Jpg_V7f7rW8",
+          "title": "中角灣（海況）",
+          "url": "https://www.youtube.com/watch?v=Jpg_V7f7rW8",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Jpg_V7f7rW8-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-ata9vDuqpHg",
+      "country": "台灣",
+      "name": "鼻頭服務區",
+      "region": "新北市",
+      "point": [
+        121.8236,
+        25.0985
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "ata9vDuqpHg",
+          "title": "鼻頭服務區",
+          "url": "https://www.youtube.com/watch?v=ata9vDuqpHg",
+          "reference": "https://www.youtube.com/@necoastnsa2903",
+          "fallback": "https://www.youtube.com/@necoastnsa2903",
+          "provider": "necoast nsa",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-ata9vDuqpHg-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-_LRkfObNP_U",
+      "country": "台灣",
+      "name": "文山農場 大草皮",
+      "region": "新北市",
+      "point": [
+        121.5316,
+        24.9305
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "_LRkfObNP_U",
+          "title": "文山農場 大草皮",
+          "url": "https://www.youtube.com/watch?v=_LRkfObNP_U",
+          "reference": "https://www.youtube.com/@%E6%96%B0%E5%8C%97%E5%B8%82%E8%BE%B2%E6%9C%83%E6%96%87%E5%B1%B1%E8%BE%B2%E5%A0%B4",
+          "fallback": "https://www.youtube.com/@%E6%96%B0%E5%8C%97%E5%B8%82%E8%BE%B2%E6%9C%83%E6%96%87%E5%B1%B1%E8%BE%B2%E5%A0%B4",
+          "provider": "新北市農會文山農場",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-_LRkfObNP_U-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "vP_IgbY4l7M",
+          "title": "碧潭",
+          "url": "https://www.youtube.com/watch?v=vP_IgbY4l7M",
+          "reference": "https://www.youtube.com/@CGNEWS8888",
+          "fallback": "https://www.youtube.com/@CGNEWS8888",
+          "provider": "大新店有線電視",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-_LRkfObNP_U-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-M24SZJU-uoo",
+      "country": "台灣",
+      "name": "三峽老街",
+      "region": "新北市",
+      "point": [
+        121.4163,
+        24.8822
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "M24SZJU-uoo",
+          "title": "三峽老街",
+          "url": "https://www.youtube.com/watch?v=M24SZJU-uoo",
+          "reference": "https://www.youtube.com/@SanxiaOldStreet",
+          "fallback": "https://www.youtube.com/@SanxiaOldStreet",
+          "provider": "三峽民權老街商圈",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-M24SZJU-uoo-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-hBpnJqhr82I",
+      "country": "台灣",
+      "name": "潮境海灣",
+      "region": "基隆市",
+      "point": [
+        121.7766,
+        25.1449
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "hBpnJqhr82I",
+          "title": "潮境海灣",
+          "url": "https://www.youtube.com/watch?v=hBpnJqhr82I",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-hBpnJqhr82I-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "pz8ieq97nSk",
+          "title": "潮境海灣3",
+          "url": "https://www.youtube.com/watch?v=pz8ieq97nSk",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-hBpnJqhr82I-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "4sNw9XLIYfc",
+          "title": "潮境公園 360",
+          "url": "https://www.youtube.com/watch?v=4sNw9XLIYfc",
+          "reference": "https://www.youtube.com/@NMMST",
+          "fallback": "https://www.youtube.com/@NMMST",
+          "provider": "國立海洋科技博物館",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-hBpnJqhr82I-2",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-A9pluEagLD4",
+      "country": "台灣",
+      "name": "外木山",
+      "region": "基隆市",
+      "point": [
+        121.7329,
+        25.15
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "A9pluEagLD4",
+          "title": "外木山",
+          "url": "https://www.youtube.com/watch?v=A9pluEagLD4",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-A9pluEagLD4-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-A7Dw6lC9Po4",
+      "country": "台灣",
+      "name": "小烏來寰宇平台",
+      "region": "桃園市",
+      "point": [
+        121.3755,
+        24.7296
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "A7Dw6lC9Po4",
+          "title": "小烏來寰宇平台",
+          "url": "https://www.youtube.com/watch?v=A7Dw6lC9Po4",
+          "reference": "https://www.youtube.com/@TaoyuanTravel2official",
+          "fallback": "https://www.youtube.com/@TaoyuanTravel2official",
+          "provider": "遊桃園 Taoyuan Travel 官方副頻道",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-A7Dw6lC9Po4-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-Y6xJKj8k2ys",
+      "country": "台灣",
+      "name": "清華大學 成功湖",
+      "region": "新竹市",
+      "point": [
+        120.9926,
+        24.7904
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "Y6xJKj8k2ys",
+          "title": "清華大學 成功湖",
+          "url": "https://www.youtube.com/watch?v=Y6xJKj8k2ys",
+          "reference": "https://www.youtube.com/@NTHUCCCLT",
+          "fallback": "https://www.youtube.com/@NTHUCCCLT",
+          "provider": "國立清華大學計算機與通訊中心學習科技組",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Y6xJKj8k2ys-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-L9y1pwGktQg",
+      "country": "台灣",
+      "name": "峨眉湖",
+      "region": "新竹縣",
+      "point": [
+        121.0111,
+        24.6782
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "L9y1pwGktQg",
+          "title": "峨眉湖",
+          "url": "https://www.youtube.com/watch?v=L9y1pwGktQg",
+          "reference": "https://www.youtube.com/@trimtnsa",
+          "fallback": "https://www.youtube.com/@trimtnsa",
+          "provider": "交通部觀光署-參山風管處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-L9y1pwGktQg-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "AE1wiaqDZjw",
+          "title": "峨眉湖 大埔水庫",
+          "url": "https://www.youtube.com/watch?v=AE1wiaqDZjw",
+          "reference": "https://www.youtube.com/@trimtnsa",
+          "fallback": "https://www.youtube.com/@trimtnsa",
+          "provider": "交通部觀光署-參山風管處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-L9y1pwGktQg-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-w2ILCwLDqIw",
+      "country": "台灣",
+      "name": "竹北 新月沙灣",
+      "region": "新竹縣",
+      "point": [
+        120.9941,
+        24.8385
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "w2ILCwLDqIw",
+          "title": "竹北 新月沙灣",
+          "url": "https://www.youtube.com/watch?v=w2ILCwLDqIw",
+          "reference": "https://www.youtube.com/@Rogy360Taiwan",
+          "fallback": "https://www.youtube.com/@Rogy360Taiwan",
+          "provider": "Rogy360看見台灣",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-w2ILCwLDqIw-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-pGZ9b29W9eg",
+      "country": "台灣",
+      "name": "永鎮濱海驛站",
+      "region": "宜蘭縣",
+      "point": [
+        121.8468,
+        24.9005
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "pGZ9b29W9eg",
+          "title": "永鎮濱海驛站",
+          "url": "https://www.youtube.com/watch?v=pGZ9b29W9eg",
+          "reference": "https://www.youtube.com/@necoastnsa2903",
+          "fallback": "https://www.youtube.com/@necoastnsa2903",
+          "provider": "necoast nsa",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-pGZ9b29W9eg-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "Se1uJkuZJFw",
+          "title": "舊草嶺自行車隧道南口",
+          "url": "https://www.youtube.com/watch?v=Se1uJkuZJFw",
+          "reference": "https://www.youtube.com/@necoastnsa2903",
+          "fallback": "https://www.youtube.com/@necoastnsa2903",
+          "provider": "necoast nsa",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-pGZ9b29W9eg-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "6DuufFTyR-Y",
+          "title": "頭城濱海公園南側",
+          "url": "https://www.youtube.com/watch?v=6DuufFTyR-Y",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-pGZ9b29W9eg-2",
+          "status": "candidate"
+        },
+        {
+          "videoId": "tec5prJ8JeE",
+          "title": "石城漁港",
+          "url": "https://www.youtube.com/watch?v=tec5prJ8JeE",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-pGZ9b29W9eg-3",
+          "status": "candidate"
+        },
+        {
+          "videoId": "sFN4JMlhtSg",
+          "title": "石城漁港1",
+          "url": "https://www.youtube.com/watch?v=sFN4JMlhtSg",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-pGZ9b29W9eg-4",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-7S0lZRj9ViY",
+      "country": "台灣",
+      "name": "無尾港",
+      "region": "宜蘭縣",
+      "point": [
+        121.8363,
+        24.5565
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "7S0lZRj9ViY",
+          "title": "無尾港",
+          "url": "https://www.youtube.com/watch?v=7S0lZRj9ViY",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-7S0lZRj9ViY-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-vtzG8rysMIc",
+      "country": "台灣",
+      "name": "通霄 日落大道",
+      "region": "苗栗縣",
+      "point": [
+        120.7137,
+        24.4861
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "vtzG8rysMIc",
+          "title": "通霄 日落大道",
+          "url": "https://www.youtube.com/watch?v=vtzG8rysMIc",
+          "reference": "https://www.youtube.com/@%E8%8B%97%E6%A0%97%E7%B8%A3%E6%94%BF%E5%BA%9C%E6%96%87%E5%8C%96%E8%A7%80%E5%85%89%E5%B1%80",
+          "fallback": "https://www.youtube.com/@%E8%8B%97%E6%A0%97%E7%B8%A3%E6%94%BF%E5%BA%9C%E6%96%87%E5%8C%96%E8%A7%80%E5%85%89%E5%B1%80",
+          "provider": "苗栗縣政府文化觀光局",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-vtzG8rysMIc-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-4ACaMU8k_fI",
+      "country": "台灣",
+      "name": "福壽山農場 星空",
+      "region": "台中市",
+      "point": [
+        121.1406,
+        24.2761
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "4ACaMU8k_fI",
+          "title": "福壽山農場 星空",
+          "url": "https://www.youtube.com/watch?v=4ACaMU8k_fI",
+          "reference": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "fallback": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "provider": "臺北天文館YT",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-4ACaMU8k_fI-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "ZayKvJKDPWc",
+          "title": "德基水庫",
+          "url": "https://www.youtube.com/watch?v=ZayKvJKDPWc",
+          "reference": "https://www.youtube.com/@trimtnsa",
+          "fallback": "https://www.youtube.com/@trimtnsa",
+          "provider": "交通部觀光署-參山風管處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-4ACaMU8k_fI-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-jIN45IVws3E",
+      "country": "台灣",
+      "name": "大安港 媽祖文化園區",
+      "region": "台中市",
+      "point": [
+        120.59,
+        24.3646
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "jIN45IVws3E",
+          "title": "大安港 媽祖文化園區",
+          "url": "https://www.youtube.com/watch?v=jIN45IVws3E",
+          "reference": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85",
+          "fallback": "https://www.youtube.com/@%E5%A4%A7%E7%8E%A9%E5%8F%B0%E4%B8%AD-%E8%87%BA%E4%B8%AD%E8%A7%80%E5%85%89%E6%97%85",
+          "provider": "大玩台中-臺中觀光旅遊局",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-jIN45IVws3E-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-RaTbGYKMUtk",
+      "country": "台灣",
+      "name": "彰化平原",
+      "region": "彰化縣",
+      "point": [
+        120.5694,
+        24.0754
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "RaTbGYKMUtk",
+          "title": "彰化平原",
+          "url": "https://www.youtube.com/watch?v=RaTbGYKMUtk",
+          "reference": "https://www.youtube.com/@trimtnsa",
+          "fallback": "https://www.youtube.com/@trimtnsa",
+          "provider": "交通部觀光署-參山風管處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-RaTbGYKMUtk-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-vTDmOvNLm1w",
+      "country": "台灣",
+      "name": "虎山巖金針花",
+      "region": "彰化縣",
+      "point": [
+        120.5598,
+        24.0302
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "vTDmOvNLm1w",
+          "title": "虎山巖金針花",
+          "url": "https://www.youtube.com/watch?v=vTDmOvNLm1w",
+          "reference": "https://www.youtube.com/@trimtnsa",
+          "fallback": "https://www.youtube.com/@trimtnsa",
+          "provider": "交通部觀光署-參山風管處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-vTDmOvNLm1w-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-PxKbKKZDfDs",
+      "country": "台灣",
+      "name": "合歡山 鳶峰 星空",
+      "region": "南投縣",
+      "point": [
+        121.1444,
+        24.0286
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "PxKbKKZDfDs",
+          "title": "合歡山 鳶峰 星空",
+          "url": "https://www.youtube.com/watch?v=PxKbKKZDfDs",
+          "reference": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "fallback": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "provider": "臺北天文館YT",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-PxKbKKZDfDs-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-tAIGWWvd3bQ",
+      "country": "台灣",
+      "name": "松柏嶺受天宮 風景",
+      "region": "南投縣",
+      "point": [
+        120.6774,
+        23.8512
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "tAIGWWvd3bQ",
+          "title": "松柏嶺受天宮 風景",
+          "url": "https://www.youtube.com/watch?v=tAIGWWvd3bQ",
+          "reference": "https://www.youtube.com/@shoutiangong",
+          "fallback": "https://www.youtube.com/@shoutiangong",
+          "provider": "松柏嶺受天宮",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-tAIGWWvd3bQ-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-Geo48day-7s",
+      "country": "台灣",
+      "name": "北港朝天宮 360",
+      "region": "雲林縣",
+      "point": [
+        120.294,
+        23.5923
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "Geo48day-7s",
+          "title": "北港朝天宮 360",
+          "url": "https://www.youtube.com/watch?v=Geo48day-7s",
+          "reference": "https://www.youtube.com/@YunlinNewsChannel",
+          "fallback": "https://www.youtube.com/@YunlinNewsChannel",
+          "provider": "雲林縣政府",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Geo48day-7s-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-NA1hVcVgv74",
+      "country": "台灣",
+      "name": "石榴火車站 360",
+      "region": "雲林縣",
+      "point": [
+        120.5601,
+        23.7066
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "NA1hVcVgv74",
+          "title": "石榴火車站 360",
+          "url": "https://www.youtube.com/watch?v=NA1hVcVgv74",
+          "reference": "https://www.youtube.com/@YunlinNewsChannel",
+          "fallback": "https://www.youtube.com/@YunlinNewsChannel",
+          "provider": "雲林縣政府",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-NA1hVcVgv74-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-EH4V8IwFIp4",
+      "country": "台灣",
+      "name": "曾文水庫",
+      "region": "嘉義縣",
+      "point": [
+        120.5897,
+        23.2886
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "EH4V8IwFIp4",
+          "title": "曾文水庫",
+          "url": "https://www.youtube.com/watch?v=EH4V8IwFIp4",
+          "reference": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "fallback": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "provider": "西拉雅國家風景區管理處 Siraya National Scenic Area Administration",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-EH4V8IwFIp4-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-KiCMukzpICU",
+      "country": "台灣",
+      "name": "布袋濕地生態園區",
+      "region": "嘉義縣",
+      "point": [
+        120.1763,
+        23.3751
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "KiCMukzpICU",
+          "title": "布袋濕地生態園區",
+          "url": "https://www.youtube.com/watch?v=KiCMukzpICU",
+          "reference": "https://www.youtube.com/@1%E5%B8%83%E8%A2%8B%E6%BA%BC%E5%9C%B0%E4%B8%80",
+          "fallback": "https://www.youtube.com/@1%E5%B8%83%E8%A2%8B%E6%BA%BC%E5%9C%B0%E4%B8%80",
+          "provider": "雲嘉南管理處-生態系列-布袋溼地生態園區(影像1)",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-KiCMukzpICU-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "8sZrrRHPZ70",
+          "title": "布袋新岑公園",
+          "url": "https://www.youtube.com/watch?v=8sZrrRHPZ70",
+          "reference": "https://www.youtube.com/@2%E6%96%B0%E5%B2%91%E5%85%AC%E5%9C%92",
+          "fallback": "https://www.youtube.com/@2%E6%96%B0%E5%B2%91%E5%85%AC%E5%9C%92",
+          "provider": "雲嘉南管理處-生態系列-候鳥-新岑公園",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-KiCMukzpICU-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-TrWoNJ-wcq8",
+      "country": "台灣",
+      "name": "東石漁人碼頭 360",
+      "region": "嘉義縣",
+      "point": [
+        120.1739,
+        23.4686
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "TrWoNJ-wcq8",
+          "title": "東石漁人碼頭 360",
+          "url": "https://www.youtube.com/watch?v=TrWoNJ-wcq8",
+          "reference": "https://www.youtube.com/@%E5%98%89%E7%BE%A9%E7%B8%A3%E6%96%87%E5%8C%96%E8%A7%80%E5%85%89%E5%B1%80",
+          "fallback": "https://www.youtube.com/@%E5%98%89%E7%BE%A9%E7%B8%A3%E6%96%87%E5%8C%96%E8%A7%80%E5%85%89%E5%B1%80",
+          "provider": "嘉義縣文化觀光局",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-TrWoNJ-wcq8-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-xbojeDKjcaM",
+      "country": "台灣",
+      "name": "二寮觀日平臺",
+      "region": "台南市",
+      "point": [
+        120.4124,
+        23.0262
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "xbojeDKjcaM",
+          "title": "二寮觀日平臺",
+          "url": "https://www.youtube.com/watch?v=xbojeDKjcaM",
+          "reference": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "fallback": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "provider": "西拉雅國家風景區管理處 Siraya National Scenic Area Administration",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-xbojeDKjcaM-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-kT-MGYO6bS0",
+      "country": "台灣",
+      "name": "官田遊客中心",
+      "region": "台南市",
+      "point": [
+        120.348,
+        23.1911
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "kT-MGYO6bS0",
+          "title": "官田遊客中心",
+          "url": "https://www.youtube.com/watch?v=kT-MGYO6bS0",
+          "reference": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "fallback": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "provider": "西拉雅國家風景區管理處 Siraya National Scenic Area Administration",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-kT-MGYO6bS0-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-zkX6X9p-6iA",
+      "country": "台灣",
+      "name": "火山碧雲寺",
+      "region": "台南市",
+      "point": [
+        120.4579,
+        23.3514
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "zkX6X9p-6iA",
+          "title": "火山碧雲寺",
+          "url": "https://www.youtube.com/watch?v=zkX6X9p-6iA",
+          "reference": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "fallback": "https://www.youtube.com/@sirayanationalscenicareaad7403",
+          "provider": "西拉雅國家風景區管理處 Siraya National Scenic Area Administration",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-zkX6X9p-6iA-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-V89we9N3ZuU",
+      "country": "台灣",
+      "name": "觀夕平台",
+      "region": "台南市",
+      "point": [
+        120.1642,
+        22.9898
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "V89we9N3ZuU",
+          "title": "觀夕平台",
+          "url": "https://www.youtube.com/watch?v=V89we9N3ZuU",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-V89we9N3ZuU-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-TQTC-FrO8YM",
+      "country": "台灣",
+      "name": "新威夕照",
+      "region": "高雄市",
+      "point": [
+        120.6578,
+        23.0088
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "TQTC-FrO8YM",
+          "title": "新威夕照",
+          "url": "https://www.youtube.com/watch?v=TQTC-FrO8YM",
+          "reference": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "fallback": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "provider": "茂林國家風景區",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-TQTC-FrO8YM-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "1pEeAYM0C_w",
+          "title": "桃花心木步道",
+          "url": "https://www.youtube.com/watch?v=1pEeAYM0C_w",
+          "reference": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "fallback": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "provider": "茂林國家風景區",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-TQTC-FrO8YM-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-An0oUZBZtG0",
+      "country": "台灣",
+      "name": "旗津（海況）",
+      "region": "高雄市",
+      "point": [
+        120.2891,
+        22.5829
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "An0oUZBZtG0",
+          "title": "旗津（海況）",
+          "url": "https://www.youtube.com/watch?v=An0oUZBZtG0",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-An0oUZBZtG0-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-bu1C78rQ14E",
+      "country": "台灣",
+      "name": "高雄小港機場",
+      "region": "高雄市",
+      "point": [
+        120.3526,
+        22.5482
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "bu1C78rQ14E",
+          "title": "高雄小港機場",
+          "url": "https://www.youtube.com/watch?v=bu1C78rQ14E",
+          "reference": "https://www.youtube.com/@%E4%B8%B9%E4%B8%B9%E7%9A%84%E9%A3%9B%E6%A9%9F%E7%AA%A9",
+          "fallback": "https://www.youtube.com/@%E4%B8%B9%E4%B8%B9%E7%9A%84%E9%A3%9B%E6%A9%9F%E7%AA%A9",
+          "provider": "丹丹的飛機窩",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-bu1C78rQ14E-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-O7JnqbNuIrE",
+      "country": "台灣",
+      "name": "洲仔濕地公園 360",
+      "region": "高雄市",
+      "point": [
+        120.292,
+        22.685
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "O7JnqbNuIrE",
+          "title": "洲仔濕地公園 360",
+          "url": "https://www.youtube.com/watch?v=O7JnqbNuIrE",
+          "reference": "https://www.youtube.com/@kcgpwb",
+          "fallback": "https://www.youtube.com/@kcgpwb",
+          "provider": "kcgpwb",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-O7JnqbNuIrE-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-wgq8e-YQHlE",
+      "country": "台灣",
+      "name": "壽山動物園 孟加拉虎",
+      "region": "高雄市",
+      "point": [
+        120.2741,
+        22.6481
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "wgq8e-YQHlE",
+          "title": "壽山動物園 孟加拉虎",
+          "url": "https://www.youtube.com/watch?v=wgq8e-YQHlE",
+          "reference": "https://www.youtube.com/@Rogy360Taiwan",
+          "fallback": "https://www.youtube.com/@Rogy360Taiwan",
+          "provider": "Rogy360看見台灣",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-wgq8e-YQHlE-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-ygvcl4e_OI0",
+      "country": "台灣",
+      "name": "禮納里遊客中心",
+      "region": "屏東縣",
+      "point": [
+        120.6799,
+        22.6712
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "ygvcl4e_OI0",
+          "title": "禮納里遊客中心",
+          "url": "https://www.youtube.com/watch?v=ygvcl4e_OI0",
+          "reference": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "fallback": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "provider": "茂林國家風景區",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-ygvcl4e_OI0-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-iW2P7TM9SaY",
+      "country": "台灣",
+      "name": "屏東平原眺景",
+      "region": "屏東縣",
+      "point": [
+        120.6865,
+        22.798
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "iW2P7TM9SaY",
+          "title": "屏東平原眺景",
+          "url": "https://www.youtube.com/watch?v=iW2P7TM9SaY",
+          "reference": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "fallback": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "provider": "茂林國家風景區",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-iW2P7TM9SaY-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "WU2FYedF2k0",
+          "title": "賽嘉飛行傘起飛場 360",
+          "url": "https://www.youtube.com/watch?v=WU2FYedF2k0",
+          "reference": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "fallback": "https://www.youtube.com/@%E8%8C%82%E6%9E%97%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80",
+          "provider": "茂林國家風景區",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-iW2P7TM9SaY-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-9h1SDNk-6EQ",
+      "country": "台灣",
+      "name": "枋寮漁港",
+      "region": "屏東縣",
+      "point": [
+        120.5968,
+        22.4028
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "9h1SDNk-6EQ",
+          "title": "枋寮漁港",
+          "url": "https://www.youtube.com/watch?v=9h1SDNk-6EQ",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-9h1SDNk-6EQ-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-RmRJcXtailQ",
+      "country": "台灣",
+      "name": "海生館",
+      "region": "屏東縣",
+      "point": [
+        120.7426,
+        22.0794
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "RmRJcXtailQ",
+          "title": "海生館",
+          "url": "https://www.youtube.com/watch?v=RmRJcXtailQ",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-RmRJcXtailQ-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "uZKmABH7xSw",
+          "title": "海生館 白鯨池",
+          "url": "https://www.youtube.com/watch?v=uZKmABH7xSw",
+          "reference": "https://www.youtube.com/@nmmba_tw",
+          "fallback": "https://www.youtube.com/@nmmba_tw",
+          "provider": "國立海洋生物博物館",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-RmRJcXtailQ-1",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-GdSx9jyJO4c",
+      "country": "台灣",
+      "name": "船帆石海灣（海況）",
+      "region": "屏東縣",
+      "point": [
+        120.7637,
+        21.9846
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "GdSx9jyJO4c",
+          "title": "船帆石海灣（海況）",
+          "url": "https://www.youtube.com/watch?v=GdSx9jyJO4c",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "GrF5RLHw6jE",
+          "title": "後壁湖1（海況）",
+          "url": "https://www.youtube.com/watch?v=GrF5RLHw6jE",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "2cdAciqP7Ng",
+          "title": "後壁湖2（海況）",
+          "url": "https://www.youtube.com/watch?v=2cdAciqP7Ng",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-2",
+          "status": "candidate"
+        },
+        {
+          "videoId": "k_4kZE2jiUk",
+          "title": "墾丁 山海漁港",
+          "url": "https://www.youtube.com/watch?v=k_4kZE2jiUk",
+          "reference": "https://www.youtube.com/@user-doosaa281",
+          "fallback": "https://www.youtube.com/@user-doosaa281",
+          "provider": "山海漁港即時浪況",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-3",
+          "status": "candidate"
+        },
+        {
+          "videoId": "vG5wyKEv1G8",
+          "title": "合界（海況）",
+          "url": "https://www.youtube.com/watch?v=vG5wyKEv1G8",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-4",
+          "status": "candidate"
+        },
+        {
+          "videoId": "oMlSukuxtHw",
+          "title": "核三廠進水口 海底珊瑚",
+          "url": "https://www.youtube.com/watch?v=oMlSukuxtHw",
+          "reference": "https://www.youtube.com/@%E5%8F%B0%E9%9B%BB-%E5%8D%97%E7%81%A3%E6%B5%B7%E5%9F%9F%E7%8F%8A%E7%91%9A%E8%A7%80",
+          "fallback": "https://www.youtube.com/@%E5%8F%B0%E9%9B%BB-%E5%8D%97%E7%81%A3%E6%B5%B7%E5%9F%9F%E7%8F%8A%E7%91%9A%E8%A7%80",
+          "provider": "台電-南灣海域珊瑚觀測計畫",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-5",
+          "status": "candidate"
+        },
+        {
+          "videoId": "6RtD55kIdj4",
+          "title": "恆春關山 海景夕陽",
+          "url": "https://www.youtube.com/watch?v=6RtD55kIdj4",
+          "reference": "https://www.youtube.com/@%E9%BB%91%E5%93%A5-t7k",
+          "fallback": "https://www.youtube.com/@%E9%BB%91%E5%93%A5-t7k",
+          "provider": "半島秘境達人工作坊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-GdSx9jyJO4c-6",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-8bn_-PbneiI",
+      "country": "台灣",
+      "name": "佳樂水",
+      "region": "屏東縣",
+      "point": [
+        120.844,
+        22.0493
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "8bn_-PbneiI",
+          "title": "佳樂水",
+          "url": "https://www.youtube.com/watch?v=8bn_-PbneiI",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-8bn_-PbneiI-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-8xhOd-LjX9c",
+      "country": "台灣",
+      "name": "花蓮東里國小 星空",
+      "region": "花蓮縣",
+      "point": [
+        121.2981,
+        23.1968
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "8xhOd-LjX9c",
+          "title": "花蓮東里國小 星空",
+          "url": "https://www.youtube.com/watch?v=8xhOd-LjX9c",
+          "reference": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "fallback": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "provider": "臺北天文館YT",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-8xhOd-LjX9c-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-Yo64T79w6Vg",
+      "country": "台灣",
+      "name": "台東市景觀（娜路彎酒店）",
+      "region": "台東縣",
+      "point": [
+        121.1105,
+        22.7517
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "Yo64T79w6Vg",
+          "title": "台東市景觀（娜路彎酒店）",
+          "url": "https://www.youtube.com/watch?v=Yo64T79w6Vg",
+          "reference": "https://www.youtube.com/@naruwan66",
+          "fallback": "https://www.youtube.com/@naruwan66",
+          "provider": "娜路彎吃.喝.玩.樂",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-Yo64T79w6Vg-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-kpVJY-3fDsU",
+      "country": "台灣",
+      "name": "蘭嶼機場",
+      "region": "台東縣",
+      "point": [
+        121.5519,
+        22.0446
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "kpVJY-3fDsU",
+          "title": "蘭嶼機場",
+          "url": "https://www.youtube.com/watch?v=kpVJY-3fDsU",
+          "reference": "https://www.youtube.com/@sahonliu",
+          "fallback": "https://www.youtube.com/@sahonliu",
+          "provider": "liu sahon",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-kpVJY-3fDsU-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-cT8osP-vYps",
+      "country": "台灣",
+      "name": "澎湖 隘門（海況）",
+      "region": "澎湖縣",
+      "point": [
+        119.6449,
+        23.578
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "cT8osP-vYps",
+          "title": "澎湖 隘門（海況）",
+          "url": "https://www.youtube.com/watch?v=cT8osP-vYps",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-cT8osP-vYps-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-sJ7NWs2uK_I",
+      "country": "台灣",
+      "name": "澎湖 青灣",
+      "region": "澎湖縣",
+      "point": [
+        119.5858,
+        23.5455
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "sJ7NWs2uK_I",
+          "title": "澎湖 青灣",
+          "url": "https://www.youtube.com/watch?v=sJ7NWs2uK_I",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-sJ7NWs2uK_I-0",
+          "status": "candidate"
+        },
+        {
+          "videoId": "fSE1qhkmadU",
+          "title": "澎湖 觀音亭海灣",
+          "url": "https://www.youtube.com/watch?v=fSE1qhkmadU",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-sJ7NWs2uK_I-1",
+          "status": "candidate"
+        },
+        {
+          "videoId": "dHyIphM2vo8",
+          "title": "澎湖 鎖港海灣",
+          "url": "https://www.youtube.com/watch?v=dHyIphM2vo8",
+          "reference": "https://www.youtube.com/@goocean520",
+          "fallback": "https://www.youtube.com/@goocean520",
+          "provider": "GoOcean海洋遊憩風險資訊",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-sJ7NWs2uK_I-2",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt--srNHTE-Nf0",
+      "country": "台灣",
+      "name": "金門 134高地",
+      "region": "金門縣",
+      "point": [
+        118.4169,
+        24.4433
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "-srNHTE-Nf0",
+          "title": "金門 134高地",
+          "url": "https://www.youtube.com/watch?v=-srNHTE-Nf0",
+          "reference": "https://www.youtube.com/@kinmentravel",
+          "fallback": "https://www.youtube.com/@kinmentravel",
+          "provider": "樂遊金門",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt--srNHTE-Nf0-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-M4EJtf_iP8s",
+      "country": "台灣",
+      "name": "金門 麒麟山森林公園",
+      "region": "金門縣",
+      "point": [
+        118.328,
+        24.4571
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "M4EJtf_iP8s",
+          "title": "金門 麒麟山森林公園",
+          "url": "https://www.youtube.com/watch?v=M4EJtf_iP8s",
+          "reference": "https://www.youtube.com/@kinmentravel",
+          "fallback": "https://www.youtube.com/@kinmentravel",
+          "provider": "樂遊金門",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-M4EJtf_iP8s-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-fK4hNlLobaA",
+      "country": "台灣",
+      "name": "金門 全天域星空",
+      "region": "金門縣",
+      "point": [
+        118.3778,
+        24.4616
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "fK4hNlLobaA",
+          "title": "金門 全天域星空",
+          "url": "https://www.youtube.com/watch?v=fK4hNlLobaA",
+          "reference": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "fallback": "https://www.youtube.com/@TaipeiAstroMuseum",
+          "provider": "臺北天文館YT",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-fK4hNlLobaA-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-6GXK2XMGgUc",
+      "country": "台灣",
+      "name": "馬祖 南竿眺望北竿",
+      "region": "連江縣",
+      "point": [
+        119.9349,
+        26.1556
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "6GXK2XMGgUc",
+          "title": "馬祖 南竿眺望北竿",
+          "url": "https://www.youtube.com/watch?v=6GXK2XMGgUc",
+          "reference": "https://www.youtube.com/@jcommltd",
+          "fallback": "https://www.youtube.com/@jcommltd",
+          "provider": "正杰資訊有限公司 Jcomm Ltd.",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-6GXK2XMGgUc-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-xdZq0hLPYbg",
+      "country": "台灣",
+      "name": "馬祖 北竿白沙港",
+      "region": "連江縣",
+      "point": [
+        119.9983,
+        26.235
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "xdZq0hLPYbg",
+          "title": "馬祖 北竿白沙港",
+          "url": "https://www.youtube.com/watch?v=xdZq0hLPYbg",
+          "reference": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "fallback": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "provider": "連江縣港務處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-xdZq0hLPYbg-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-d-uG7fiabCE",
+      "country": "台灣",
+      "name": "馬祖 東引中柱港",
+      "region": "連江縣",
+      "point": [
+        120.4903,
+        26.3696
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "d-uG7fiabCE",
+          "title": "馬祖 東引中柱港",
+          "url": "https://www.youtube.com/watch?v=d-uG7fiabCE",
+          "reference": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "fallback": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "provider": "連江縣港務處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-d-uG7fiabCE-0",
+          "status": "candidate"
+        }
+      ]
+    },
+    {
+      "id": "tw-yt-R3geopUJojU",
+      "country": "台灣",
+      "name": "馬祖 西莒青帆港",
+      "region": "連江縣",
+      "point": [
+        119.9566,
+        25.9684
+      ],
+      "coordinatePrecision": "鏡頭約略座標",
+      "sources": [
+        {
+          "videoId": "R3geopUJojU",
+          "title": "馬祖 西莒青帆港",
+          "url": "https://www.youtube.com/watch?v=R3geopUJojU",
+          "reference": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "fallback": "https://www.youtube.com/@%E9%80%A3%E6%B1%9F%E7%B8%A3%E6%B8%AF%E5%8B%99%E8%99%95-m4j",
+          "provider": "連江縣港務處",
+          "discovery": "匯入時實際播放成功",
+          "checkedAt": "2026-11-26",
+          "id": "tw-yt-R3geopUJojU-0",
           "status": "candidate"
         }
       ]

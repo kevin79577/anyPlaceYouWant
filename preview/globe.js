@@ -39,7 +39,7 @@
   let motionEnabled=true;
   try { motionEnabled=localStorage.getItem('somewhere-globe-motion-v1')!=='off'; } catch {}
   const state = {lon:120,lat:26,zoom:1,selected:'japan',auto:false,dragging:false,flying:false,focused:false,focusMix:0};
-  let width=0,height=0,dpr=1,radius=1,dirty=true,lastPaint=0,lastTick=0,frame=0,flight=null,pointer=null,toastTimer=0,settleTimer=0,fastUntil=0,islandOpen=false;// the scene window starts collapsed (owner's annotation); 「展開風景窗口」 opens it
+  let width=0,height=0,dpr=1,radius=1,dirty=true,lastPaint=0,lastTick=0,frame=0,flight=null,pointer=null,pinch=null,fling=null,toastTimer=0,settleTimer=0,fastUntil=0,islandOpen=false;// the scene window starts collapsed (owner's annotation); 「展開風景窗口」 opens it
   const projection = D.geoOrthographic().clipAngle(90).precision(.45);
   const geoPath = D.geoPath(projection,ctx);
   const graticule = D.geoGraticule().step([20,20])();
@@ -54,13 +54,14 @@
   function selected(){return destinations.find(d=>d.id===state.selected);}
   function notify(text){$('#status').textContent=text;$('#status').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#status').classList.remove('visible'),2900);}
   function setAuto(value){state.auto=value && motionEnabled;$('#spin').setAttribute('aria-pressed',String(state.auto));$('#spin').setAttribute('aria-label',state.auto?'暫停自動旋轉':'開啟自動旋轉');dirty=true;}
-  function stopMotion(){setAuto(false);flight=null;state.flying=false;root.classList.remove('flying');}
+  function stopMotion(){setAuto(false);flight=null;fling=null;state.flying=false;root.classList.remove('flying');}
   function syncMotionControl(){root.classList.toggle('motion-on',motionEnabled);document.documentElement?.classList.toggle('motion-off',!motionEnabled);$('#motion-toggle').setAttribute('aria-pressed',String(motionEnabled));$('#motion-status').textContent=motionEnabled?'轉場動效：開':'轉場動效：關';}
   function toggleMotion(){motionEnabled=!motionEnabled;try{localStorage.setItem('somewhere-globe-motion-v1',motionEnabled?'on':'off');}catch{}syncMotionControl();if(!motionEnabled){const wasFlying=state.flying;stopMotion();if(wasFlying){const d=selected();Object.assign(state,arrival(d));state.focusMix=1;updateIsland();}dirty=true;}notify(motionEnabled?'轉場動效已開啟，點選國家或按「重播轉場」體驗。':'轉場動效已關閉，切換國家會直接定位。');}
-  function updateTime(){const d=selected(),time=new Intl.DateTimeFormat('zh-TW',{timeZone:d.zone,hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date());$('#local-time').textContent='當地時間 '+time;
-    // Door plaque, and the light around the door, follow the destination's local hour.
-    // shortcut: fixed hours (06–16 day, 16–19 dusk), not real sunrise/sunset; switch to the weather API's is_day if the seasons make it look wrong.
-    const hour=parseInt(time,10);$('#door-plaque').textContent='通往 '+d.country+'・當地 '+time;root.dataset.light=hour>=6&&hour<16?'day':hour>=16&&hour<19?'dusk':'night';}
+  function updateTime(){const d=selected(),now=new Date(),time=new Intl.DateTimeFormat('zh-TW',{timeZone:d.zone,hour:'2-digit',minute:'2-digit',hour12:false}).format(now);
+    // Door plaque, the light around the door and the 白天/黃昏/夜晚 label all follow the real sun at the destination (subsolar point, ~1° accuracy).
+    const doy=(now-Date.UTC(now.getUTCFullYear(),0,0))/864e5,sun=[(12-now.getUTCHours()-now.getUTCMinutes()/60)*15,-23.44*Math.cos(2*Math.PI*(doy+10)/365)],elevation=90-D.geoDistance(d.point,sun)*180/Math.PI;
+    const light=elevation>6?'day':elevation>-6?'dusk':'night';root.dataset.light=light;
+    $('#local-time').textContent='當地時間 '+time+'・'+{day:'白天',dusk:'黃昏',night:'夜晚'}[light];$('#door-plaque').textContent='通往 '+d.country+'・當地 '+time;}
   function updateSaved(){
     $('#saved-count').textContent=saved.length;
     const isSaved=saved.includes(state.selected);
@@ -182,12 +183,23 @@
   function openDetails(){stopMotion();const d=selected();window.SomewhereExperience?.detailsOpened(d);$('#detail-photo').src=d.image;$('#detail-photo').alt=d.alt;$('#detail-location').textContent=d.en;$('#detail-title').textContent=d.name;$('#detail-description').textContent=d.description;$('#detail-coordinates').textContent=`示範定位 ${d.point[1].toFixed(3)}° N / ${d.point[0].toFixed(3)}° E`;if(window.SomewhereMedia)window.SomewhereMedia.selectDestination(d.id);updateSaved();if(!$('#destination-dialog').open)$('#destination-dialog').showModal();}
   function closeSaved(){$('#saved-panel').hidden=true;$('#saved-toggle').setAttribute('aria-expanded','false');}
   function tick(now){const delta=lastTick?Math.min(now-lastTick,80):0;lastTick=now;if(flight){const camera=flight.choreography.sample(now-flight.start);state.lon=camera.lon;state.lat=camera.lat;state.zoom=camera.zoom;state.focusMix=camera.focusMix;dirty=true;if(camera.done){flight=null;state.flying=false;root.classList.remove('flying');}}
+    else if(fling){const k=delta*.25/state.zoom;state.lon=wrap(state.lon-fling.vx*k);state.lat=clamp(state.lat+fling.vy*k,-80,80);fling.vx*=Math.pow(.92,delta/16);fling.vy*=Math.pow(.92,delta/16);fastUntil=now+120;dirty=true;if(Math.hypot(fling.vx,fling.vy)<.02){fling=null;fastUntil=0;}}// drag inertia, px/ms
     else if(state.auto&&!document.hidden&&!$('#destination-dialog').open){state.lon=wrap(state.lon+delta*.0014);dirty=true;}
     if(dirty&&now-lastPaint>=15){draw();lastPaint=now;}frame=requestAnimationFrame(tick);// the 15ms gate keeps it to ~60 paints a second on faster displays too
   }
-  canvas.addEventListener('pointerdown',event=>{if(pointer||event.button!==0)return;stopMotion();canvas.setPointerCapture(event.pointerId);pointer={id:event.pointerId,x:event.clientX,y:event.clientY,lon:state.lon,lat:state.lat,moved:false};});
-  canvas.addEventListener('pointermove',event=>{if(!pointer||event.pointerId!==pointer.id)return;const dx=event.clientX-pointer.x,dy=event.clientY-pointer.y;if(Math.hypot(dx,dy)>4){pointer.moved=true;state.dragging=true;root.classList.add('dragging');}if(pointer.moved){state.lon=wrap(pointer.lon-dx*.25/state.zoom);state.lat=clamp(pointer.lat+dy*.25/state.zoom,-80,80);dirty=true;}});
-  function endPointer(event,cancelled=false){if(!pointer||event.pointerId!==pointer.id)return;const moved=pointer.moved;pointer=null;state.dragging=false;root.classList.remove('dragging');dirty=true;if(cancelled||moved)return;const box=canvas.getBoundingClientRect();const point=projection.invert([event.clientX-box.left,event.clientY-box.top]);if(!point||!Number.isFinite(point[0]))return;const projected=projection(point);if(Math.hypot(projected[0]-(event.clientX-box.left),projected[1]-(event.clientY-box.top))>3)return;const country=geography.features.find(f=>D.geoContains(f,point));if(country){const d=destinations.find(d=>d.iso===country.properties.iso);if(d)flyTo(d.id);else notify('這個地區尚未收錄內容。先探索日本、韓國、台灣或泰國。');}}
+  canvas.addEventListener('pointerdown',event=>{
+    if(pointer&&!pinch&&event.pointerType==='touch'){canvas.setPointerCapture(event.pointerId);pointer.moved=pointer.pinched=true;pinch={id:event.pointerId,x:event.clientX,y:event.clientY,zoom:state.zoom};pinch.d=Math.hypot(pinch.x-pointer.cx,pinch.y-pointer.cy);return;}// second finger: pinch zoom
+    if(pointer||event.button!==0)return;stopMotion();canvas.setPointerCapture(event.pointerId);pointer={id:event.pointerId,x:event.clientX,y:event.clientY,cx:event.clientX,cy:event.clientY,t:event.timeStamp,vx:0,vy:0,lon:state.lon,lat:state.lat,moved:false};});
+  canvas.addEventListener('pointermove',event=>{
+    if(pinch&&(event.pointerId===pinch.id||event.pointerId===pointer.id)){if(event.pointerId===pinch.id){pinch.x=event.clientX;pinch.y=event.clientY;}else{pointer.cx=event.clientX;pointer.cy=event.clientY;}
+      const d=Math.hypot(pinch.x-pointer.cx,pinch.y-pointer.cy);if(pinch.d>0&&d>0){const box=canvas.getBoundingClientRect();zoomAt(pinch.zoom*d/pinch.d/state.zoom,(pinch.x+pointer.cx)/2-box.left,(pinch.y+pointer.cy)/2-box.top);}return;}
+    if(!pointer||event.pointerId!==pointer.id)return;const dt=event.timeStamp-pointer.t;if(dt>0){pointer.vx=(pointer.vx+(event.clientX-pointer.cx)/dt)/2;pointer.vy=(pointer.vy+(event.clientY-pointer.cy)/dt)/2;}pointer.cx=event.clientX;pointer.cy=event.clientY;pointer.t=event.timeStamp;const dx=event.clientX-pointer.x,dy=event.clientY-pointer.y;if(Math.hypot(dx,dy)>4){pointer.moved=true;state.dragging=true;root.classList.add('dragging');}if(pointer.moved){state.lon=wrap(pointer.lon-dx*.25/state.zoom);state.lat=clamp(pointer.lat+dy*.25/state.zoom,-80,80);dirty=true;}});
+  function endPointer(event,cancelled=false){
+    if(pinch&&(event.pointerId===pinch.id||event.pointerId===pointer.id)){// one finger lifted: the other keeps dragging from where it is
+      const rest=event.pointerId===pinch.id?pointer:{id:pinch.id,cx:pinch.x,cy:pinch.y,moved:true,pinched:true};pinch=null;pointer=Object.assign(rest,{x:rest.cx,y:rest.cy,t:event.timeStamp,vx:0,vy:0,lon:state.lon,lat:state.lat});return;}
+    if(!pointer||event.pointerId!==pointer.id)return;const moved=pointer.moved;
+    if(moved&&!cancelled&&!pointer.pinched&&event.timeStamp-pointer.t<80&&Math.hypot(pointer.vx,pointer.vy)>.15){const k=Math.min(1,1.5/Math.hypot(pointer.vx,pointer.vy));fling={vx:pointer.vx*k,vy:pointer.vy*k};}// released while still moving; capped at 1.5 px/ms so a hard flick drifts ~30°, not whole turns
+    pointer=null;state.dragging=false;root.classList.remove('dragging');dirty=true;if(cancelled||moved)return;const box=canvas.getBoundingClientRect();const point=projection.invert([event.clientX-box.left,event.clientY-box.top]);if(!point||!Number.isFinite(point[0]))return;const projected=projection(point);if(Math.hypot(projected[0]-(event.clientX-box.left),projected[1]-(event.clientY-box.top))>3)return;const country=geography.features.find(f=>D.geoContains(f,point));if(country){const d=destinations.find(d=>d.iso===country.properties.iso);if(d)flyTo(d.id);else notify('這個地區尚未收錄內容。先探索日本、韓國、台灣或泰國。');}}
   canvas.addEventListener('pointerup',event=>endPointer(event));canvas.addEventListener('pointercancel',event=>endPointer(event,true));canvas.addEventListener('lostpointercapture',event=>{if(pointer&&pointer.id===event.pointerId)endPointer(event,true);});
   // Zoom about the cursor: after scaling, turn the globe so the place under the cursor stays under it (3 passes absorb the projection's -5° roll).
   function zoomAt(factor,x,y){setProjection();const before=projection.invert([x,y]);changeZoom(factor);if(!before||!Number.isFinite(before[0]))return;const p=projection(before);if(!p||Math.hypot(p[0]-x,p[1]-y)>1)return;// cursor off the globe: zoom about the centre
