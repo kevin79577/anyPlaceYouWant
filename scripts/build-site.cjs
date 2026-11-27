@@ -30,7 +30,11 @@ const siteHeaders={
 const assetHeaders={'Cache-Control':'public, max-age=86400'};
 const lines=h=>Object.entries(h).map(([k,v])=>`  ${k}: ${v}`).join('\n'),pairs=h=>Object.entries(h).map(([key,value])=>({key,value}));
 fs.writeFileSync(path.join(out,'_headers'),`/*\n${lines(siteHeaders)}\n/assets/*\n${lines(assetHeaders)}\n`);
-fs.writeFileSync(path.join(out,'vercel.json'),JSON.stringify({headers:[{source:'/(.*)',headers:pairs(siteHeaders)},{source:'/assets/(.*)',headers:pairs(assetHeaders)}]},null,2)+'\n');
+const vercelJson=JSON.stringify({headers:[{source:'/(.*)',headers:pairs(siteHeaders)},{source:'/assets/(.*)',headers:pairs(assetHeaders)}]},null,2)+'\n';
+fs.writeFileSync(path.join(out,'vercel.json'),vercelJson);
+// Vercel 從 GitHub 自動部署時只讀 repo 根目錄的 vercel.json（dist/ 裡那份只對手動 vercel deploy --cwd dist 有效），所以根目錄要放同一份並 commit。
+const rootJson=path.join(__dirname,'../vercel.json');
+if((!fs.existsSync(rootJson)||fs.readFileSync(rootJson,'utf8').replace(/\r\n/g,'\n')!==vercelJson)){fs.writeFileSync(rootJson,vercelJson);console.warn('已更新根目錄 vercel.json（自動部署用的安全標頭），記得 commit。')}
 
 // Self-check: every local file referenced by the shipped HTML/CSS/JS must exist in dist (a missed file = a broken page).
 const missing=[];
