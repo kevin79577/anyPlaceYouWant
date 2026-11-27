@@ -3,6 +3,7 @@
 // 播放交給 media-player.js、天氣交給 weather.js（錯誤處理、取消請求、不顯示虛構數字都在那兩支）。
 import * as THREE from "./vendor/three.module.min.js";
 import {SIGNS,CATS,GEN,PLACES as MYSTIC,ORDER} from "./mystic.js";
+import {STORIES} from "./stories.js";
 import {initShell,places as ALL,countries,sources,countryOf,thumbOf,firstVideo,isSaved,toggleSaved,onSavedChange,byId} from "./shell.js";
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -257,9 +258,10 @@ function fortune(key,si){const p=MYSTIC[key],sg=SIGNS[si],sc={};
   const useSp=p.special[top[0]]&&hh(`${dkey}${key}${si}x`)%2===0,line=useSp?p.special[top[0]]:pk(GEN[top[0]],`${dkey}${key}${si}m`).replace("{spot}",spot);
   return{sc,top,spot,line,total:Math.round(CATS.reduce((a,c)=>a+sc[c[0]],0)/CATS.length*20),item:pk(p.items,`${dkey}${key}${si}i`),color:pk(p.colors,`${dkey}${key}${si}c`)}}
 const store={get(k,d){try{return localStorage.getItem(k)??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-let sign=+store.get("door-sign",10);if(!(sign>=0&&sign<12))sign=10;let ntab=store.get("door-ntab","fort")==="legend"?"legend":"fort";
+let sign=+store.get("door-sign",10);if(!(sign>=0&&sign<12))sign=10;const NTABS=[["fort","星座運勢"],["legend","都市傳說"],["story","景點故事"]];let ntab=store.get("door-ntab","fort");if(!NTABS.some(([k])=>k===ntab))ntab="fort";
+const host=u=>new URL(u).hostname.replace(/^www./,"");
 function renderNight(){const box=$("nightBox"),key=openId&&NIGHT.get(openId);
-  if(!key){box.innerHTML=`<div class="soon">星座運勢與都市傳說目前在東京、大阪、首爾、釜山、墾丁開放，其他地點會陸續加入。</div>`;return}
+  if(!key){box.innerHTML=`<div class="soon">星座運勢、都市傳說與景點故事目前在東京、大阪、首爾、釜山、墾丁開放，其他地點會陸續加入。</div>`;return}
   const p=MYSTIC[key];let inner;
   if(ntab==="fort"){const f=fortune(key,sign),s=SIGNS[sign];
     inner=`<div class="signs" role="group" aria-label="選星座">${SIGNS.map((x,i)=>`<button type="button" data-sign="${i}" aria-pressed="${i===sign}">${esc(x[0])}<small>${fortune(key,i).total}</small></button>`).join("")}</div>
@@ -267,11 +269,14 @@ function renderNight(){const box=$("nightBox"),key=openId&&NIGHT.get(openId);
     <ul class="bars">${CATS.map(([k,n])=>`<li class="${k===f.top[0]?"top":""}"><span>${esc(n)}</span><i role="img" aria-label="${esc(n)} ${f.sc[k]} 顆星，滿分 5"><em data-w="${f.sc[k]*20}"></em></i><b>${f.sc[k]}/5</b></li>`).join("")}</ul>
     <div class="lucky"><div><span>幸運地點</span>${esc(f.spot)}</div><div><span>幸運小物</span>${esc(f.item)}</div><div><span>幸運色</span>${esc(f.color)}</div></div></div>
     <p class="small">運勢依日期、地點與星座產生，每天更新，僅供娛樂。</p>`}
+  else if(ntab==="story")inner=(STORIES[key]||[]).map(s=>`<details class="story"><summary><img src="${esc(s.img)}" alt="" loading="lazy" width="88" height="66"><span><span class="tags">${s.tags.map(t=>`<em>${esc(t)}</em>`).join("")}</span><h5>${esc(s.title)}</h5><span class="lead">${esc(s.lead)}</span></span></summary>
+    <figure><img src="${esc(s.img)}" alt="${esc(s.title)}" loading="lazy"><figcaption>${s.stand_in?"示意照片・":""}照片：<a href="${esc(s.photo.page)}" target="_blank" rel="noopener noreferrer">${esc(s.photo.author)}</a>／${esc(s.photo.license)}／Wikimedia Commons</figcaption></figure>
+    ${s.body.map(b=>`<p>${esc(b)}</p>`).join("")}${s.tip?`<p class="tip"><b>小提醒</b>${esc(s.tip)}</p>`:""}${s.sources.length?`<div class="src">來源：${s.sources.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(host(u))}</a>`).join("、")}</div>`:""}</details>`).join("")+`<p class="small">景點故事整理自公開資料；標示「都市傳說」「恐怖怪談」的內容屬民間說法。</p>`;
   else inner=p.legends.map(l=>`<article class="lg"><div class="fear" aria-label="恐怖指數 ${l.f}，滿分 5">恐怖指數 ${[1,2,3,4,5].map(n=>`<i class="${n<=l.f?"on":""}"></i>`).join("")}</div>
     <h5>${esc(l.t)}</h5><div class="where">${esc(l.w)}</div><p>${esc(l.s)}</p><p class="why"><b>${esc(l.y[0])}：</b>${esc(l.y[1])}</p>
     <div class="src">出處：${l.src.map(([n,u])=>/^https:\/\//.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(n)}</a>`:esc(n)).join("、")}</div></article>`).join("")+`<p class="small">都市傳說整理自網路公開資料，真實性未經查證，僅供娛樂。</p>`;
-  box.innerHTML=`<section class="night" aria-label="夜之門"><header><h3>夜之門・${esc(p.name)}</h3><small>星座運勢・都市傳說</small></header>
-    <div class="ntabs" role="tablist"><button type="button" role="tab" data-nt="fort" aria-selected="${ntab==="fort"}">星座運勢</button><button type="button" role="tab" data-nt="legend" aria-selected="${ntab==="legend"}">都市傳說</button></div><div>${inner}</div></section>`;
+  box.innerHTML=`<section class="night" aria-label="夜之門"><header><h3>夜之門・${esc(p.name)}</h3><small>${NTABS.map(t=>t[1]).join("・")}</small></header>
+    <div class="ntabs" role="tablist">${NTABS.map(([k,n])=>`<button type="button" role="tab" data-nt="${k}" aria-selected="${ntab===k}">${n}</button>`).join("")}</div><div>${inner}</div></section>`;
   box.querySelectorAll("[data-w]").forEach(e=>e.style.width=e.dataset.w+"%")}// CSP 不允許 style 屬性，寬度用 JS 設
 $("nightBox").addEventListener("click",e=>{const t=e.target.closest("[data-sign],[data-nt]");if(!t)return;
   if(t.dataset.sign){sign=+t.dataset.sign;store.set("door-sign",sign)}else{ntab=t.dataset.nt;store.set("door-ntab",ntab)}renderNight()});

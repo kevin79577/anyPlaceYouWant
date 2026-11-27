@@ -52,6 +52,9 @@ const hot=k=>C.places.filter(p=>(p.countryKey||p.id)===k&&p.tier==='hot').length
   assert.notEqual(await page.evaluate(()=>SomewhereWeather.getState().status),'idle');
   assert.equal(await page.locator('.signs button').count(),12);
   await page.click('[data-nt="legend"]');assert(await page.locator('.lg').count()>0,'都市傳說');
+  await page.click('[data-nt="story"]');assert.equal(await page.locator('.story').count(),4,'墾丁 4 則景點故事');
+  await page.click('.story summary');await page.waitForFunction(()=>{const i=document.querySelector('.story[open] figure img');return i&&i.complete&&i.naturalWidth>0});
+  assert.match(await page.textContent('.story[open] figcaption'),/照片：.+／.+／Wikimedia Commons/);
   assert.equal(await page.locator('#cMsg').isDisabled(),true,'留言尚未接後端，必須停用');
   // 收藏 → 重新整理後仍在
   await page.click('#dSave');assert.equal(await page.textContent('#saved-n'),'1');
@@ -60,7 +63,7 @@ const hot=k=>C.places.filter(p=>(p.countryKey||p.id)===k&&p.tier==='hot').length
   // Esc 關閉景點，網址回到國家
   await page.waitForFunction(()=>document.getElementById('destination-dialog')?.classList.contains('open'));
   await page.keyboard.press('Escape');assert.equal(await page.evaluate(()=>location.hash),'#taiwan');
-  console.log('通過：深連結、播放器與天氣接上、夜之門（運勢 12 星座、傳說）、留言停用、收藏保存、Esc 關閉。');
+  console.log('通過：深連結、播放器與天氣接上、夜之門（運勢 12 星座、傳說、景點故事與照片授權）、留言停用、收藏保存、Esc 關閉。');
   // 地區標點：點了會篩選清單並出現「回到全國」
   await page.$eval('#pins .pin',b=>b.click());// 鏡頭還在飛回全國，標點可能暫時在畫面外
   await page.waitForFunction(()=>!document.getElementById('back').hidden);
