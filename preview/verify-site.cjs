@@ -56,6 +56,7 @@ const hot=k=>C.places.filter(p=>(p.countryKey||p.id)===k&&p.tier==='hot').length
   await page.click('.story summary');await page.waitForFunction(()=>{const i=document.querySelector('.story[open] figure img');return i&&i.complete&&i.naturalWidth>0});
   assert.match(await page.textContent('.story[open] figcaption'),/照片：.+／.+／Wikimedia Commons/);
   assert.equal(await page.locator('#cMsg').isDisabled(),true,'留言尚未接後端，必須停用');
+  {const n=await page.locator('#cList .cm').count();assert(n>=2&&n<=3,'示意留言 2～3 則，實際 '+n)}
   // 收藏 → 重新整理後仍在
   await page.click('#dSave');assert.equal(await page.textContent('#saved-n'),'1');
   await page.reload();await page.waitForFunction(()=>document.getElementById('saved-n').textContent==='1');

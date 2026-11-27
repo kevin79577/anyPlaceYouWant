@@ -6,13 +6,13 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>任意門 — 深入探索</title>
 <meta name="description" content="從地球降落到日本、韓國、台灣、泰國，打開每一扇即時影像的窗。">
-<link rel="stylesheet" href="site.css?v=door-24">
-<link rel="stylesheet" href="country.css?v=door-24">
-<script src="catalog.js?v=door-24"></script>
-<script src="assets/region-map-data.js?v=door-24"></script>
-<script src="weather.js?v=door-24" defer></script>
-<script src="media-player.js?v=door-24" defer></script>
-<script type="module" src="country.js?v=door-24"></script>
+<link rel="stylesheet" href="site.css?v=door-25">
+<link rel="stylesheet" href="country.css?v=door-25">
+<script src="catalog.js?v=door-25"></script>
+<script src="assets/region-map-data.js?v=door-25"></script>
+<script src="weather.js?v=door-25" defer></script>
+<script src="media-player.js?v=door-25" defer></script>
+<script type="module" src="country.js?v=door-25"></script>
 </head>
 <body>
 <svg class="wx-defs" aria-hidden="true" focusable="false">
@@ -33,7 +33,7 @@
   <symbol id="wx-sunset" viewBox="0 0 24 24"><path d="M3 18h18M6.5 18a5.5 5.5 0 0 1 11 0M12 4v5M9 6.5 12 9l3-2.5"/></symbol>
 </svg>
 <header class="bar glass">
-<a class="logo" href="./" aria-label="任意門 首頁"><b>任意門</b><i>anywhere door</i><sup>BETA</sup></a>
+<a class="logo" href="./" aria-label="任意門 首頁"><b>任意門</b><i>anywhere door</i></a>
 <nav class="nav" aria-label="主選單"><a id="nav-explore" href="./" aria-current="page">探索</a><button type="button" id="nav-recent" data-sheet="recent">近期<span class="lbl">分享</span></button><button type="button" id="nav-saved" data-sheet="saved"><span class="lbl">我的</span>收藏<span class="n" id="saved-n" hidden></span></button><a id="nav-game" href="game.html"><span class="lbl">小</span>遊戲</a></nav>
 <button type="button" class="search" id="open-search" aria-label="搜尋地點"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span>搜尋地點，或一種心情</span></button>
 </header>
@@ -74,11 +74,11 @@
     <div class="wx" id="weather-detail"></div>
     <div id="nightBox"></div>
     <section class="talk" aria-label="旅人留言">
-      <header><h3>旅人留言</h3><small>即將開放</small></header>
+      <header><h3>旅人留言</h3><small>示意留言・留言功能即將開放</small></header>
       <form id="cForm"><label class="sr-only" for="cMsg">留言內容</label><textarea id="cMsg" maxlength="400" disabled placeholder="留言功能即將開放，到時候可以分享你在這裡的經歷。"></textarea>
         <div class="row"><span class="st">正式上線後可以留言、按讚；目前尚未收集任何資料。</span><button class="send" type="submit" disabled>送出</button></div></form>
-      <div class="sorts" role="group" aria-label="留言排序"><button type="button" aria-pressed="true" disabled>最新</button><button type="button" aria-pressed="false" disabled>最多讚</button></div>
-      <p class="empty2">還沒有留言。</p>
+      <div class="sorts" role="group" aria-label="留言排序"><button type="button" data-csort="new" aria-pressed="true">最新</button><button type="button" data-csort="hot" aria-pressed="false">最多讚</button></div>
+      <div id="cList"></div>
     </section>
   </div>
 </aside>

@@ -235,7 +235,7 @@ function openDetail(id){const p=byId.get(id);if(!p)return;
   const th=thumbOf(id),img=$("detail-photo");img.hidden=!th;if(th){img.src=th;img.alt=p.name+" 影片縮圖"}else img.removeAttribute("src");
   $("bigplay").hidden=!firstVideo(id);
   window.SomewhereMedia?.selectDestination(id);window.SomewhereWeather?.selectPlace(p);
-  syncSave();renderNight();$("dScroll").scrollTop=0;
+  syncSave();renderNight();renderComments();$("dScroll").scrollTop=0;
   const d=$("destination-dialog");d.classList.add("open");d.setAttribute("aria-hidden","false");document.body.classList.add("dopen");
   fly({lat:p.point[1]+.12*(HOME.dist>1.3?1:.5),lon:p.point[0]-.02,dist:Math.min(1.07,HOME.dist)},1300);
   if(route()[1]!==id)history.replaceState(null,"",`#${KEY}/${encodeURIComponent(id)}`);
@@ -248,6 +248,23 @@ $("bigplay").addEventListener("click",()=>window.SomewhereMedia?.play());
 const syncSave=()=>{if(!openId)return;const on=isSaved(openId);$("dSave").setAttribute("aria-pressed",String(on));$("dSave").textContent=on?"♥ 已收藏":"♡ 收藏"};
 $("dSave").addEventListener("click",()=>{if(openId)toggleSaved(openId)});onSavedChange(syncSave);
 $("cForm").addEventListener("submit",e=>e.preventDefault());
+
+/* 示意留言：後端還沒接，先依景點 id 固定挑 2～3 則（同一景點每次看到一樣），標題旁已註明「示意留言」 */
+const CM_WHO=["小島旅人","阿哲","Mina","在路上的貓","週末出走","Yuki","背包客老王","晴天娃娃","慢慢走","Hana","夜貓子","Leo"];
+const CM_ANY=["半夜睡不著就打開這扇窗，看著{n}的畫面，好像真的出門了一趟。","去年去過{n}，看到畫面整個回憶都回來了。","下次出國一定要排{n}，先收藏起來。","畫面好療癒，開著當背景工作剛剛好。","原來現在{n}是這個樣子，跟我印象中差好多。","跟家人一起看，大家都在討論下一趟要去哪。"];
+const CM_CAT={山岳:["天氣好的時候山的稜線好清楚，好想去爬。","{n}的雲海是真的美，運氣好才看得到。"],海岸:["光看浪就覺得放鬆了，好想聽現場的海浪聲。","夕陽時段來看{n}最漂亮。"],河川:["河邊散步一定很舒服，{n}看起來好悠閒。"],
+  城市街景:["街上的人來來去去，看著就有種在當地喝咖啡的感覺。","晚上來看{n}，燈一亮整個氣氛都不一樣。"],車站鐵道:["一直等火車進站，等到的那一刻好開心！","鐵道迷表示這扇窗可以看一整天。"],機場:["看飛機起降好紓壓，好想直接飛走。"],
+  觀光地:["{n}人好多，在家看反而比較悠閒哈哈。","之前去{n}排了好久，還是很值得。"],溫泉:["看著冒煙的畫面就覺得暖起來了。"],港口漁港:["漁船進港的時候好熱鬧，好想去吃海鮮。"],道路:["看車流也能看得很入迷，好奇大家都要去哪裡。"],滑雪場:["雪季快到了！今年想去{n}滑雪。"]};
+const hash=s=>{let h=2166136261;for(const c of s)h=Math.imul(h^c.codePointAt(0),16777619);return h>>>0};
+let csort="new";
+function renderComments(){const box=$("cList"),p=openId&&byId.get(openId);if(!box||!p)return;let h=hash(p.id);const r=k=>(h=Math.imul(h^h>>>15,2246822507)>>>0)%k;
+  const pool=[...(CM_CAT[p.category]||[]),...CM_ANY],rows=[];
+  for(let i=0,n=2+r(2);i<n;i++){const t=pool.splice(r(pool.length),1)[0];rows.push({who:CM_WHO[r(CM_WHO.length)],days:1+r(60),likes:r(40),text:t.replaceAll("{n}",p.name)})}
+  rows.sort((a,b)=>csort==="hot"?b.likes-a.likes:a.days-b.days);
+  box.innerHTML=rows.map(c=>`<article class="cm"><span class="av" aria-hidden="true">${esc([...c.who][0])}</span><div><div class="mt"><b>${esc(c.who)}</b><span>${c.days<30?c.days+" 天前":Math.round(c.days/30)+" 個月前"}</span></div>
+    <p>${esc(c.text)}</p><span class="like" aria-label="${c.likes} 個讚"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>${c.likes}</span></div></article>`).join("")}
+document.querySelector(".talk .sorts").addEventListener("click",e=>{const b=e.target.closest("[data-csort]");if(!b)return;csort=b.dataset.csort;
+  document.querySelectorAll("[data-csort]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderComments()});
 
 /* 夜之門：星座運勢（同一天、同一地點、同一星座結果固定）與都市傳說 */
 const today=new Date(),dkey=`${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
